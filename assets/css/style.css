@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Ortica Linear Light";
+    src: url("assets/fonts/OrticaLinear-Light.woff2") format("woff2"),
+        url("assets/fonts/OrticaLinear-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Ortica Linear Regular";
+    src: url("assets/fonts/OrticaLinear-Regular.woff2") format("woff2"),
+        url("assets/fonts/OrticaLinear-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Ortica Linear Bold";
+    src: url("assets/fonts/OrticaLinear-Bold.woff2") format("woff2"),
+        url("assets/fonts/OrticaLinear-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Ortica Angular Bold";
+    src: url("assets/fonts/OrticaAngular-Bold.woff2") format("woff2"),
+        url("assets/fonts/OrticaAngular-Bold.woff") format("woff");
+}
+
+:root {
+    --doc-height: 100%;
+    --color-txt: #000000;
+    --color-bg: #ffffff;
+    --menu-font-size: .9rem;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    /* font-family: "Ortica Linear Regular", serif; */
+    background-color: var(--color-bg);
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Ortica Angular Bold", serif;
+    font-size: var(--menu-font-size);
+    padding: 2rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    flex: 1 1;
+    gap: 4rem;
+}
+
+.nav-page {
+    display: block;
+    transition: opacity .35s ease;
+}
+
+.nav-site {
+    display: flex;
+    gap: 4rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(2px);
+    transition: transform .35s ease;
+}
+
+/* .nav:hover .nav-page {
+    display: none;
+} */
+
+.nav-site.visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
