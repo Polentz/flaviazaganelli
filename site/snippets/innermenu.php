@@ -1,4 +1,4 @@
-<div class="inner-menu">
+<div class="inner-menu index close">
     <ul class="inner-menu-list">
         <li><a href="" class="js-href">project</a></li>
         <li><a href="" class="js-href">project</a></li>

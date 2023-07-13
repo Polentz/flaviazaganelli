@@ -3,6 +3,19 @@ const documentHeight = () => {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
 };
 
+const handleAnchorTags = () => {
+    const aTags = document.querySelectorAll(".js-href");
+    aTags.forEach(a => {
+        a.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = a.getAttribute("href");
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+};
+
 const toggleMenu = () => {
     const nav = document.querySelector(".nav");
     const navPage = document.querySelector(".nav-page");
@@ -43,30 +56,36 @@ const toggleInfo = () => {
     });
 };
 
+const openELement = (button, element) => {
+    document.getElementById(button).addEventListener("click", () => {
+        document.querySelector(element).classList.add("open");
+        if (document.querySelector(element).classList.contains("close")) {
+            document.querySelector(element).classList.remove("close");
+        };
+    });
+};
+
 const closeElement = () => {
     const uiClose = document.querySelectorAll(".ui-close");
     uiClose.forEach(uiElement => {
         const container = uiElement.parentElement;
         uiElement.addEventListener("click", () => {
+            if (container.classList.contains("open")) {
+                container.classList.remove("open");
+            };
             container.classList.add("close");
-        })
+        });
     });
 };
 
-// const togglePopup = () => {
-//     const popupClose = document.querySelectorAll(".popup-ui");
-//     popupClose.forEach(close => {
-//         close.addEventListener("click", () => {
-//             const popup = close.parentElement;
-//             popup.classList.add("hide");
-//         });
-//     });
-// };
-
 window.addEventListener("load", () => {
     documentHeight();
+    handleAnchorTags();
     toggleMenu();
     toggleInfo();
+    openELement("contact", ".contact");
+    openELement("calendar", ".calendar");
+    openELement("index", ".index");
     closeElement();
 });
 

@@ -1,5 +1,6 @@
 <?= snippet('header') ?>
-<!-- <?= snippet('popup') ?> -->
-<!-- <?= snippet('innermenu') ?> -->
+<?= snippet('contact') ?>
+<?= snippet('calendar') ?>
+<?= snippet('innermenu') ?>
 <?= snippet('project') ?>
 <?= snippet('footer') ?>
