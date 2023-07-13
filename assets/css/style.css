@@ -46,20 +46,6 @@
         url("assets/fonts/altehaasgroteskbold.woff") format("woff");
 }
 
-@keyframes opacity {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 :root {
     --doc-height: 100%;
     --color-txt: #000000;
@@ -67,6 +53,8 @@
     --menu-font-size: .9rem;
     --title-font-size-sansserif: 4rem;
     --title-font-size-serif: 3.5rem;
+    --text-font-size: 1rem;
+    --ui-size: 3rem;
 }
 
 html {
@@ -158,21 +146,26 @@ body {
     margin-left: -6rem;
 }
 
-.project-title {
+.project-wrapper {
     width: 100%;
+    height: var(--title-font-size-sansserif);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
     z-index: 8;
 }
 
+.project-title {
+    width: 56%;
+    min-height: var(--title-font-size-sansserif);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .project-title h2 {
-    height: auto;
     text-align: center;
 }
 
@@ -181,9 +174,115 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: var(--title-font-size-sansserif);
+    line-height: 100%;
 }
 
 .project-title h2 a:hover {
     font-family: "Ortica Angular", serif;
     font-size: var(--title-font-size-serif);
+}
+
+.project-info {
+    max-width: 40%;
+    position: absolute;
+    top: calc(50% + var(--title-font-size-sansserif) + 2rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--text-font-size);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.project-ui {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.project-ui.left {
+    left: 2rem;
+}
+
+.project-ui.right {
+    right: 2rem;
+}
+
+.project-ui svg {
+    width: var(--ui-size);
+    stroke: var(--color-txt);
+    stroke-width: 2px;
+}
+
+.project-ui,
+.project-info {
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.project-ui.info,
+.project-info.info {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup {
+    width: 560px;
+    height: 480px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-txt);
+    padding: 2rem;
+    z-index: 9;
+    opacity: 0;
+    pointer-events: all;
+    transition: all .5s ease;
+}
+
+.popup.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.popup-close svg {
+    width: var(--ui-size);
+    stroke: var(--color-bg);
+    stroke-width: 1px;
+}
+
+.popup-wrapper {
+    color: var(--color-bg);
+}
+
+.popup-title {
+    width: 75%;
+    margin-bottom: 2rem;
+}
+
+.popup-title h3 {
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--title-font-size-sansserif);
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.popup-list p:first-of-type {
+    margin-bottom: 1rem;
 }
