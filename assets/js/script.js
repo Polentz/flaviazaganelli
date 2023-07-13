@@ -41,24 +41,33 @@ const toggleInfo = () => {
             });
         });
     });
+};
 
-}
-
-const togglePopup = () => {
-    const popupClose = document.querySelectorAll(".popup-close");
-    popupClose.forEach(close => {
-        close.addEventListener("click", () => {
-            const popup = close.parentElement;
-            popup.classList.add("hide");
-        });
+const closeElement = () => {
+    const uiClose = document.querySelectorAll(".ui-close");
+    uiClose.forEach(uiElement => {
+        const container = uiElement.parentElement;
+        uiElement.addEventListener("click", () => {
+            container.classList.add("close");
+        })
     });
 };
+
+// const togglePopup = () => {
+//     const popupClose = document.querySelectorAll(".popup-ui");
+//     popupClose.forEach(close => {
+//         close.addEventListener("click", () => {
+//             const popup = close.parentElement;
+//             popup.classList.add("hide");
+//         });
+//     });
+// };
 
 window.addEventListener("load", () => {
     documentHeight();
     toggleMenu();
-    togglePopup();
     toggleInfo();
+    closeElement();
 });
 
 window.addEventListener("resize", () => {

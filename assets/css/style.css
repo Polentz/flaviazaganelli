@@ -109,6 +109,32 @@ body {
     transform: translateX(0);
 }
 
+.ui-open svg {
+    width: var(--ui-size);
+    stroke: var(--color-txt);
+    stroke-width: 2px;
+}
+
+.ui-close svg {
+    width: var(--ui-size);
+    stroke: var(--color-bg);
+    stroke-width: 1px;
+}
+
+.close {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.left {
+    left: 2rem;
+}
+
+.right {
+    right: 2rem;
+}
+
 .project {
     width: 100%;
     height: var(--doc-height);
@@ -157,8 +183,7 @@ body {
 }
 
 .project-title {
-    width: 56%;
-    min-height: var(--title-font-size-sansserif);
+    max-width: 40%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -185,9 +210,9 @@ body {
 .project-info {
     max-width: 40%;
     position: absolute;
-    top: calc(50% + var(--title-font-size-sansserif) + 2rem);
+    bottom: 2rem;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     font-family: "Alte Haas Grotesk";
     font-style: normal;
     font-weight: 700;
@@ -199,25 +224,12 @@ body {
     align-items: center;
 }
 
-.project-ui {
+.project-ui,
+.inner-menu-ui {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-}
-
-.project-ui.left {
-    left: 2rem;
-}
-
-.project-ui.right {
-    right: 2rem;
-}
-
-.project-ui svg {
-    width: var(--ui-size);
-    stroke: var(--color-txt);
-    stroke-width: 2px;
 }
 
 .project-ui,
@@ -242,27 +254,14 @@ body {
     background-color: var(--color-txt);
     padding: 2rem;
     z-index: 9;
-    opacity: 0;
-    pointer-events: all;
     transition: all .5s ease;
 }
 
-.popup.hide {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.popup-close {
+.popup-ui {
     position: absolute;
     top: 2rem;
     right: 2rem;
     cursor: pointer;
-}
-
-.popup-close svg {
-    width: var(--ui-size);
-    stroke: var(--color-bg);
-    stroke-width: 1px;
 }
 
 .popup-wrapper {
@@ -285,4 +284,32 @@ body {
 
 .popup-list p:first-of-type {
     margin-bottom: 1rem;
+}
+
+.inner-menu {
+    width: 100%;
+    height: var(--doc-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-txt);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0;
+    pointer-events: none; */
+    transition: all .5s ease;
+}
+
+.inner-menu-list {
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--title-font-size-sansserif);
+    line-height: 100%;
+    color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
