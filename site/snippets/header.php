@@ -34,7 +34,6 @@
     <link rel="shortcut icon" type="image/png" sizes="48x48" href="/assets/favicons/favicon48.png">
     <link rel="shortcut icon" type="image/png" sizes="192x192" href="/assets/favicons/favicon192.png">
     <link rel="shortcut icon" type="image/png" sizes="512x512" href="/assets/favicons/favicon512.png"> -->
-    <link href="https://fonts.cdnfonts.com/css/alte-haas-grotesk?styles=10515,10514" rel="stylesheet">
     <?= css ([
         'assets/css/base.css',
         'assets/css/style.css',

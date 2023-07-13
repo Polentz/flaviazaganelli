@@ -11,14 +11,14 @@ const toggleMenu = () => {
         navPage.style.opacity = "0";
         setTimeout(() => {
             navPage.style.display = "none";
-            navSite.classList.add("visible");
+            navSite.classList.add("show");
         }, 250);
 
     });
     nav.addEventListener("mouseleave", () => {
         navPage.style.display = "block";
         navPage.style.opacity = "1";
-        navSite.classList.remove("visible");
+        navSite.classList.remove("show");
     });
 };
 
