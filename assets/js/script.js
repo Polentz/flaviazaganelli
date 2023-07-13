@@ -40,7 +40,6 @@ const toggleInfo = () => {
         const title = project.querySelector(".project-wrapper");
         const info = project.querySelector(".project-info");
         const ui = project.querySelectorAll(".project-ui");
-        console.log(ui)
         title.addEventListener("mouseenter", () => {
             info.classList.add("info");
             ui.forEach(uiElement => {
@@ -56,11 +55,11 @@ const toggleInfo = () => {
     });
 };
 
-const openELement = (button, element) => {
+const openELement = (button, container) => {
     document.getElementById(button).addEventListener("click", () => {
-        document.querySelector(element).classList.add("open");
-        if (document.querySelector(element).classList.contains("close")) {
-            document.querySelector(element).classList.remove("close");
+        document.querySelector(container).classList.add("open");
+        if (document.querySelector(container).classList.contains("close")) {
+            document.querySelector(container).classList.remove("close");
         };
     });
 };

@@ -1,4 +1,4 @@
-<section class="project">
+<section class="project" data-section-title="">
     <div class="project-grid">
         <div class="project-grid-item rellax" data-rellax-speed="-4"></div>
         <div class="project-grid-item rellax" data-rellax-speed="-8"></div>
@@ -11,19 +11,23 @@
             <h2><a href="">project title project title</a></h2>
         </div>
         <div class="project-ui ui-open left">
-            <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <a href="">
+                <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
         <div class="project-ui ui-open right">
-            <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <a href="">
+                <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
     </div>
     <div class="project-info">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto doloribus ipsa eius iusto ex necessitatibus nostrum, earum dolorum. Ipsum, hic.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, illo!</p>
+        <p>Harum, illo!</p>
     </div>
 </section>
 
