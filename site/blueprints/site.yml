@@ -1,5 +1,77 @@
-title: Site
+title: Flavia Zaganelli
 
-sections:
-  pages:
-    type: pages
+tabs:
+  website:
+    label: WEBSITE
+    icon: grid-full
+    columns:
+      main:
+        width: 2/3
+        sections:
+          pages:
+            label: Pagine
+            type: pages
+            image: false
+            templates:
+              - home
+      sidebar:
+        width: 1/3
+        sections:
+          global:
+            type: fields
+            fields:
+              instagram:
+                label: Instagram
+                placeholder: Link di Instagram
+                type: url
+              facebook:
+                label: Facebook
+                placeholder: Link di Facebook
+                type: url
+              email:
+                label: Email
+                placeholder: Indirizzo email
+                type: email
+              footer:
+                label: Footer
+                placeholder: Anno
+                after: "© Flavia Zaganelli"
+                type: text
+  seo:
+    label: SEO DEL SITO WEB
+    icon: circle
+    columns:
+      main:
+        width: 2/3
+        sections:
+          seocontent:
+            type: fields
+            fields:
+              description:
+                label: Descrizione
+                type: textarea
+                buttons: false
+              keywords:
+                label: Keywords
+                type: tags                
+      sidebar:
+        width: 1/3
+        sections:
+          seoappendix:
+            type: fields
+            fields:
+              ogimage:
+                label: Immagine di copertina
+                type: files
+                template: image
+                uploads: image
+                layout: cards
+                size: huge
+                multiple: false
+                image:
+                  back: "#000"
+                  icon: false
+                  ratio: 6/3
+                  cover: true
+
+  

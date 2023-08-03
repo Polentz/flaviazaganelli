@@ -1,0 +1,17 @@
+title: Homepage
+navigation:
+  status: all
+  template:
+    - home
+
+
+sections:
+  pages:
+    label: Lista dei progetti
+    type: pages
+    layout: list
+    search: true
+    image: false
+    template: project
+        
+  

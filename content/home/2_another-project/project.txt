@@ -1,0 +1,46 @@
+Title: Another project
+
+----
+
+Info: 
+
+----
+
+Cover:
+
+- file://IlgB6hI8C4LjiD6R
+- file://AR7rF8eQeprW2Dlb
+- file://QXMJvD5GiS1BAonD
+
+----
+
+Maintext: 
+
+----
+
+Credits: 
+
+----
+
+Gallery:
+
+- file://aXaqRNz59KTQzRbJ
+- file://AR7rF8eQeprW2Dlb
+- file://QXMJvD5GiS1BAonD
+- file://IlgB6hI8C4LjiD6R
+
+----
+
+Video: 
+
+----
+
+Logo: 
+
+----
+
+Pagestatus: false
+
+----
+
+Uuid: cx2YjpE7LZbNBRJA

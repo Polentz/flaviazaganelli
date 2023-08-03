@@ -1,0 +1,114 @@
+title: Progetto
+options:
+  navigation:
+    status: listed
+    template: project
+
+tabs:
+  projectslist:
+    label: Progetto nella Home
+    icon: grid-full
+    columns:
+      main:
+        width: 3/4
+        sections:
+          info:
+            type: fields
+            fields:
+              title:
+                label: Titolo del progetto
+                placeholder: Titolo del progetto
+                type: text
+              info:
+                label: Informazioni
+                type: writer
+                marks: false
+                nodes: false
+      sidebar:
+        width: 1/4
+        sections:
+          cover:
+            type: fields
+            fields:
+              cover:
+                label: Immagini nella home
+                type: files
+                template: image
+                uploads: image
+                query: page.images.filterBy('template', 'image')
+                layout: cards
+                size: huge
+                multiple: true
+                image:
+                  back: "#000"
+                  icon: false
+                  ratio: 6/3
+                  cover: true
+  page:
+    label: Pagina del progetto
+    icon: page
+    columns:
+      main:
+        width: 3/4
+        sections: 
+          copy:
+            type: fields
+            fields:
+              maintext:
+                label: Testo
+                width: 1/2
+                type: writer
+                inline: true
+                marks:
+                  - bold
+                  - italic
+                  - underline
+                  - link
+                  - email
+                nodes: false
+              credits:
+                label: Crediti
+                width: 1/2
+                type: writer
+                marks:
+                  - bold
+                  - italic
+                  - underline
+                  - link
+                  - email
+                nodes: false
+      sidebar:
+        width: 1/4
+        sections:
+          media:
+            type: fields
+            fields:
+              gallery:
+                type: files
+                label: Galleria immagini
+                template: image
+                uploads: image
+                query: page.images.filterBy('template', 'image')
+                info: false
+                sortable: true
+              video:
+                type: files
+                label: Video
+                template: video
+                uploads: video
+                query: page.videos              
+              logo:
+                type: files
+                label: Loghi
+                template: logo
+                uploads: logo
+                query: page.images.filterBy('template', 'logo')
+          pagestatus:
+            type: fields
+            fields:
+              pagestatus:
+                label: La pagina è pronta?
+                type: toggle
+                text: 
+                  - "no"
+                  - "sì"
