@@ -1,3 +1,16 @@
+const hanldeSessionStorage = () => {
+    const initial = sessionStorage.getItem("initial");
+    if (initial === "done") {
+        const element = document.querySelector(".calendar");
+        element.classList.add("close");
+    } else {
+        sessionStorage.setItem("initial", "done");
+        window.addEventListener("load", () => {
+            openELement("calendar", ".calendar");
+        });
+    };
+};
+
 const closeInnerMenu = () => {
     const menu = document.querySelector(".inner-menu")
     const menuElements = document.querySelectorAll(".inner-menu-list li a");
@@ -57,6 +70,7 @@ const handlePageLabel = () => {
 
 window.addEventListener("load", () => {
     openELement("index", ".index");
+    hanldeSessionStorage();
     closeInnerMenu();
     handleDataAttributes();
 });
