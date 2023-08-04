@@ -17,20 +17,20 @@ const handleAnchorTags = () => {
 };
 
 const toggleMenu = () => {
+    const menu = document.querySelector(".menu");
+    const pageTitle = document.querySelector(".page-title");
     const nav = document.querySelector(".nav");
-    const navPage = document.querySelector(".nav-page");
-    const navSite = document.querySelector(".nav-site");
-    nav.addEventListener("mouseenter", () => {
-        navPage.style.opacity = "0";
+    menu.addEventListener("mouseenter", () => {
+        pageTitle.style.opacity = "0";
         setTimeout(() => {
-            navPage.style.display = "none";
-            navSite.classList.add("show");
+            pageTitle.style.display = "none";
+            nav.classList.add("show");
         }, 250);
     });
-    nav.addEventListener("mouseleave", () => {
-        navPage.style.display = "block";
-        navPage.style.opacity = "1";
-        navSite.classList.remove("show");
+    menu.addEventListener("mouseleave", () => {
+        pageTitle.style.display = "block";
+        pageTitle.style.opacity = "1";
+        nav.classList.remove("show");
     });
 };
 

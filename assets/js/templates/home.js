@@ -54,7 +54,7 @@ const handleParallax = () => {
 const handlePageLabel = () => {
     const pixelScrolled = window.scrollY;
     const sections = document.querySelectorAll(".project");
-    const pageLabel = document.querySelector(".nav-page h2");
+    const pageLabel = document.querySelector(".page-title h2");
     sections.forEach(section => {
         if (section.offsetTop - 50 <= pixelScrolled) {
             pageLabel.style.opacity = "1";
