@@ -54,7 +54,8 @@
     --title-font-size-sansserif: 4rem;
     --title-font-size-serif: 3.5rem;
     --text-font-size: 1rem;
-    --ui-size: 3rem;
+    --ui-open-size: 3rem;
+    --ui-close-size: 2.5rem;
 }
 
 html {
@@ -131,25 +132,31 @@ body::after {
     cursor: pointer;
 }
 
-.ui-open svg {
-    width: var(--ui-size);
+.project-ui svg {
     stroke: var(--color-txt);
     stroke-width: 2px;
     transition: stroke-width .5s ease;
 }
 
-.ui-open svg:hover {
+.ui-open svg {
+    width: var(--ui-open-size);
+}
+
+.project-ui svg:hover {
     stroke-width: .75px;
 }
 
-.ui-close svg {
-    width: var(--ui-size);
+.inner-menu-ui svg {
     stroke: var(--color-bg);
     stroke-width: 1px;
     transition: stroke-width .5s ease;
 }
 
-.ui-close svg:hover {
+.ui-close svg {
+    width: var(--ui-close-size);
+}
+
+.inner-menu-ui svg:hover {
     stroke-width: .25px;
 }
 

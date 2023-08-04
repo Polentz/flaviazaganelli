@@ -84,6 +84,7 @@ window.addEventListener("load", () => {
     toggleInfo();
     openELement("contact", ".contact");
     openELement("calendar", ".calendar");
+    openELement("index", ".index");
     closeElement();
 });
 

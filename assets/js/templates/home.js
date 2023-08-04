@@ -16,6 +16,7 @@ const closeInnerMenu = () => {
     const menuElements = document.querySelectorAll(".inner-menu-list li a");
     menuElements.forEach(element => {
         element.addEventListener("click", () => {
+            menu.classList.remove("open");
             menu.classList.add("close");
         });
     });
@@ -69,7 +70,6 @@ const handlePageLabel = () => {
 };
 
 window.addEventListener("load", () => {
-    openELement("index", ".index");
     hanldeSessionStorage();
     closeInnerMenu();
     handleDataAttributes();

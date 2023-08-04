@@ -7,10 +7,10 @@
                     <h2></h2>
                 </div>
                 <div class="nav-site">
-                        <a href="">Bio</a>
-                        <p id="calendar">Calendar</p>
-                        <p id="contact">Contact</p>
-                        <p id="index">Index</p>                
+                    <a href="">Bio</a>
+                    <p id="calendar">Calendar</p>
+                    <p id="contact">Contact</p>
+                    <p id="index">Index</p>                
                 </div>
             <?php else : ?>
                 <h1><a href="/">Flavia Zaganelli</a></h1>
@@ -18,9 +18,10 @@
                     <h2><?= $page->title() ?></h2>
                 </div>
                 <div class="nav-site">
-                        <a href="">Bio</a>
-                        <p id="calendar">Calendar</p>
-                        <p id="contact">Contact</p>             
+                    <a href="">Bio</a>
+                    <p id="calendar">Calendar</p>
+                    <p id="contact">Contact</p>     
+                    <p id="index">Index</p>         
                 </div>
             <?php endif ?>
         </nav>

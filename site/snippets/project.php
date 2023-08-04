@@ -1,7 +1,7 @@
 
 <section id="<?= $project->title()->slug() ?>" class="project" data-section-title="<?= $project->title() ?>">
     <div class="project-grid">
-        <?php foreach ($project->gallery()->toFiles() as $image) : ?>
+        <?php foreach ($project->cover()->toFiles() as $image) : ?>
             <div class="project-grid-item">
                 <img src="<?= $image->resize(1200, null)->url() ?>">
             </div>

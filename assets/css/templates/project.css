@@ -3,3 +3,16 @@
     opacity: 1;
     transition: opacity .35s ease;
 }
+
+.project-ui,
+.project-info {
+    opacity: 1;
+    pointer-events: all;
+}
+
+main {
+    width: auto;
+    height: var(--doc-height);
+    max-height: var(--doc-height);
+    display: flex;
+}

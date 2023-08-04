@@ -6,4 +6,4 @@ const handleScroll = () => {
     }, { passive: false });
 };
 
-handleScroll();
+// handleScroll();
