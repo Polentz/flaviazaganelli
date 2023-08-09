@@ -166,6 +166,13 @@ const handlePageLabel = () => {
     });
 };
 
+const handleHorizontalScroll = () => {
+    window.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        document.querySelector(".content").scrollLeft += event.deltaY;
+    }, { passive: false });
+};
+
 window.addEventListener("load", () => {
     documentHeight();
     handleAnchorTags();

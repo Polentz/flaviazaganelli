@@ -9,7 +9,7 @@ tabs:
         width: 2/3
         sections:
           projects:
-            label: Homepage
+            label: Progetti
             type: pages
             layout: list
             image:

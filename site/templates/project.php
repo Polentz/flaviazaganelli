@@ -2,29 +2,36 @@
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
 <?= snippet('projects-menu') ?>
-<?= snippet('project', ['project' => $page]) ?>
-<section class="content">
 
-    <section class="main-text">
-        <div class="text-wrapper">
-            <?= $page->maintext()->kt() ?>
-        </div>
+<main class="content">
+
+    <section class="scroll-wrapper">
+        <?= $page->maintext()->kt() ?>
+        <?= $page->credits()->kt() ?>
+        <button>Button!</button>
+        <button>Button!</button>
+        <button>Button!</button>
+        <?php foreach ($page->gallery()->toFiles() as $image) : ?>
+            <figure class="image-wrapper">
+                <img src="<?= $image->resize(1200, null)->url() ?>">
+            </figure>
+        <?php endforeach ?>
     </section>
 
     <!-- <section class="gallery">
         <?php foreach ($page->gallery()->toFiles() as $image) : ?>
-            <div class="gallery-wrapper">
+            <figure class="image-wrapper">
                 <img src="<?= $image->resize(1200, null)->url() ?>">
-            </div>
+            </figure>
         <?php endforeach ?>
     </section> -->
 
-    <section class="text">
-        <div class="text-wrapper">
+    <!-- <section class="text-wrapper">
+        <div class="credits-text">
             <?= $page->credits()->kt() ?>
         </div>
-    </section>
-</section>
+    </section> -->
+</main>
 <div class="project-ui ui-close left">
     <a href="/">
         <svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">

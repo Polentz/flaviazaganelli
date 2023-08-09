@@ -11,19 +11,15 @@ Cover:
 
 ----
 
-Empty: 
-
-----
-
 Info: <p>Spazio sospeso di interazione fra un albero e dei corpi in ascolto di ciò che tra loro esiste.</p>
 
 ----
 
-Maintext: 
+Maintext: <p>Performance costruita attorno ed insieme ad un leccio secolare, dopo un attento lavoro di osservazione, speculazione ed indagine fisica, sonora, vocale e utilizzo di tecnologie di trasduzione elettroacustica (microfoni) e di biodata sonification.</p><p>La performance è frutto della relazione tra i corpi umani, il corpo vegetale dell'albero e l'apparato tecnologico e tende alla costruzione di uno spazio sospeso dove la relazione tra gli elementi in campo possa emergere come atto poetico.</p><p>Performance costruita attorno ed insieme ad un leccio secolare, dopo un attento lavoro di osservazione, speculazione ed indagine fisica, sonora, vocale e utilizzo di tecnologie di trasduzione elettroacustica (microfoni) e di biodata sonification.</p><p>La performance è frutto della relazione tra i corpi umani, il corpo vegetale dell'albero e l'apparato tecnologico e tende alla costruzione di uno spazio sospeso dove la relazione tra gli elementi in campo possa emergere come atto poetico.</p>
 
 ----
 
-Credits: 
+Credits: <p><strong>danza </strong>Flavia Zaganelli<strong><br>suono </strong>Cecilia Stacchiotti<strong><br>costumi </strong>Silvia Piantini</p>
 
 ----
 
@@ -46,6 +42,10 @@ Logo:
 ----
 
 Pagestatus: true
+
+----
+
+Empty: 
 
 ----
 

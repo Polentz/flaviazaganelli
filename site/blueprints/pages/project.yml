@@ -31,15 +31,9 @@ tabs:
       info:
         type: fields
         fields:
-          title:
-            label: Titolo del progetto
-            placeholder: Titolo del progetto
-            type: text
-          empty:
+          gap:
+            type: gap
             width: 1/4
-            label: false
-            type: text    
-            disabled: true
           info:
             width: 1/2
             label: Didascalia

@@ -18,7 +18,3 @@ html {
 .k-topbar-wrapper:after {
     display: none !important;
 }
-
-.k-field-name-empty {
-    visibility: hidden;
-}

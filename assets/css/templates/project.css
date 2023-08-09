@@ -1,6 +1,10 @@
-/* body::after {
-    content: none;
-} */
+body {
+    overflow: hidden;
+}
+
+body::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 90%, #ffffff 100%);
+}
 
 .page-title h2 {
     cursor: unset;
@@ -8,9 +12,9 @@
     transition: opacity .35s ease;
 }
 
-.project {
+/* .project {
     height: auto;
-}
+} */
 
 .project-ui,
 .project-info {
@@ -20,58 +24,68 @@
 
 .project-ui {
     position: fixed;
+    z-index: 8;
     mix-blend-mode: exclusion;
 }
 
 .content {
-    /* width: auto;
+    width: 100%;
     height: var(--doc-height);
-    overflow-y: scroll;
-    overflow-x: hidden; */
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    padding: 2rem 6rem 6rem 14rem
-}
-
-.content a {
-    border-bottom: 1px dashed var(--color-txt);
-}
-
-.main-text {
-    min-width: 65%;
-    max-width: 65%;
+    padding-top: 6rem;
+    padding-left: 14rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
     font-family: "Alte Haas Grotesk";
     font-style: normal;
     font-weight: 400;
     font-size: var(--text-font-size);
     line-height: 130%;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
-/* .text-wrapper {
-    column-count: 2;
+.scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: var(--text-font-size);
     column-gap: 2rem;
-    column-fill: balance;
+    flex: 0 0 32vw;
+}
+
+/* .main-text {
+    height: inherit;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--text-font-size);
+    padding-bottom: 4rem;
 } */
 
-.main-text p:not(:last-of-type) {
+.buttons-wrapper button {
+    display: block;
     margin-bottom: var(--text-font-size);
 }
 
-.gallery {
-    width: 100%;
-    max-height: var(--doc-height);
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
+/* .gallery {
+    width: auto;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
+    flex: 0 0 1000px;
+} */
+
+.image-wrapper img {
+    height: auto;
+    max-height: 30vh;
+    width: auto;
 }
 
-.gallery-wrapper {
-    width: 300px;
-}
-
-.gallery-wrapper img {
-    width: 100%;
+.image-wrapper:last-child {
+    padding-right: 2rem;
 }
