@@ -1,21 +1,13 @@
 
 <section id="<?= $project->title()->slug() ?>" class="project" data-section-title="<?= $project->title() ?>">
-    <div class="project-grid">
-        <?php if ($page->is('home')) : ?>
+    <?php if ($page->is('home')) : ?>
+        <div class="project-grid">
             <?php foreach ($project->cover()->toFiles() as $image) : ?>
                 <div class="project-grid-item">
                     <img src="<?= $image->resize(1200, null)->url() ?>">
                 </div>
             <?php endforeach ?>
-        <?php else : ?>
-            <?php foreach ($project->gallery()->toFiles() as $image) : ?>
-                <div class="project-grid-item">
-                    <img src="<?= $image->resize(1200, null)->url() ?>">
-                </div>
-            <?php endforeach ?>
-        <?php endif ?>
-    </div>
-    <?php if ($page->is('home')) : ?>
+        </div>
         <div class="project-wrapper">    
             <?php if ($project->pagestatus()->isTrue()) : ?>   
                 <div class="project-title">
@@ -41,9 +33,16 @@
                 </div>
             <?php endif ?>
         </div>
-        
         <div class="project-info">
             <?= $project->info()->kt() ?>
+        </div>
+    <?php else : ?>
+        <div class="project-grid">
+            <?php foreach ($project->gallery()->toFiles() as $image) : ?>
+                <div class="project-grid-item">
+                    <img src="<?= $image->resize(1200, null)->url() ?>">
+                </div>
+            <?php endforeach ?>
         </div>
     <?php endif ?>
 </section>

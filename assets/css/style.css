@@ -173,7 +173,7 @@ em {
     stroke-width: .75px;
 }
 
-.inner-menu-ui svg,
+/* .inner-menu-ui svg, */
 .popup-ui svg {
     stroke: var(--color-bg);
     stroke-width: 1px;
@@ -184,7 +184,7 @@ em {
     width: var(--ui-close-size);
 }
 
-.inner-menu-ui svg:hover,
+/* .inner-menu-ui svg:hover, */
 .popup-ui svg:hover {
     stroke-width: .25px;
 }
@@ -305,8 +305,8 @@ em {
     align-items: center;
 }
 
-.project-ui,
-.inner-menu-ui {
+/* .inner-menu-ui, */
+.project-ui {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -338,8 +338,8 @@ em {
 
 .popup-ui {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
 

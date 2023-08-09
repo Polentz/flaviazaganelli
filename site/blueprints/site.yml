@@ -8,11 +8,10 @@ tabs:
       main:
         width: 2/3
         sections:
-          pages:
-            label: Pagine
+          projects:
+            label: Homepage
             type: pages
-            layout: cards
-            size: small
+            layout: list
             image:
               icon: true
               ratio: 4/3
@@ -20,6 +19,17 @@ tabs:
               cover: true 
             templates:
               - project
+          pages:
+            label: Bio
+            type: pages
+            layout: list
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true 
+            templates:
+              - about
       sidebar:
         width: 1/3
         sections:

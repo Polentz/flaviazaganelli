@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flavia Zaganelli</title>
-    <!-- <title><?= $site->title() ?> | <?= $page->title() ?></title>
-    <meta name="description"
+    <?php if ($page->is('home')) : ?>
+        <title><?= $site->title() ?></title>
+    <?php else : ?>
+        <title><?= $page->title() ?> - <?= $site->title() ?></title>
+    <?php endif ?>
+    <!-- <meta name="description"
         content="<?= $site->description() ?>">
     <link rel="canonical" href="<?= $page->url() ?>">
     <meta name="keywords"

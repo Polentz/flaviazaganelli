@@ -20,6 +20,7 @@ const toggleMenu = () => {
     const menu = document.querySelector(".menu");
     const pageTitle = document.querySelector(".page-title");
     const nav = document.querySelector(".nav");
+    const navButtons = document.querySelectorAll(".nav-button");
     menu.addEventListener("mouseenter", () => {
         pageTitle.style.opacity = "0";
         setTimeout(() => {
@@ -27,13 +28,19 @@ const toggleMenu = () => {
             nav.classList.add("show");
         }, 250);
     });
+    navButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            menu.classList.add("nav-visible");
+        });
+    });
     menu.addEventListener("mouseleave", () => {
-        pageTitle.style.opacity = "1";
-        setTimeout(() => {
-            pageTitle.style.display = "block";
-            nav.classList.remove("show");
-        }, 250);
-
+        if (!menu.classList.contains("nav-visible")) {
+            pageTitle.style.opacity = "1";
+            setTimeout(() => {
+                pageTitle.style.display = "block";
+                nav.classList.remove("show");
+            }, 250);
+        };
     });
 };
 
@@ -69,6 +76,9 @@ const openELement = (button, container) => {
 
 const closeElement = () => {
     const uiClose = document.querySelectorAll(".ui-close");
+    const menu = document.querySelector(".menu");
+    const pageTitle = document.querySelector(".page-title");
+    const nav = document.querySelector(".nav");
     uiClose.forEach(uiElement => {
         const container = uiElement.parentElement;
         uiElement.addEventListener("click", () => {
@@ -76,6 +86,11 @@ const closeElement = () => {
                 container.classList.remove("open");
             };
             container.classList.add("close");
+
+            menu.classList.remove("nav-visible");
+            pageTitle.style.opacity = "1";
+            pageTitle.style.display = "block";
+            nav.classList.remove("show");
         });
     });
 };
@@ -154,10 +169,10 @@ const handlePageLabel = () => {
 window.addEventListener("load", () => {
     documentHeight();
     handleAnchorTags();
-    toggleMenu();
     openELement("contact", ".contact");
     openELement("calendar", ".calendar");
     openELement("index", ".index");
+    toggleMenu();
     closeElement();
 });
 
