@@ -1,14 +1,12 @@
 <div class="inner-menu index close">
     <ul class="inner-menu-list">
-        <?php if ($page->is('home')) : ?>
-            <?php foreach($page->children()->listed() as $project) : ?>
+        <?php foreach($pages->template('project')->listed() as $project) : ?>
+            <?php if ($page->is('home')) : ?>
                 <li><a href="#<?= $project->title()->slug() ?>" class="js-href"><?= $project->title() ?></a></li>
-            <?php endforeach ?>
-        <?php else : ?>
-            <?php foreach($pages->template('home')->children()->listed() as $project) : ?>
+            <?php elseif ($project->pagestatus()->isTrue()) : ?>
                 <li><a href="<?= $project->url() ?>"><?= $project->title() ?></a></li>
-            <?php endforeach ?>
-        <?php endif ?>
+            <?php endif ?>
+        <?php endforeach ?>   
     </ul>
     <div class="inner-menu-ui ui-close left">
         <svg viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">

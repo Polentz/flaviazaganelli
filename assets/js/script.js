@@ -138,7 +138,7 @@ const handlePageLabel = () => {
     const sections = document.querySelectorAll(".project");
     const pageLabel = document.querySelector(".page-title h2");
     sections.forEach(section => {
-        if (section.offsetTop - 50 <= pixelScrolled) {
+        if (section.offsetTop - 200 <= pixelScrolled) {
             pageLabel.style.opacity = "1";
             pageLabel.innerHTML = section.getAttribute("data-section-title");
         };

@@ -160,7 +160,7 @@ em {
 }
 
 .project-ui svg {
-    stroke: var(--color-txt);
+    stroke: var(--color-bg);
     stroke-width: 2px;
     transition: stroke-width .5s ease;
 }
@@ -255,6 +255,8 @@ em {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 8;
+    color: var(--color-bg);
+    mix-blend-mode: exclusion;
 }
 
 .project-title {
@@ -288,7 +290,7 @@ em {
 .project-info {
     max-width: 40%;
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 8;

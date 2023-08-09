@@ -1,0 +1,46 @@
+Title: electrica /ecosi'stɛma/
+
+----
+
+Cover:
+
+- file://AJiYdSMLyykwkvEX
+- file://nToUaCu17u1xgomj
+- file://VyrVQYZmdFN1Aglm
+- file://D15l7sR8vjYT8kLL
+
+----
+
+Empty: 
+
+----
+
+Info: <p>Indagine performativa sulla relazione tra tre universi: il vegetale, il tecnologico e l'umano.</p>
+
+----
+
+Maintext: 
+
+----
+
+Credits: 
+
+----
+
+Gallery: 
+
+----
+
+Video: 
+
+----
+
+Logo: 
+
+----
+
+Pagestatus: false
+
+----
+
+Uuid: caoJvuxgtXTwKuWU

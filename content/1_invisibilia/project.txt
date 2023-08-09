@@ -1,0 +1,52 @@
+Title: Invisibilia
+
+----
+
+Cover:
+
+- file://1wSEVLKySRLbEp4l
+- file://GkLCcGyDfFlvltWh
+- file://p4KXPDfAaWO06D5x
+- file://Lzlrho6YFw7qkVTc
+
+----
+
+Empty: 
+
+----
+
+Info: <p>Spazio sospeso di interazione fra un albero e dei corpi in ascolto di ciò che tra loro esiste.</p>
+
+----
+
+Maintext: 
+
+----
+
+Credits: 
+
+----
+
+Gallery:
+
+- file://p4KXPDfAaWO06D5x
+- file://Lzlrho6YFw7qkVTc
+- file://GkLCcGyDfFlvltWh
+- file://PaUl0U4NpQ8xrxAL
+- file://1wSEVLKySRLbEp4l
+
+----
+
+Video: 
+
+----
+
+Logo: 
+
+----
+
+Pagestatus: true
+
+----
+
+Uuid: qbsz1IwLKsvev2K3

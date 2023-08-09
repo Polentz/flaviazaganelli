@@ -2,7 +2,7 @@
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
 <?= snippet('projects-menu') ?>
-<?php foreach($page->children()->listed() as $project) : ?>
+<?php foreach($pages->template('project')->listed() as $project) : ?>
     <?= snippet('project', ['project' => $project]) ?>
 <?php endforeach ?>
 <?= snippet('footer') ?>

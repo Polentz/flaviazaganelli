@@ -7,11 +7,11 @@ navigation:
 
 sections:
   pages:
-    label: Lista dei progetti
-    type: pages
-    layout: list
-    search: true
-    image: false
-    template: project
+    label: Homepage
+    #type: pages
+    #layout: list
+    #search: true
+    #image: false
+    #template: project
         
   

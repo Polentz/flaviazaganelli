@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fonts/altehaasgroteskregular.woff2") format("woff2"),
+        url("assets/fonts/altehaasgroteskregular.woff") format("woff");
+}
+
+:root {
+    --rounded: 0rem;
+}
+
+html {
+    font-family: "Alte Haas Grotesk";
+}
+
+.k-topbar-signals,
+.k-topbar-wrapper:after {
+    display: none !important;
+}
+
+.k-field-name-empty {
+    visibility: hidden;
+}

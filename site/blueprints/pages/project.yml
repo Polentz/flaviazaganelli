@@ -8,41 +8,45 @@ tabs:
   projectslist:
     label: Progetto nella Home
     icon: grid-full
-    columns:
-      main:
-        width: 3/4
-        sections:
-          info:
-            type: fields
-            fields:
-              title:
-                label: Titolo del progetto
-                placeholder: Titolo del progetto
-                type: text
-              info:
-                label: Informazioni
-                type: writer
-                marks: false
-                nodes: false
-      sidebar:
-        width: 1/4
-        sections:
+    sections:
+      cover:
+        type: fields
+        fields:
           cover:
-            type: fields
-            fields:
-              cover:
-                label: Immagini nella home
-                type: files
-                template: image
-                uploads: image
-                query: page.images.filterBy('template', 'image')
-                layout: list
-                multiple: true
-                image:
-                  back: "#000"
-                  icon: false
-                  ratio: 6/3
-                  cover: true
+            label: Immagini nella home
+            type: files
+            template: image
+            uploads: image
+            query: page.images.filterBy('template', 'image')
+            layout: cards
+            size: small
+            multiple: true
+            max: 4
+            required: true
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true   
+      info:
+        type: fields
+        fields:
+          title:
+            label: Titolo del progetto
+            placeholder: Titolo del progetto
+            type: text
+          empty:
+            width: 1/4
+            label: false
+            type: text    
+            disabled: true
+          info:
+            width: 1/2
+            label: Didascalia
+            type: writer
+            marks: false
+            nodes: false
+            spellcheck: true
   page:
     label: Pagina del progetto
     icon: page
