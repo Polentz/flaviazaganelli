@@ -36,8 +36,7 @@ tabs:
                 template: image
                 uploads: image
                 query: page.images.filterBy('template', 'image')
-                layout: cards
-                size: huge
+                layout: list
                 multiple: true
                 image:
                   back: "#000"
@@ -58,7 +57,6 @@ tabs:
                 label: Testo
                 width: 1/2
                 type: writer
-                inline: true
                 marks:
                   - bold
                   - italic
@@ -84,13 +82,18 @@ tabs:
             type: fields
             fields:
               gallery:
-                type: files
                 label: Galleria immagini
+                type: files
                 template: image
                 uploads: image
                 query: page.images.filterBy('template', 'image')
-                info: false
-                sortable: true
+                layout: list
+                multiple: true
+                image:
+                  back: "#000"
+                  icon: false
+                  ratio: 6/3
+                  cover: true
               video:
                 type: files
                 label: Video

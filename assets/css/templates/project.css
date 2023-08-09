@@ -1,7 +1,15 @@
+/* body::after {
+    content: none;
+} */
+
 .page-title h2 {
     cursor: unset;
     opacity: 1;
     transition: opacity .35s ease;
+}
+
+.project {
+    height: auto;
 }
 
 .project-ui,
@@ -10,9 +18,59 @@
     pointer-events: all;
 }
 
-main {
-    width: auto;
+.project-ui {
+    position: fixed;
+}
+
+.content {
+    /* width: auto;
     height: var(--doc-height);
-    max-height: var(--doc-height);
+    overflow-y: scroll;
+    overflow-x: hidden; */
     display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem 6rem 6rem 14rem
+}
+
+.content a {
+    border-bottom: 1px dashed var(--color-txt);
+}
+
+.main-text {
+    min-width: 65%;
+    max-width: 65%;
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-font-size);
+    line-height: 130%;
+}
+
+/* .text-wrapper {
+    column-count: 2;
+    column-gap: 2rem;
+    column-fill: balance;
+} */
+
+.main-text p:not(:last-of-type) {
+    margin-bottom: var(--text-font-size);
+}
+
+.gallery {
+    width: 100%;
+    max-height: var(--doc-height);
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.gallery-wrapper {
+    width: 300px;
+}
+
+.gallery-wrapper img {
+    width: 100%;
 }

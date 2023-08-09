@@ -2,25 +2,29 @@
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
 <?= snippet('projects-menu') ?>
+<?= snippet('project', ['project' => $page]) ?>
+<section class="content">
 
-<main>
-    <section class="text">
+    <section class="main-text">
         <div class="text-wrapper">
             <?= $page->maintext()->kt() ?>
         </div>
     </section>
 
-    <section class="gallery">
+    <!-- <section class="gallery">
         <?php foreach ($page->gallery()->toFiles() as $image) : ?>
-            <img src="<?= $image->resize(1200, null)->url() ?>">
+            <div class="gallery-wrapper">
+                <img src="<?= $image->resize(1200, null)->url() ?>">
+            </div>
         <?php endforeach ?>
-    </section>
+    </section> -->
+
     <section class="text">
         <div class="text-wrapper">
             <?= $page->credits()->kt() ?>
         </div>
     </section>
-</main>
+</section>
 <div class="project-ui ui-close left">
     <a href="/">
         <svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
