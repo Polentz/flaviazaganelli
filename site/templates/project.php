@@ -6,16 +6,33 @@
 <main class="content">
 
     <section class="scroll-wrapper">
-        <?= $page->maintext()->kt() ?>
-        <?= $page->credits()->kt() ?>
-        <button>Button!</button>
-        <button>Button!</button>
-        <button>Button!</button>
         <?php foreach ($page->gallery()->toFiles() as $image) : ?>
             <figure class="image-wrapper">
                 <img src="<?= $image->resize(1200, null)->url() ?>">
             </figure>
         <?php endforeach ?>
+        <?= $page->maintext()->kt() ?>
+        <div class="button-wrapper">
+            <button>
+                <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.852804 1L16.4577 1M16.4577 1L16.6553 17M16.4577 1L0.655273 17"/>
+                </svg>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    Trailer
+                </a>
+            </button>
+            <button>
+                <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.852804 1L16.4577 1M16.4577 1L16.6553 17M16.4577 1L0.655273 17"/>
+                </svg>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    Dossier
+                </a>
+            </button>
+        </div>
+        <div class="text-wrapper credits">
+            <?= $page->credits()->kt() ?>
+        </div>
     </section>
 
     <!-- <section class="gallery">

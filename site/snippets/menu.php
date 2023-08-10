@@ -3,7 +3,7 @@
         <?php if ($page->is('home')) : ?>
             <h1 class="site-title">Flavia Zaganelli</h1>
             <div class="page-title">
-                <h2></h2>
+                <h2>+</h2>
             </div>
         <?php else : ?>
             <h1 class="site-title"><a href="/">Flavia Zaganelli</a></h1>

@@ -154,13 +154,13 @@ const handlePageLabel = () => {
     const pageLabel = document.querySelector(".page-title h2");
     sections.forEach(section => {
         if (section.offsetTop - 200 <= pixelScrolled) {
-            pageLabel.style.opacity = "1";
+            pageLabel.style.animation = "opacity .35s ease 1";
             pageLabel.innerHTML = section.getAttribute("data-section-title");
         };
         if (window.scrollY == 0) {
-            pageLabel.style.opacity = "0";
+            pageLabel.style.animation = "none";
             setTimeout(() => {
-                pageLabel.innerHTML = "";
+                pageLabel.innerHTML = "+";
             }, 350);
         };
     });
@@ -172,6 +172,15 @@ const handleHorizontalScroll = () => {
         document.querySelector(".content").scrollLeft += event.deltaY;
     }, { passive: false });
 };
+
+const enlargeImages = () => {
+    const images = document.querySelectorAll(".image-wrapper");
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            img.classList.toggle("enlarge");
+        })
+    });
+}
 
 window.addEventListener("load", () => {
     documentHeight();

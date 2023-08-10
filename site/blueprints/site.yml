@@ -6,7 +6,7 @@ tabs:
     icon: grid-full
     columns:
       main:
-        width: 2/3
+        width: 1/2
         sections:
           projects:
             label: Progetti
@@ -30,8 +30,18 @@ tabs:
               cover: true 
             templates:
               - about
+      column:
+        width: 1/4
+        sections:
+          calendar:
+            type: fields
+            fields:
+              dates:
+                label: What's next
+                type: writer
+                size: large
       sidebar:
-        width: 1/3
+        width: 1/4
         sections:
           global:
             type: fields

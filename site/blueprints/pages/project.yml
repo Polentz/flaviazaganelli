@@ -45,6 +45,34 @@ tabs:
     label: Pagina del progetto
     icon: page
     columns:
+      sidebar:
+        width: 1/4
+        sections:
+          pagestatus:
+            type: fields
+            fields:
+              pagestatus:
+                label: La pagina è pronta?
+                type: toggle
+                text: 
+                  - "no"
+                  - "sì"
+          media:
+            type: fields
+            fields:
+              gallery:
+                label: Immagini
+                type: files
+                template: image
+                uploads: image
+                query: page.images.filterBy('template', 'image')
+                layout: list
+                multiple: true
+                image:
+                  back: "#000"
+                  icon: false
+                  ratio: 6/3
+                  cover: true
       main:
         width: 3/4
         sections: 
@@ -73,43 +101,3 @@ tabs:
                   - link
                   - email
                 nodes: false
-      sidebar:
-        width: 1/4
-        sections:
-          media:
-            type: fields
-            fields:
-              gallery:
-                label: Galleria immagini
-                type: files
-                template: image
-                uploads: image
-                query: page.images.filterBy('template', 'image')
-                layout: list
-                multiple: true
-                image:
-                  back: "#000"
-                  icon: false
-                  ratio: 6/3
-                  cover: true
-              video:
-                type: files
-                label: Video
-                template: video
-                uploads: video
-                query: page.videos              
-              logo:
-                type: files
-                label: Loghi
-                template: logo
-                uploads: logo
-                query: page.images.filterBy('template', 'logo')
-          pagestatus:
-            type: fields
-            fields:
-              pagestatus:
-                label: La pagina è pronta?
-                type: toggle
-                text: 
-                  - "no"
-                  - "sì"

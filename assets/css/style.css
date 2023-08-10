@@ -46,6 +46,16 @@
         url("assets/fonts/altehaasgroteskbold.woff") format("woff");
 }
 
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 :root {
     --doc-height: 100%;
     --color-txt: #000000;
@@ -53,7 +63,7 @@
     --menu-font-size: .9rem;
     --title-font-size-sansserif: 4rem;
     --title-font-size-serif: 3.5rem;
-    --text-font-size: 1rem;
+    --text-font-size: .95rem;
     --ui-open-size: 3rem;
     --ui-close-size: 2.5rem;
 }
@@ -136,8 +146,6 @@ em {
 
 .page-title h2 {
     cursor: pointer;
-    opacity: 0;
-    transition: opacity .35s ease;
 }
 
 .nav {
