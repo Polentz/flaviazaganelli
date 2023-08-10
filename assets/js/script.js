@@ -9,9 +9,7 @@ const handleAnchorTags = () => {
         a.addEventListener("click", (e) => {
             e.preventDefault();
             const href = a.getAttribute("href");
-            document.querySelector(href).scrollIntoView({
-                behavior: "smooth"
-            });
+            document.querySelector(href).scrollIntoView();
         });
     });
 };
@@ -50,18 +48,20 @@ const toggleInfo = () => {
         const title = project.querySelector(".project-wrapper");
         const info = project.querySelector(".project-info");
         const ui = project.querySelectorAll(".project-ui");
-        title.addEventListener("mouseenter", () => {
-            info.classList.add("info");
-            ui.forEach(uiElement => {
-                uiElement.classList.add("info");
+        if (info) {
+            title.addEventListener("mouseenter", () => {
+                info.classList.add("info");
+                ui.forEach(uiElement => {
+                    uiElement.classList.add("info");
+                });
             });
-        });
-        title.addEventListener("mouseleave", () => {
-            info.classList.remove("info");
-            ui.forEach(uiElement => {
-                uiElement.classList.remove("info");
+            title.addEventListener("mouseleave", () => {
+                info.classList.remove("info");
+                ui.forEach(uiElement => {
+                    uiElement.classList.remove("info");
+                });
             });
-        });
+        };
     });
 };
 
@@ -171,7 +171,7 @@ const handleSectionColor = () => {
     const sections = document.querySelectorAll(".project");
     const circles = document.querySelectorAll("circle");
     sections.forEach(section => {
-        if (section.offsetTop - 200 <= pixelScrolled) {
+        if (section.offsetTop - 250 <= pixelScrolled) {
             const color = section.getAttribute("data-section-color");
             circles.forEach(circle => {
                 circle.style.fill = `${color}`;
@@ -183,7 +183,7 @@ const handleSectionColor = () => {
 const handleHorizontalScroll = () => {
     window.addEventListener("wheel", (event) => {
         event.preventDefault();
-        document.querySelector(".project-content").scrollLeft += event.deltaY;
+        document.querySelector(".main-content").scrollLeft += event.deltaY;
     }, { passive: false });
 };
 
@@ -194,6 +194,17 @@ const enlargeImages = () => {
             img.classList.toggle("enlarge");
         })
     });
+}
+
+const mouseMoveEffect = () => {
+    const background = document.querySelector(".background svg")
+    document.addEventListener("mousemove", (event) => {
+        let x = event.pageX;
+        let y = event.pageY;
+        let xDecimal = x * 0.15;
+        let yDecimal = y * 0.15;
+        background.style.transform = `translate(${xDecimal}px, ${yDecimal}px) skew(${(yDecimal * 0.2)}deg)`;
+    })
 }
 
 window.addEventListener("load", () => {

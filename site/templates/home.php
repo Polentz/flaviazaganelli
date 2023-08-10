@@ -1,10 +1,13 @@
 <?= snippet('header') ?>
-<?= snippet('contact') ?>
-<?= snippet('calendar') ?>
-<?= snippet('projects-menu') ?>
+
 <?php foreach($pages->template('project')->listed() as $project) : ?>
     <?= snippet('project', ['project' => $project]) ?>
 <?php endforeach ?>
+
+
+<?= snippet('contact') ?>
+<?= snippet('calendar') ?>
+<?= snippet('projects-menu') ?>
 <div class="background">
     <svg viewBox="0 0 1139 841" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_f_149_272)">

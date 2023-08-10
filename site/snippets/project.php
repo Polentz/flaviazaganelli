@@ -32,7 +32,9 @@
             </div>
         <?php endif ?>
     </div>
-    <div class="project-info">
-        <?= $project->info()->kt() ?>
-    </div>
+    <?php if ($project->info()->isNotEmpty()) : ?>
+        <div class="project-info">
+            <?= $project->info()->kt() ?>
+        </div>
+    <?php endif ?>
 </section>

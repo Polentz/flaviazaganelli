@@ -1,3 +1,4 @@
+html,
 body {
     overflow: hidden;
 }
@@ -24,7 +25,7 @@ body::after {
     mix-blend-mode: exclusion;
 }
 
-.project-content {
+.main-content {
     width: 100%;
     height: var(--doc-height);
     display: flex;
@@ -43,13 +44,13 @@ body::after {
     overflow-x: scroll;
 }
 
-.project-content a {
+.main-content a {
     text-decoration: underline 1px dashed var(--color-txt);
     text-underline-offset: 4px;
     transition: all 1s ease;
 }
 
-.project-content a:hover {
+.main-content a:hover {
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }
@@ -109,7 +110,7 @@ button:hover svg {
 }
 
 .image-wrapper {
-    transition: background-color .5s ease;
+    transition: backdrop-filter .15s ease;
 }
 
 .image-wrapper img {
@@ -122,21 +123,21 @@ button:hover svg {
 .image-wrapper.enlarge {
     width: 100%;
     height: var(--doc-height);
-    background-color: var(--color-bg);
+    backdrop-filter: blur(2rem) grayscale(1);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 10;
     cursor: zoom-out;
 }
 
 .image-wrapper.enlarge img {
-    margin: 0 auto;
     max-height: unset;
-    height: var(--doc-height);
+    height: calc(var(--doc-height)/1.2);
     cursor: zoom-out;
 }
 
