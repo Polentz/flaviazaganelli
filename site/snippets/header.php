@@ -1,5 +1,15 @@
+<?php
+    if ($kirby->language()->code() == 'it') {
+        $lang = 'it';
+        $langCode = 'it_IT';
+    } else if ($kirby->language()->code() == 'en') {
+        $lang = 'en';
+        $langCode = 'en_US';
+    }
+?>
+
 <!DOCTYPE html>
-<html lang="it">
+<html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +19,12 @@
     <?php else : ?>
         <title><?= $page->title() ?> - <?= $site->title() ?></title>
     <?php endif ?>
-    <!-- <meta name="description"
+    <meta name="description"
         content="<?= $site->description() ?>">
     <link rel="canonical" href="<?= $page->url() ?>">
     <meta name="keywords"
         content="<?= $site->keywords() ?>">
-    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale" content="<?= $langCode ?>">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= $site->title()?>">
     <meta property="og:description"
@@ -34,7 +44,7 @@
         <meta name="twitter:image:alt" content="<?= $site->ogimage()->toFile()->alt() ?>">
     <?php endif ?>
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="shortcut icon" type="image/png" sizes="48x48" href="/assets/favicons/favicon48.png">
+    <!-- <link rel="shortcut icon" type="image/png" sizes="48x48" href="/assets/favicons/favicon48.png">
     <link rel="shortcut icon" type="image/png" sizes="192x192" href="/assets/favicons/favicon192.png">
     <link rel="shortcut icon" type="image/png" sizes="512x512" href="/assets/favicons/favicon512.png"> -->
     <?= css ([

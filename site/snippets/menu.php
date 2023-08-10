@@ -1,3 +1,18 @@
+<?php
+    if ($kirby->language()->code() == 'it') {
+        $href = 'en';
+        $languageString = 'English';
+        $calendar = 'Calendario';
+        $contact = 'Contatti';
+    } else if ($kirby->language()->code() == 'en') {
+        $href = '/';
+        $languageString = 'Italiano';
+        $calendar = 'Calendar';
+        $contact = 'Contact';
+    }
+?>
+
+
 <header class="header">
     <menu class="menu">
         <?php if ($page->is('home')) : ?>
@@ -13,12 +28,12 @@
         <?php endif ?>
         <div class="nav">
             <a href="">Bio</a>
-            <p id="calendar" class="nav-button">Calendar</p>
-            <p id="contact" class="nav-button">Contact</p>
+            <p id="calendar" class="nav-button"><?= $calendar ?></p>
+            <p id="contact" class="nav-button"><?= $contact ?></p>
             <p id="index" class="nav-button">Index</p>                
         </div>
     </menu>
     <div class="site-lang">
-        <a href="">English</a>
+        <a href="<?= $page->url($href) ?>" hreflang="<?php echo $href ?>"><?= $languageString ?></a>
     </div>
 </header>
