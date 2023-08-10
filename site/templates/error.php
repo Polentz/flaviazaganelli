@@ -1,2 +1,3 @@
 <?= snippet('header') ?>
-<?= snippet('footer') ?>
+</body>
+</html>

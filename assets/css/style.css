@@ -150,10 +150,6 @@ em {
     transition: opacity .35s ease;
 }
 
-.page-title h2 {
-    cursor: pointer;
-}
-
 .nav {
     display: flex;
     gap: 4rem;
@@ -187,7 +183,6 @@ em {
     stroke-width: .75px;
 }
 
-/* .inner-menu-ui svg, */
 .popup-ui svg {
     stroke: var(--color-bg);
     stroke-width: 1px;
@@ -198,7 +193,6 @@ em {
     width: var(--ui-close-size);
 }
 
-/* .inner-menu-ui svg:hover, */
 .popup-ui svg:hover {
     stroke-width: .25px;
 }
@@ -318,7 +312,6 @@ em {
     align-items: center;
 }
 
-/* .inner-menu-ui, */
 .project-ui {
     position: absolute;
     top: 50%;
