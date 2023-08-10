@@ -14,86 +14,11 @@ const handleAnchorTags = () => {
     });
 };
 
-const toggleMenu = () => {
-    const menu = document.querySelector(".menu");
-    const pageTitle = document.querySelector(".page-title");
-    const nav = document.querySelector(".nav");
-    const navButtons = document.querySelectorAll(".nav-button");
-    menu.addEventListener("mouseenter", () => {
-        pageTitle.style.opacity = "0";
-        setTimeout(() => {
-            pageTitle.style.display = "none";
-            nav.classList.add("show");
-        }, 250);
-    });
-    navButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            menu.classList.add("nav-visible");
-        });
-    });
-    menu.addEventListener("mouseleave", () => {
-        if (!menu.classList.contains("nav-visible")) {
-            pageTitle.style.opacity = "1";
-            setTimeout(() => {
-                pageTitle.style.display = "block";
-                nav.classList.remove("show");
-            }, 250);
-        };
-    });
-};
-
-const toggleInfo = () => {
-    const projects = document.querySelectorAll(".project");
-    projects.forEach(project => {
-        const title = project.querySelector(".project-wrapper");
-        const info = project.querySelector(".project-info");
-        const ui = project.querySelectorAll(".project-ui");
-        if (info) {
-            title.addEventListener("mouseenter", () => {
-                info.classList.add("info");
-                ui.forEach(uiElement => {
-                    uiElement.classList.add("info");
-                });
-            });
-            title.addEventListener("mouseleave", () => {
-                info.classList.remove("info");
-                ui.forEach(uiElement => {
-                    uiElement.classList.remove("info");
-                });
-            });
-        };
-    });
-};
-
-const openELement = (button, container) => {
-    document.getElementById(button).addEventListener("click", () => {
-        document.querySelector(container).classList.add("open");
-        if (document.querySelector(container).classList.contains("close")) {
-            document.querySelector(container).classList.remove("close");
-        };
-    });
-};
-
-const closeElement = () => {
-    const uiClose = document.querySelectorAll(".ui-close");
-    const menu = document.querySelector(".menu");
-    const pageTitle = document.querySelector(".page-title");
-    const nav = document.querySelector(".nav");
-    uiClose.forEach(uiElement => {
-        const container = uiElement.parentElement;
-        uiElement.addEventListener("click", () => {
-            if (container.classList.contains("open")) {
-                container.classList.remove("open");
-            };
-            container.classList.add("close");
-
-            menu.classList.remove("nav-visible");
-            pageTitle.style.opacity = "1";
-            pageTitle.style.display = "block";
-            nav.classList.remove("show");
-        });
-    });
-};
+const menu = document.querySelector(".menu");
+const pageTitle = document.querySelector(".page-title");
+const nav = document.querySelector(".nav");
+const navButtons = document.querySelectorAll(".nav-button");
+const sections = document.querySelectorAll(".project");
 
 const hanldeSessionStorage = () => {
     const initial = sessionStorage.getItem("initial");
@@ -103,20 +28,9 @@ const hanldeSessionStorage = () => {
     } else {
         sessionStorage.setItem("initial", "done");
         window.addEventListener("load", () => {
-            openELement("calendar", ".calendar");
+            openPopupElement("calendar", ".calendar");
         });
     };
-};
-
-const closeInnerMenu = () => {
-    const menu = document.querySelector(".inner-menu")
-    const menuElements = document.querySelectorAll(".inner-menu-list li a");
-    menuElements.forEach(element => {
-        element.addEventListener("click", () => {
-            menu.classList.remove("open");
-            menu.classList.add("close");
-        });
-    });
 };
 
 const handleDataAttributes = () => {
@@ -133,7 +47,6 @@ const handleDataAttributes = () => {
 };
 
 const handleParallax = () => {
-    const sections = document.querySelectorAll(".project");
     const topViewport = window.pageYOffset;
     const midViewport = topViewport + (window.innerHeight / 2);
     sections.forEach(section => {
@@ -150,7 +63,6 @@ const handleParallax = () => {
 
 const handlePageLabel = () => {
     const pixelScrolled = window.scrollY;
-    const sections = document.querySelectorAll(".project");
     const pageLabel = document.querySelector(".page-title h2");
     sections.forEach(section => {
         if (section.offsetTop - 200 <= pixelScrolled) {
@@ -168,7 +80,6 @@ const handlePageLabel = () => {
 
 const handleSectionColor = () => {
     const pixelScrolled = window.scrollY;
-    const sections = document.querySelectorAll(".project");
     const circles = document.querySelectorAll("circle");
     sections.forEach(section => {
         if (section.offsetTop - 250 <= pixelScrolled) {
@@ -192,9 +103,9 @@ const enlargeImages = () => {
     images.forEach(img => {
         img.addEventListener("click", () => {
             img.classList.toggle("enlarge");
-        })
+        });
     });
-}
+};
 
 const mouseMoveEffect = () => {
     const background = document.querySelector(".background svg")
@@ -204,17 +115,106 @@ const mouseMoveEffect = () => {
         let xDecimal = x * 0.15;
         let yDecimal = y * 0.15;
         background.style.transform = `translate(${xDecimal}px, ${yDecimal}px) skew(${(yDecimal * 0.2)}deg)`;
-    })
-}
+    });
+};
+
+const toggleNav = () => {
+    menu.addEventListener("mouseenter", () => {
+        pageTitle.style.opacity = "0";
+        setTimeout(() => {
+            pageTitle.style.display = "none";
+            nav.classList.add("show");
+        }, 250);
+    });
+    navButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            menu.classList.add("nav-visible");
+        });
+    });
+    menu.addEventListener("mouseleave", () => {
+        if (!menu.classList.contains("nav-visible")) {
+            pageTitle.style.opacity = "1";
+            setTimeout(() => {
+                pageTitle.style.display = "block";
+                nav.classList.remove("show");
+            }, 250);
+        };
+    });
+};
+
+const hideNav = () => {
+    menu.classList.remove("nav-visible");
+    pageTitle.style.opacity = "1";
+    pageTitle.style.display = "block";
+    nav.classList.remove("show");
+};
+
+const toggleInfo = () => {
+    sections.forEach(project => {
+        const title = project.querySelector(".project-wrapper");
+        const info = project.querySelector(".project-info");
+        const ui = project.querySelectorAll(".project-ui");
+        if (info) {
+            title.addEventListener("mouseenter", () => {
+                info.classList.add("info");
+                ui.forEach(uiElement => {
+                    uiElement.classList.add("info");
+                });
+            });
+            title.addEventListener("mouseleave", () => {
+                info.classList.remove("info");
+                ui.forEach(uiElement => {
+                    uiElement.classList.remove("info");
+                });
+            });
+        };
+    });
+};
+
+const openPopupElement = (button, container) => {
+    document.getElementById(button).addEventListener("click", () => {
+        document.querySelector(container).classList.add("open");
+        if (document.querySelector(container).classList.contains("close")) {
+            document.querySelector(container).classList.remove("close");
+        };
+    });
+};
+
+const closePopupElement = () => {
+    const uiClose = document.querySelectorAll(".ui-close");
+    uiClose.forEach(uiElement => {
+        const container = uiElement.parentElement;
+        uiElement.addEventListener("click", () => {
+            if (container.classList.contains("open")) {
+                container.classList.remove("open");
+            };
+            container.classList.add("close");
+            hideNav();
+        });
+    });
+};
+
+const closeIndexMenu = () => {
+    const innerMenu = document.querySelector(".inner-menu")
+    const menuElements = document.querySelectorAll(".inner-menu-list li a");
+    menuElements.forEach(element => {
+        element.addEventListener("click", () => {
+            innerMenu.classList.remove("open");
+            innerMenu.classList.add("close");
+            hideNav();
+        });
+    });
+};
 
 window.addEventListener("load", () => {
     documentHeight();
     handleAnchorTags();
-    openELement("contact", ".contact");
-    openELement("calendar", ".calendar");
-    openELement("index", ".index");
-    toggleMenu();
-    closeElement();
+    openPopupElement("contact", ".contact");
+    openPopupElement("calendar", ".calendar");
+    openPopupElement("index", ".index");
+    toggleNav();
+    closePopupElement();
+    closeIndexMenu();
 });
 
 window.addEventListener("resize", () => {

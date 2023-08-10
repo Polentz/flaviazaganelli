@@ -1,7 +1,6 @@
 window.addEventListener("load", () => {
     toggleInfo();
     hanldeSessionStorage();
-    closeInnerMenu();
     handleDataAttributes();
     handleSectionColor();
 });
