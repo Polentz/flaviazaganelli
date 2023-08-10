@@ -3,9 +3,11 @@ window.addEventListener("load", () => {
     hanldeSessionStorage();
     closeInnerMenu();
     handleDataAttributes();
+    handleSectionColor();
 });
 
 document.addEventListener("scroll", () => {
     handleParallax();
     handlePageLabel();
+    handleSectionColor();
 });

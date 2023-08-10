@@ -2,12 +2,16 @@ Title: Invisibilia
 
 ----
 
+Color: #ffb83d
+
+----
+
 Cover:
 
-- file://1wSEVLKySRLbEp4l
-- file://GkLCcGyDfFlvltWh
-- file://p4KXPDfAaWO06D5x
-- file://Lzlrho6YFw7qkVTc
+- file://5vMDKyJ203lPecmE
+- file://i5EKhxySJlpBzHnW
+- file://9KXUC9iZFzJo6Wu2
+- file://MiXRSUeqQVtKBk19
 
 ----
 
@@ -21,11 +25,11 @@ Pagestatus: true
 
 Gallery:
 
-- file://p4KXPDfAaWO06D5x
-- file://Lzlrho6YFw7qkVTc
-- file://GkLCcGyDfFlvltWh
-- file://PaUl0U4NpQ8xrxAL
-- file://1wSEVLKySRLbEp4l
+- file://9KXUC9iZFzJo6Wu2
+- file://MiXRSUeqQVtKBk19
+- file://i5EKhxySJlpBzHnW
+- file://H0eqEIrKDgM6VISb
+- file://5vMDKyJ203lPecmE
 
 ----
 

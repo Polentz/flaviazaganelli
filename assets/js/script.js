@@ -166,10 +166,24 @@ const handlePageLabel = () => {
     });
 };
 
+const handleSectionColor = () => {
+    const pixelScrolled = window.scrollY;
+    const sections = document.querySelectorAll(".project");
+    const circles = document.querySelectorAll("circle");
+    sections.forEach(section => {
+        if (section.offsetTop - 200 <= pixelScrolled) {
+            const color = section.getAttribute("data-section-color");
+            circles.forEach(circle => {
+                circle.style.fill = `${color}`;
+            });
+        };
+    });
+};
+
 const handleHorizontalScroll = () => {
     window.addEventListener("wheel", (event) => {
         event.preventDefault();
-        document.querySelector(".content").scrollLeft += event.deltaY;
+        document.querySelector(".project-content").scrollLeft += event.deltaY;
     }, { passive: false });
 };
 

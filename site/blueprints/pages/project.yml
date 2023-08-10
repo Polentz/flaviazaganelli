@@ -9,6 +9,13 @@ tabs:
     label: Progetto nella Home
     icon: grid-full
     sections:
+      color:
+        type: fields
+        fields:
+          color:
+            width: 1/4
+            label: Colore
+            type: colors
       cover:
         type: fields
         fields:

@@ -24,7 +24,7 @@ body::after {
     mix-blend-mode: exclusion;
 }
 
-.content {
+.project-content {
     width: 100%;
     height: var(--doc-height);
     display: flex;
@@ -43,13 +43,13 @@ body::after {
     overflow-x: scroll;
 }
 
-.content a {
+.project-content a {
     text-decoration: underline 1px dashed var(--color-txt);
     text-underline-offset: 4px;
     transition: all 1s ease;
 }
 
-.content a:hover {
+.project-content a:hover {
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }
