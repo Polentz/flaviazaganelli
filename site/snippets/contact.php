@@ -6,9 +6,9 @@
     </div>
     <div class="popup-wrapper">
         <div class="popup-title">
-            <h3>Say Hi!</h3>
+            <h3><?= $site->contactHeader() ?></h3>
         </div>
-        <div class="popup-list">
+        <!-- <div class="popup-list">
             <p>Personale</p>
             <p>f.zaganelli[at]hotmail[dot]it</p>
             <p>Instagram/flo_zag/</p>
@@ -16,6 +16,11 @@
         <div class="popup-list">
             <p>Distribuzione</p>
             <p>irenealbertarossini[at]gmail[dot]com</p>
-        </div>
+        </div> -->
+        <?php foreach ($site->contactBlocks()->toBlocks() as $block): ?>
+            <div class="popup-list">
+                <?= $block ?>
+            </div>
+        <?php endforeach ?>
     </div>
 </section>

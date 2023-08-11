@@ -2,7 +2,43 @@ Title: Flavia Zaganelli
 
 ----
 
-Dates: 
+Footer: 2023
+
+----
+
+Calendarheader: What's Next
+
+----
+
+Calendarblocks: [{"content":{"text":"<p>11.08.2023</p><p><strong>Invisibilia</strong></p><p><a href=\"https://www.santarcangelofestival.com/\" target=\"_blank\" rel=\"noreferrer\">Santarcangelo Festival</a></p><p>Santarcangelo di Romagna</p><p>Residenza</p>"},"id":"8f89c199-a4a1-4ff4-b289-8b11256d6a32","isHidden":false,"type":"text"}]
+
+----
+
+Contactheader: Say Hi!
+
+----
+
+Contactblocks: [{"content":{"text":"<p>Personale</p><p><a href=\"f.zaganelli@hotmail.it\" rel=\"noreferrer\">f.zaganelli@hotmail.it</a></p><p><a href=\"https://www.instagram.com/flo_zag/\" target=\"_blank\" rel=\"noreferrer\">Instagram/flo_zag/</a></p>"},"id":"20e5283d-f876-405b-b74a-d8a3cbce3341","isHidden":false,"type":"text"},{"content":{"text":"<p>Distribuzione</p><p><a href=\"irenealbertarossini@gmail.com\" rel=\"noreferrer\">irenealbertarossini@gmail.com</a></p>"},"id":"ace1d852-d2bd-4bc7-81b7-d3eaca887315","isHidden":false,"type":"text"}]
+
+----
+
+Description: 
+
+----
+
+Keywords: 
+
+----
+
+Ogimage: 
+
+----
+
+Favicons: 
+
+----
+
+Customblocks: 
 
 ----
 
@@ -18,16 +54,4 @@ Email:
 
 ----
 
-Footer: 
-
-----
-
-Description: 
-
-----
-
-Keywords: 
-
-----
-
-Ogimage: 
+Dates: 

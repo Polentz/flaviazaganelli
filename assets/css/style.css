@@ -337,9 +337,19 @@ em {
     height: 480px;
     position: fixed;
     background-color: var(--color-txt);
-    padding: 2rem;
     z-index: 9;
     transition: all .5s ease;
+}
+
+.popup-list a {
+    text-decoration: underline 1px dashed var(--color-bg);
+    text-underline-offset: 4px;
+    transition: all 1s ease;
+}
+
+.popup-list a:hover {
+    text-decoration-style: solid;
+    text-decoration-thickness: .5px;
 }
 
 .popup-ui {
@@ -350,7 +360,18 @@ em {
 }
 
 .popup-wrapper {
+    height: inherit;
+    overflow-y: scroll;
+    padding: 2rem;
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-size: var(--menu-font-size);
+    line-height: 130%;
     color: var(--color-bg);
+}
+
+.popup-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .popup-title {
@@ -368,11 +389,13 @@ em {
 }
 
 .popup-list:not(:last-of-type) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .popup-list p:first-of-type {
-    margin-bottom: 1rem;
+    font-family: "Ortica Angular", serif;
+    font-weight: 700;
+    margin-bottom: .5rem;
 }
 
 .calendar {
@@ -439,4 +462,16 @@ em {
 
 .background circle {
     transition: fill .5s ease;
+}
+
+footer {
+    position: relative;
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    font-size: .75rem;
+    color: var(--color-txt);
+    text-align: right;
+    padding: 0.25rem 2rem;
+    z-index: 8;
 }

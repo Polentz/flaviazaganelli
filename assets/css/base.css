@@ -197,10 +197,3 @@ img::selection {
     background-color: transparent;
     color: #8f00ff;
 }
-
-.headline-data p::selection,
-.headline-data h3::selection,
-.headline-data h2::selection {
-    background-color: transparent;
-    color: #5dcc00;
-} */
