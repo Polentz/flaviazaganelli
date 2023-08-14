@@ -32,7 +32,7 @@ Gallery:
 
 ----
 
-Buttonblocks: 
+Customblocks: 
 
 ----
 
@@ -41,6 +41,10 @@ Maintext: <p>ecosistèma /ecosi'stɛma/ s. m. [comp. di eco- e sistema] (pl. -i)
 ----
 
 Credits: <p><strong>Corpo vegetale</strong><br>Monstera Deliciosa, Ficus Lyrata, Ficus Elastica</p><p><strong>Corpo tecnologico</strong><br>Sintetizzatore analogico, Biodata sonification Device, MacBook, Ableton Live</p><p><strong>Corpo umano</strong><br>Flavia Zaganelli (concept, ricerca, creazione, danza)<br>Ceci Stuck (ricerca e suono)<br>Fabrizio Piro (disegno luci)<br>Silvia Piantini (costumi)</p><p>Progetto realizzato con il sostegno di Lavanderia a Vapore e Piemonte dal Vivo nell’ambito del progetto residenze coreografiche Lavanderia a Vapore , Corniolo Art Platform, Bando Abitante - Centro Nazionale di Produzione della Danza Virgilio Sieni e di Fondazione CR Firenze.</p><p>Supportato da Santarcangelo Festival, P.I.A. Palazzina Indiano Arte, DAS Dispositivo Arti Sperimentali, Paleotto 11 e Fienile Fluò/Crexida con il sostegno di h(abita)t – Rete di Spazi per la Danza.</p>
+
+----
+
+Buttonblocks: 
 
 ----
 

@@ -1,0 +1,11 @@
+.k-block-type-download input,
+.k-block-type-link input {
+    border: none;
+    font: inherit;
+}
+
+.k-block-type-download input:focus,
+.k-block-type-link input:focus {
+    outline: 0;
+    border-color: #000;
+}

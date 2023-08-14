@@ -83,11 +83,37 @@ tabs:
           buttons:
             type: fields
             fields:
-              buttonBlocks:
+              customBlocks:
                 label: Pulsanti
                 type: blocks
                 fieldsets:
-                  - text
+                  download:
+                    name: Download File
+                    icon: attachment
+                    fields:
+                      file:
+                        label: Link del pulsante
+                        type: files
+                        label: File in download
+                        template: document
+                        uploads: document
+                        info: false
+                        max: 1
+                      text:
+                        label: Testo del pulsante
+                        type: text
+                        placeholder: Testo del pulsante ...
+                  link:
+                    name: Link
+                    icon: bolt
+                    fields:
+                      link:
+                        label: Link del pulsante
+                        type: url
+                      text:
+                        label: Testo del pulsante
+                        type: text
+                        placeholder: Testo del pulsante ...
       main:
         width: 3/4
         sections: 

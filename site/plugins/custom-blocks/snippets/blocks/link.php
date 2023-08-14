@@ -1,0 +1,1 @@
+<a href="<?= $block->link() ?>" target="_blank" rel="noopener noreferrer"><?= $block->text() ?></a>

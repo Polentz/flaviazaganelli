@@ -1,7 +1,7 @@
-name: Descrizione
+name: Pulsante con link
 icon: text
 wysiwyg: true
 fields:
-  textBlock:
-    label: Testo
+  link:
+    label: Link
     type: writer
