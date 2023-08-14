@@ -3,6 +3,7 @@ options:
   navigation:
     status: listed
     template: about
+  changeSlug: false
 
 columns:
   sidebar:
