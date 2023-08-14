@@ -1,91 +1,114 @@
 html,
 body {
-    overflow: hidden;
-}
-
-body::after {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 90%, #ffffff 100%);
+    scroll-snap-points-y: repeat(var(--doc-height));
+    scroll-snap-type: y proximity;
 }
 
 .page-title h2 {
-    cursor: unset;
     opacity: 1;
     transition: opacity .35s ease;
 }
 
-.project-ui,
-.project-info {
-    opacity: 1;
-    pointer-events: all;
+.project-title {
+    position: static;
+    transform: none;
 }
 
 .project-ui {
-    position: fixed;
+    opacity: 1;
+    pointer-events: all;
     z-index: 8;
     mix-blend-mode: exclusion;
 }
 
-.main-content {
-    width: 100%;
-    height: var(--doc-height);
+.content-wrapper {
     display: flex;
-    flex-direction: row;
     gap: 2rem;
+    padding: 7rem 2rem;
+}
+
+.project {
+    width: 50%;
+    height: auto;
+    flex: 1 1 50%;
+    padding: 0;
+}
+
+.project-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.project-grid-item {
+    transition: backdrop-filter .15s ease;
+    margin: 0 !important;
+    grid-column: auto !important;
+    max-width: unset;
+}
+
+.project-grid-item img {
+    cursor: zoom-in;
+    object-fit: cover;
+}
+
+.project-grid-item.enlarge {
+    width: 100%;
+    max-width: unset;
+    height: var(--doc-height);
+    backdrop-filter: blur(2rem) grayscale(1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0px, 0px) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: 10;
+    cursor: zoom-out;
+}
+
+.project-grid-item.enlarge img {
+    width: 60%;
+    cursor: zoom-out;
+}
+
+.project-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1 1 50%;
+    padding-right: 4rem;
+}
+
+.main-text {
     font-family: "Alte Haas Grotesk";
     font-style: normal;
     font-weight: 400;
-    font-size: var(--text-font-size);
-    line-height: 1.25rem;
-    padding-top: 6rem;
-    padding-left: 14rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
-}
-
-.main-content a {
-    text-decoration: underline 1px dashed var(--color-txt);
-    text-underline-offset: 4px;
-    transition: all 1s ease;
-}
-
-.main-content a:hover {
-    text-decoration-style: solid;
-    text-decoration-thickness: .5px;
-}
-
-.scroll-wrapper {
+    font-size: 1rem;
+    line-height: 130%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 1.25rem;
-    column-gap: 2rem;
-    flex: 0 0 32vw;
+    gap: var(--text-font-size);
 }
 
-.text-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 0;
-    column-gap: 2rem;
-}
-
-.credits {
+.secondary-text {
     font-family: "Ortica Linear";
     font-style: normal;
     font-weight: 400;
-    font-size: .85rem;
-    line-height: 1.25rem;
+    font-size: var(--text-font-size);
+    line-height: 130%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--text-font-size);
+    margin-top: 4rem;
 }
 
 .button-wrapper {
     margin: 1rem 0;
 }
 
-button {
+.button {
     display: block;
     font-family: "Ortica Angular";
     font-style: normal;
@@ -95,7 +118,7 @@ button {
     background-color: transparent;
 }
 
-button svg {
+.button svg {
     position: relative;
     width: calc(var(--text-font-size)/2);
     height: calc(var(--text-font-size)/2);
@@ -105,46 +128,28 @@ button svg {
     transition: transform .25s ease;
 }
 
-button:hover svg {
+.button:hover svg {
     transform: rotate(45deg);
 }
 
-.image-wrapper {
-    transition: backdrop-filter .15s ease;
+.button p {
+    display: inline;
 }
 
-.image-wrapper img {
-    height: auto;
-    max-height: 35vh;
-    width: auto;
-    cursor: zoom-in;
-}
-
-.image-wrapper.enlarge {
+.project-pagination {
+    position: relative;
     width: 100%;
     height: var(--doc-height);
-    backdrop-filter: blur(2rem) grayscale(1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10;
-    cursor: zoom-out;
+    scroll-snap-align: start;
 }
 
-.image-wrapper.enlarge img {
-    max-height: unset;
-    height: calc(var(--doc-height)/1.2);
-    cursor: zoom-out;
-}
-
-.image-wrapper:last-of-type {
-    margin-bottom: var(--doc-height);
-}
-
-.scroll-wrapper p:last-child {
-    padding-right: 6rem;
+.project-pagination-text {
+    font-family: "Ortica Angular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text-font-size);
 }

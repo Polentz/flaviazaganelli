@@ -1,42 +1,73 @@
+<?php
+    if ($kirby->language()->code() == 'it') {
+        $paginationText = 'Progetto successivo:';
+    } else if ($kirby->language()->code() == 'en') {
+        $paginationText = 'Next project:';
+    }
+?>
 <?= snippet('header') ?>
-<?= snippet('contact') ?>
-<?= snippet('calendar') ?>
-<?= snippet('projects-menu') ?>
+<main class="content-wrapper">
+    <section class="project" data-section-color="<?= $page->color() ?>">
+        <div class="project-grid">
+            <?php foreach ($page->gallery()->toFiles() as $image) : ?>
+                <div class="project-grid-item">
+                    <img src="<?= $image->resize(1200, null)->url() ?>">
+                </div>
+            <?php endforeach ?>
+        </div>
+    </section>
 
-<main class="main-content">
-    <section class="scroll-wrapper">
-        <?php foreach ($page->gallery()->toFiles() as $image) : ?>
-            <figure class="image-wrapper">
-                <img src="<?= $image->resize(1600, null)->url() ?>">
-            </figure>
-        <?php endforeach ?>
-        <?= $page->maintext()->kt() ?>
-        <?php if($pages->template('project')) : ?>
-            <div class="button-wrapper">
-                <button>
-                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.852804 1L16.4577 1M16.4577 1L16.6553 17M16.4577 1L0.655273 17"/>
-                    </svg>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
-                        Trailer
-                    </a>
-                </button>
-                <button>
-                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.852804 1L16.4577 1M16.4577 1L16.6553 17M16.4577 1L0.655273 17"/>
-                    </svg>
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
-                        Dossier
-                    </a>
-                </button>
-            </div>
-            <div class="text-wrapper credits">
-                <?= $page->credits()->kt() ?>
+    <section class="project-copy">
+        <div class="main-text">
+            <?= $page->maintext()->kt() ?>
+            <?php if($page->buttonBlocks()->isNotEmpty()) : ?>
+                <div class="button-wrapper">
+                    <?php foreach ($page->buttonBlocks()->toBlocks() as $block): ?>
+                        <button class="button">
+                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.852804 1L16.4577 1M16.4577 1L16.6553 17M16.4577 1L0.655273 17"/>
+                            </svg>
+                            <?= $block ?>
+                        </button>
+                    <?php endforeach ?>
+                </div>
+            <?php endif ?>
+        </div>
+        <?php if($page->credits()->isNotEmpty()) : ?>
+            <div class="secondary-text">
+                <?= $page->credits()->kt() ?>     
             </div>
         <?php endif ?>
     </section>
 </main>
-<div class="project-ui ui-close left">
+
+<?php if ($page->hasNextListed() && $page->nextListed()->pagestatus()->isTrue()) : ?>
+    <section class="project-pagination" data-section-color="<?= $page->nextListed()->color() ?>">
+        <p class="project-pagination-text"><?= $paginationText ?></p>
+        <div class="project-title">
+            <h2><a href="<?= $page->nextListed()->url(); ?>"><?= $page->nextListed()->title(); ?></a></h2>
+        </div>
+        <div class="project-ui ui-open left">
+                <a href="<?= $page->nextListed()->url() ?>">
+                    <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="project-ui ui-open right">
+                <a href="<?= $page->nextListed()->url() ?>">
+                    <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+    </section>
+<?php endif ?>
+
+<?= snippet('contact') ?>
+<?= snippet('calendar') ?>
+<?= snippet('projects-menu') ?>
+<!-- <div class="project-ui ui-close left">
     <a href="/">
         <svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M49.6553 1.68235L25.9553 25.0898M25.9553 25.0898L1.65527 49.0898M25.9553 25.0898L1.65527 1.08975M25.9553 25.0898L49.6553 48.4972"/>
@@ -49,7 +80,7 @@
             <path d="M49.6553 1.68235L25.9553 25.0898M25.9553 25.0898L1.65527 49.0898M25.9553 25.0898L1.65527 1.08975M25.9553 25.0898L49.6553 48.4972"/>
         </svg>
     </a>
-</div>
+</div> -->
 <div class="background">
     <svg viewBox="0 0 1139 841" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_f_149_272)">

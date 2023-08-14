@@ -77,18 +77,12 @@ body {
     overflow-x: hidden;
 }
 
-/* html,
-body {
-    scroll-snap-points-y: repeat(var(--doc-height));
-    scroll-snap-type: y proximity;
-} */
-
 body::after {
     content: "";
     width: 100%;
-    height: 100%;
+    height: 50%;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 58.85%, #ffffff 100%);
     z-index: 7;
@@ -216,7 +210,6 @@ em {
     height: var(--doc-height);
     position: relative;
     padding: 4rem 2rem;
-    /* scroll-snap-align: start; */
 }
 
 .project-grid {
@@ -227,6 +220,7 @@ em {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    justify-items: stretch;
 }
 
 .project-grid-item {

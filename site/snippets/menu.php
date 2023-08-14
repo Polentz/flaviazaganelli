@@ -28,7 +28,9 @@
         <?php endif ?>
         <div class="nav">
             <a href="/">Bio</a>
-            <p id="calendar" class="nav-button"><?= $calendar ?></p>
+            <?php if($site->calendarBlocks()->isNotEmpty()) : ?>
+                <p id="calendar" class="nav-button"><?= $calendar ?></p>
+            <?php endif ?>
             <p id="contact" class="nav-button"><?= $contact ?></p>
             <p id="index" class="nav-button">Index</p>                
         </div>

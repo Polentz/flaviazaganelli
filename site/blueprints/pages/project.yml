@@ -80,6 +80,14 @@ tabs:
                   icon: false
                   ratio: 6/3
                   cover: true
+          buttons:
+            type: fields
+            fields:
+              buttonBlocks:
+                label: Pulsanti
+                type: blocks
+                fieldsets:
+                  - text
       main:
         width: 3/4
         sections: 

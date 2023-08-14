@@ -1,0 +1,7 @@
+name: Titolo
+icon: title
+wysiwyg: true
+fields:
+  text:
+    label: Titolo
+    type: text

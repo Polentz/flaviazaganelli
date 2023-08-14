@@ -1,0 +1,17 @@
+title: Image
+options:
+  preview: false
+
+accept: 
+  extension: jpg, png, jpeg
+  maxsize: 1258291
+
+fields:
+  credits:
+    type: text
+    width: 1/2
+    label: Crediti
+  alt:
+    type: text
+    width: 1/2
+    label: Alt Tag

@@ -1,0 +1,7 @@
+name: Descrizione
+icon: text
+wysiwyg: true
+fields:
+  textBlock:
+    label: Testo
+    type: writer

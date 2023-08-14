@@ -1,0 +1,24 @@
+.k-block-type-fileBlock input {
+    border: 2px solid red;
+    border-radius: 3rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    font: inherit;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.k-block-type-fileBlock input:focus {
+    outline: 0;
+    border-color: red;
+}
+
+.k-block-type-textBlock div {
+    font: inherit;
+}
+
+.k-block-type-textBlock div:focus {
+    outline: 0;
+    border-color: transparent;
+}

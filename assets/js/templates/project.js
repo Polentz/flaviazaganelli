@@ -1,4 +1,9 @@
 window.addEventListener("load", () => {
-    handleHorizontalScroll();
+    mouseMoveEffect();
+    handleDataAttributes();
     enlargeImages();
+});
+
+document.addEventListener("scroll", () => {
+    handleSectionColor();
 });
