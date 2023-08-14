@@ -104,16 +104,16 @@ body {
     margin-top: 4rem;
 }
 
-.button-wrapper {
+.buttons {
     margin: 1rem 0;
 }
 
 .button {
-    display: block;
+    display: inline-block;
     font-family: "Ortica Angular";
     font-style: normal;
     font-weight: 700;
-    font-size: var(--text-font-size);
+    font-size: var(--menu-font-size);
     border: none;
     background-color: transparent;
 }
@@ -126,6 +126,12 @@ body {
     stroke-width: 2px;
     margin-right: var(--text-font-size);
     transition: transform .25s ease;
+}
+
+.button:hover {
+    font-family: "Alte Haas Grotesk";
+    font-style: normal;
+    font-weight: 700;
 }
 
 .button:hover svg {

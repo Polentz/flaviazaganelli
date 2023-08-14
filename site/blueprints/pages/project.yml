@@ -80,11 +80,25 @@ tabs:
                   icon: false
                   ratio: 6/3
                   cover: true
-          buttons:
+      main:
+        width: 3/4
+        sections: 
+          copy:
             type: fields
             fields:
+              maintext:
+                label: Testo
+                type: writer
+                marks:
+                  - bold
+                  - italic
+                  - underline
+                  - link
+                  - email
+                nodes: false
               customBlocks:
                 label: Pulsanti
+                width: 1/4
                 type: blocks
                 fieldsets:
                   download:
@@ -114,26 +128,8 @@ tabs:
                         label: Testo del pulsante
                         type: text
                         placeholder: Testo del pulsante ...
-      main:
-        width: 3/4
-        sections: 
-          copy:
-            type: fields
-            fields:
-              maintext:
-                label: Testo
-                width: 1/2
-                type: writer
-                marks:
-                  - bold
-                  - italic
-                  - underline
-                  - link
-                  - email
-                nodes: false
               credits:
                 label: Crediti
-                width: 1/2
                 type: writer
                 marks:
                   - bold
