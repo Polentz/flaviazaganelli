@@ -1,5 +1,5 @@
     <footer>
-        <p><?= $site->footer() ?> © Flavia Zaganelli. Website <a href="https://www.iampolenta.com/" target="_blank" rel="noopener noreferrer">Giulia Polenta</a></p>    
+        <p><?= $site->footer() ?> © Flavia Zaganelli</p>    
     </footer>
     
     <?= js([

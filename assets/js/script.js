@@ -1,3 +1,8 @@
+console.log(
+    '%cDesign & Code: Giulia Polenta https://www.iampolenta.com/',
+    'color: #4c00ff; font-family: sans-serif; font-size: .75rem;'
+);
+
 const documentHeight = () => {
     const doc = document.documentElement;
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
@@ -36,9 +41,9 @@ const hanldeSessionStorage = () => {
 };
 
 const handleDataAttributes = () => {
-    const imagesGrid = document.querySelectorAll(".project-grid");
+    const imagesGrid = document.querySelectorAll(".gallery-grid");
     imagesGrid.forEach(grid => {
-        const images = grid.querySelectorAll(".project-grid-item");
+        const images = grid.querySelectorAll(".gallery-grid-item");
         let coefficient = 4 / (images.length - 1) * 0.1
         let parallax = -0.2;
         for (let i = 0; i < images.length; i++) {
@@ -107,7 +112,7 @@ const handleSectionColor = () => {
 // };
 
 const enlargeImages = () => {
-    const images = document.querySelectorAll(".project-grid-item");
+    const images = document.querySelectorAll(".gallery-grid-item");
     images.forEach(img => {
         img.addEventListener("click", () => {
             img.classList.toggle("enlarge");

@@ -8,15 +8,6 @@
         <div class="popup-title">
             <h3><?= $site->contactHeader() ?></h3>
         </div>
-        <!-- <div class="popup-list">
-            <p>Personale</p>
-            <p>f.zaganelli[at]hotmail[dot]it</p>
-            <p>Instagram/flo_zag/</p>
-        </div>
-        <div class="popup-list">
-            <p>Distribuzione</p>
-            <p>irenealbertarossini[at]gmail[dot]com</p>
-        </div> -->
         <?php foreach ($site->contactBlocks()->toBlocks() as $block): ?>
             <div class="popup-list">
                 <?= $block ?>

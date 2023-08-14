@@ -1,0 +1,85 @@
+title: Bio
+options:
+  navigation:
+    status: listed
+    template: about
+
+columns:
+  sidebar:
+    width: 1/2
+    sections:
+      media:
+        type: fields
+        fields:
+          gallery:
+            label: Immagini
+            type: files
+            template: image
+            uploads: image
+            query: page.images.filterBy('template', 'image')
+            layout: cards
+            size: large
+            multiple: true
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true 
+  main:
+    width: 1/2
+    sections: 
+      copy:
+        type: fields
+        fields:
+          maintext:
+            label: Testo principale
+            type: writer
+            marks:
+              - bold
+              - italic
+              - underline
+              - link
+              - email
+            nodes: false
+          customBlocks:
+            label: Pulsanti
+            width: 1/2
+            type: blocks
+            fieldsets:
+              download:
+                name: Download File
+                icon: attachment
+                fields:
+                  file:
+                    label: Link del pulsante
+                    type: files
+                    label: File in download
+                    template: document
+                    uploads: document
+                    info: false
+                    max: 1
+                  text:
+                    label: Testo del pulsante
+                    type: text
+                    placeholder: Testo del pulsante ...
+              link:
+                name: Link
+                icon: bolt
+                fields:
+                  link:
+                    label: Link del pulsante
+                    type: url
+                  text:
+                    label: Testo del pulsante
+                    type: text
+                    placeholder: Testo del pulsante ...
+          text:
+            label: Testo secondario
+            type: writer
+            marks:
+              - bold
+              - italic
+              - underline
+              - link
+              - email
+            nodes: false

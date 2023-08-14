@@ -8,16 +8,16 @@
 <?= snippet('header') ?>
 <main class="content-wrapper">
     <section class="project" data-section-color="<?= $page->color() ?>">
-        <div class="project-grid">
+        <div class="gallery-grid">
             <?php foreach ($page->gallery()->toFiles() as $image) : ?>
-                <div class="project-grid-item">
+                <div class="gallery-grid-item">
                     <img src="<?= $image->resize(1200, null)->url() ?>">
                 </div>
             <?php endforeach ?>
         </div>
     </section>
 
-    <section class="project-copy">
+    <section class="page-copy">
         <div class="main-text">
             <?= $page->maintext()->kt() ?>
             <?php if($page->customBlocks()->isNotEmpty()) : ?>

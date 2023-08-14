@@ -27,7 +27,7 @@ body {
     padding: 7rem 2rem;
 }
 
-.project {
+.gallery {
     width: 50%;
     height: auto;
     flex: 1 1 50%;
@@ -35,7 +35,7 @@ body {
 }
 
 .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: start;
 }
 

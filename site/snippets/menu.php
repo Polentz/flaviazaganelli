@@ -21,13 +21,13 @@
                 <h2>+</h2>
             </div>
         <?php else : ?>
-            <h1 class="site-title"><a href="/">Flavia Zaganelli</a></h1>
+            <h1 class="site-title"><a href="<?= page('home')->url() ?>">Flavia Zaganelli</a></h1>
             <div class="page-title">
                 <h2><?= $page->title() ?></h2>
             </div>
         <?php endif ?>
         <div class="nav">
-            <a href="/">Bio</a>
+            <a href="<?= page('bio')->url() ?>">Bio</a>
             <?php if($site->calendarBlocks()->isNotEmpty()) : ?>
                 <p id="calendar" class="nav-button"><?= $calendar ?></p>
             <?php endif ?>
@@ -36,6 +36,6 @@
         </div>
     </menu>
     <div class="site-lang">
-        <a href="<?= $page->url($href) ?>" hreflang="<?php echo $href ?>"><?= $languageString ?></a>
+        <a href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>
     </div>
 </header>

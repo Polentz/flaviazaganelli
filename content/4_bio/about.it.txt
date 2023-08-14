@@ -1,0 +1,21 @@
+Title: Bio
+
+----
+
+Gallery: - file://ZTOen1ad6cAvkm3W
+
+----
+
+Maintext: <p>Dance artist e performer. Si forma in modo indipendente, seguendo il lavoro di coreografi ed artisti internazionali. Nel 2017 completa un intenso periodo di formazione in danza e performance a Berlino, frequentando SMAHS#9 e diplomandosi alla Tanzfabrik School of Contemporary Dance. Dal 2013 è performer per artisti italiani ed internazionali. Dal 2017 comincia a creare lavori coreografici in collaborazione con altri artisti, per poi intraprendere un percorso più autonomo. Porta avanti una ricerca trasversale e contraddittoria, le interessano le relazioni tra le cose, il dubbio e il processo.</p><p>Danza e coreografia sono per lei occasioni di conoscenza dei molti modi di stare al mondo. Sfugge intenzionalmente a tentativi di definizione del sé e del suo percorso artistico. Nel 2021 debutta a Danza Urbana con The Game We Play, indagine coreografica attorno al tema del gioco e con INVISIBILIA grazie al premio del Bando Abitante della Compagnia Virgilio Sieni. Nel 2023 debutta con electrica /ecosi'stɛma/a Spazio Kor all'interno della stagione curata da Chiara Bersani e Giulia Traversi.</p>
+
+----
+
+Customblocks: 
+
+----
+
+Text: 
+
+----
+
+Uuid: 5BTnclcpmTEs3wc0

@@ -1,15 +1,15 @@
 
 <section id="<?= $project->title()->slug() ?>" class="project" data-section-title="<?= $project->title() ?>" data-section-color="<?= $project->color() ?>">
-    <div class="project-grid">
+    <div class="gallery-grid">
         <?php if($page->is('home')) : ?>
             <?php foreach ($project->cover()->toFiles() as $image) : ?>
-                <div class="project-grid-item">
+                <div class="gallery-grid-item">
                     <img src="<?= $image->resize(1200, null)->url() ?>">
                 </div>
             <?php endforeach ?>
         <?php else : ?>
             <?php foreach ($project->gallery()->toFiles() as $image) : ?>
-                <div class="project-grid-item">
+                <div class="gallery-grid-item">
                     <img src="<?= $image->resize(1200, null)->url() ?>">
                 </div>
             <?php endforeach ?>
