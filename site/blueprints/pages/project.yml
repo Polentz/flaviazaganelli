@@ -53,17 +53,8 @@ tabs:
     icon: page
     columns:
       sidebar:
-        width: 1/4
+        width: 1/2
         sections:
-          pagestatus:
-            type: fields
-            fields:
-              pagestatus:
-                label: La pagina è pronta?
-                type: toggle
-                text: 
-                  - "no"
-                  - "sì"
           media:
             type: fields
             fields:
@@ -73,15 +64,16 @@ tabs:
                 template: image
                 uploads: image
                 query: page.images.filterBy('template', 'image')
-                layout: list
+                layout: cards
+                size: small
                 multiple: true
                 image:
-                  back: "#000"
-                  icon: false
-                  ratio: 6/3
-                  cover: true
+                  icon: true
+                  ratio: 4/3
+                  back: white
+                  cover: true 
       main:
-        width: 3/4
+        width: 1/2
         sections: 
           copy:
             type: fields
@@ -98,7 +90,7 @@ tabs:
                 nodes: false
               customBlocks:
                 label: Pulsanti
-                width: 1/4
+                width: 1/2
                 type: blocks
                 fieldsets:
                   download:
@@ -138,3 +130,11 @@ tabs:
                   - link
                   - email
                 nodes: false
+              pagestatus:
+                label: La pagina è pronta?
+                width: 1/2
+                required: true
+                type: toggle
+                text: 
+                  - "no"
+                  - "sì"
