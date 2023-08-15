@@ -110,10 +110,8 @@ const mouseMoveEffect = () => {
     const background = document.querySelector(".background")
     document.addEventListener("mousemove", (event) => {
         let x = event.pageX;
-        let y = event.pageY;
         let xDecimal = x * 0.02;
-        let yDecimal = y * 0.02;
-        background.style.transform = `translate(${xDecimal}px, ${yDecimal}px)`;
+        background.style.filter = `hue-rotate(${xDecimal}deg)`;
     });
 };
 

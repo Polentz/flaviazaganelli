@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+    mouseMoveEffect();
     toggleInfo();
     hanldeSessionStorage();
     handleDataAttributes();
