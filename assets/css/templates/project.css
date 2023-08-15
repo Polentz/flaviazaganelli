@@ -1,6 +1,8 @@
 html,
 body {
+    -ms-scroll-snap-points-y: repeat(var(--doc-height));
     scroll-snap-points-y: repeat(var(--doc-height));
+    -ms-scroll-snap-type: y proximity;
     scroll-snap-type: y proximity;
 }
 
@@ -40,7 +42,9 @@ body {
 }
 
 .gallery-grid-item {
+    transition: -webkit-backdrop-filter .15s ease;
     transition: backdrop-filter .15s ease;
+    transition: backdrop-filter .15s ease, -webkit-backdrop-filter .15s ease;
     margin: 0 !important;
     grid-column: auto !important;
     max-width: unset;
@@ -48,6 +52,7 @@ body {
 
 .gallery-grid-item img {
     cursor: zoom-in;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -55,6 +60,7 @@ body {
     width: 100%;
     max-width: unset;
     height: var(--doc-height);
+    -webkit-backdrop-filter: blur(2rem) grayscale(1);
     backdrop-filter: blur(2rem) grayscale(1);
     position: fixed;
     top: 0;
@@ -82,12 +88,14 @@ body {
 }
 
 .page-copy a {
+    -webkit-text-decoration: underline 1px dashed var(--color-txt);
     text-decoration: underline 1px dashed var(--color-txt);
     text-underline-offset: 4px;
     transition: all 1s ease;
 }
 
 .page-copy a:hover {
+    -webkit-text-decoration-style: solid;
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }

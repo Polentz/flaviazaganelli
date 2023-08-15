@@ -46,6 +46,16 @@
         url("assets/fonts/altehaasgroteskbold.woff") format("woff");
 }
 
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes opacity {
     0% {
         opacity: 0;
@@ -75,6 +85,7 @@ html {
 body {
     background-color: var(--color-bg);
     overflow-x: hidden;
+    -webkit-animation: opacity 1.5s ease 1;
     animation: opacity 1.5s ease 1;
 }
 
@@ -123,7 +134,11 @@ em {
 .site-lang {
     position: absolute;
     top: 2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -167,7 +182,9 @@ em {
 .nav a,
 .nav p,
 .site-title a {
+    -webkit-text-decoration: underline 1px dashed;
     text-decoration: underline 1px dashed;
+    -webkit-text-decoration-color: transparent;
     text-decoration-color: transparent;
     text-underline-offset: 4px;
     transition: all .5s ease;
@@ -176,6 +193,7 @@ em {
 .nav a:hover,
 .nav p:hover,
 .site-title a:hover {
+    -webkit-text-decoration-color: var(--color-txt);
     text-decoration-color: var(--color-txt);
 }
 
@@ -352,12 +370,14 @@ em {
 }
 
 .popup-list a {
+    -webkit-text-decoration: underline 1px dashed var(--color-bg);
     text-decoration: underline 1px dashed var(--color-bg);
     text-underline-offset: 4px;
     transition: all 1s ease;
 }
 
 .popup-list a:hover {
+    -webkit-text-decoration-style: solid;
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }
