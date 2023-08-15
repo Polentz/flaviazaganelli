@@ -163,6 +163,22 @@ em {
     cursor: pointer;
 }
 
+.nav a,
+.nav p,
+.site-title a {
+    text-decoration: underline 1px dashed;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    transition: all .5s ease;
+}
+
+.nav a:hover,
+.nav p:hover,
+.site-title a:hover {
+    text-decoration-color: var(--color-txt);
+}
+
+
 .project-ui svg {
     stroke: var(--color-bg);
     stroke-width: 2px;

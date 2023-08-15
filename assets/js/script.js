@@ -63,7 +63,6 @@ const handleParallax = () => {
         parallaxTags.forEach(tag => {
             const ratio = tag.getAttribute("data-parallax");
             const weightedDistance = distanceToSection * ratio;
-            // tag.style.transform = `translate(${(weightedDistance / 4)}px, ${weightedDistance}px)`;
             tag.style.transform = `translate(0px, ${weightedDistance}px)`;
             if (window.scrollY == 0) {
                 tag.style.transform = `translate(0px, 0px)`;
@@ -102,14 +101,6 @@ const handleSectionColor = () => {
         };
     });
 };
-
-// const handleHorizontalScroll = () => {
-//     const scrollContainer = document.querySelector(".gallery")
-//     scrollContainer.addEventListener("wheel", (event) => {
-//         event.preventDefault();
-//         scrollContainer.scrollLeft += event.deltaY;
-//     }, { passive: false });
-// };
 
 const enlargeImages = () => {
     const images = document.querySelectorAll(".gallery-grid-item");

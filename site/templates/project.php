@@ -1,8 +1,10 @@
 <?php
     if ($kirby->language()->code() == 'it') {
-        $paginationText = 'Progetto successivo:';
+        $paginationTextNext = 'Progetto successivo:';
+        $paginationTextPrev = 'Progetto precedente:';
     } else if ($kirby->language()->code() == 'en') {
-        $paginationText = 'Next project:';
+        $paginationTextNext = 'Next project:';
+        $paginationTextPrev = 'Previous project:';
     }
 ?>
 <?= snippet('header') ?>
@@ -45,7 +47,7 @@
 
 <?php if ($page->hasNextListed() && $page->nextListed()->pagestatus()->isTrue()) : ?>
     <section class="project-pagination" data-section-color="<?= $page->nextListed()->color() ?>">
-        <p class="project-pagination-text"><?= $paginationText ?></p>
+        <p class="project-pagination-text"><?= $paginationTextNext ?></p>
         <div class="project-title">
             <h2><a href="<?= $page->nextListed()->url(); ?>"><?= $page->nextListed()->title(); ?></a></h2>
         </div>
@@ -64,25 +66,32 @@
                 </a>
             </div>
     </section>
+<?php elseif($page->hasPrevListed() && $page->prevListed()->pagestatus()->isTrue()) :?>
+    <section class="project-pagination" data-section-color="<?= $page->prevListed()->color() ?>">
+        <p class="project-pagination-text"><?= $paginationTextPrev ?></p>
+        <div class="project-title">
+            <h2><a href="<?= $page->prevListed()->url(); ?>"><?= $page->prevListed()->title(); ?></a></h2>
+        </div>
+        <div class="project-ui ui-open left">
+                <a href="<?= $page->prevListed()->url() ?>">
+                    <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="project-ui ui-open right">
+                <a href="<?= $page->prevListed()->url() ?>">
+                    <svg viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.4 1C33.4 32.6 33.4 40.0064 33.4 65M1 32.6H65" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+    </section>
 <?php endif ?>
 
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
 <?= snippet('projects-menu') ?>
-<!-- <div class="project-ui ui-close left">
-    <a href="/">
-        <svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M49.6553 1.68235L25.9553 25.0898M25.9553 25.0898L1.65527 49.0898M25.9553 25.0898L1.65527 1.08975M25.9553 25.0898L49.6553 48.4972"/>
-        </svg>
-    </a>
-</div>
-<div class="project-ui ui-close right">
-    <a href="/">
-        <svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M49.6553 1.68235L25.9553 25.0898M25.9553 25.0898L1.65527 49.0898M25.9553 25.0898L1.65527 1.08975M25.9553 25.0898L49.6553 48.4972"/>
-        </svg>
-    </a>
-</div> -->
 <div class="background">
     <svg viewBox="0 0 1139 841" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_f_149_272)">

@@ -23,7 +23,7 @@ body {
 
 .content-wrapper {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     padding: 7rem 2rem;
 }
 
@@ -79,6 +79,17 @@ body {
     gap: 2rem;
     flex: 1 1 50%;
     padding-right: 4rem;
+}
+
+.page-copy a {
+    text-decoration: underline 1px dashed var(--color-txt);
+    text-underline-offset: 4px;
+    transition: all 1s ease;
+}
+
+.page-copy a:hover {
+    text-decoration-style: solid;
+    text-decoration-thickness: .5px;
 }
 
 .main-text {

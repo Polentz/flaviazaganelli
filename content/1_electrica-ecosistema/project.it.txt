@@ -19,10 +19,6 @@ Info: <p>Indagine performativa sulla relazione tra tre universi: il vegetale, il
 
 ----
 
-Pagestatus: true
-
-----
-
 Gallery:
 
 - file://Xk4nmpTN7kRYJ4P8
@@ -32,15 +28,19 @@ Gallery:
 
 ----
 
-Customblocks: 
-
-----
-
 Maintext: <p>ecosistèma /ecosi'stɛma/ s. m. [comp. di eco- e sistema] (pl. -i). – In ecologia, unità funzionale formata dall’insieme degli organismi viventi e delle sostanze non viventi (necessarie alla sopravvivenza dei primi), in un’area delimitata (per es., un lago, uno stagno, un prato, un bosco, ecc.).</p><p>Qui siamo in un teatro ed è l'elettricità ciò che tiene insieme gli elementi dell'unità.</p><p>electrica /ecosi'stɛma/ indaga la relazione tra corpi vegetali, umani e tecnologici attraverso l'elettricità che scorre dentro e fuori di loro, utilizzando i linguaggi della musica elettronica live, della danza contemporanea e della biodata sonification.</p><p>L'indagine affonda le sue radici teoriche nel terreno dell'eco-transfemminismo, nelle pratiche queer di mescolanza tra specie compagne e nel concetto di kinship della biologa Donna Haraway espresse nel suo saggio Chthulucene: Sopravvivere su un pianeta infetto (2019, NOT Nero Editions).</p><p>L'indagine parte dall'utilizzo di un dispositivo open source, chiamato Midi Sprout che, se collegato alle foglie di una pianta, tramite due elettrodi è in grado di recepire gli impulsi elettrici emessi dalla pianta stessa (biodata) e di trasformarli in segnali Midi. Tali segnali vengono trasformati in note o segnali di controllo (sonification) ed elaborati live da lə sound artist che crea la traccia sonora. Il corpo, influenzato dal campo elettrico delle piante e attraversato dal suono, lascia emergere il movimento, la danza e così, a sua volta altera il proprio campo energetico/elettrico, influenzando l'emissione di impulsi da parte delle piante. A partire da questo primo meccanismo circolare di entanglement, il lavoro ne sviluppa altri ed indaga le potenzialità della relazione.</p><p>electrica /ecosi'stɛma/ è uno spazio-tempo sospeso e indefinito che vede la compresenza di corpi visibili, quelli umani, vegetali e tecnologici e di corpi invisibili, quelli sonori, energetici, e vibrazionali.</p><p>electrica /ecosi'stɛma/ attinge dal mondo del Rito e si slancia verso un Futuro Possibile.</p>
 
 ----
 
+Customblocks: 
+
+----
+
 Credits: <p><strong>Corpo vegetale</strong><br>Monstera Deliciosa, Ficus Lyrata, Ficus Elastica</p><p><strong>Corpo tecnologico</strong><br>Sintetizzatore analogico, Biodata sonification Device, MacBook, Ableton Live</p><p><strong>Corpo umano</strong><br>Flavia Zaganelli (concept, ricerca, creazione, danza)<br>Ceci Stuck (ricerca e suono)<br>Fabrizio Piro (disegno luci)<br>Silvia Piantini (costumi)</p><p>Progetto realizzato con il sostegno di Lavanderia a Vapore e Piemonte dal Vivo nell’ambito del progetto residenze coreografiche Lavanderia a Vapore , Corniolo Art Platform, Bando Abitante - Centro Nazionale di Produzione della Danza Virgilio Sieni e di Fondazione CR Firenze.</p><p>Supportato da Santarcangelo Festival, P.I.A. Palazzina Indiano Arte, DAS Dispositivo Arti Sperimentali, Paleotto 11 e Fienile Fluò/Crexida con il sostegno di h(abita)t – Rete di Spazi per la Danza.</p>
+
+----
+
+Pagestatus: true
 
 ----
 
