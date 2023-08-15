@@ -170,3 +170,37 @@ body {
     font-weight: 400;
     font-size: var(--text-font-size);
 }
+
+@media screen and (max-width: 720px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5rem 1rem;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .gallery-grid-item img {
+        width: 100%;
+    }
+
+    .page-copy {
+        padding-right: 0;
+    }
+
+    .secondary-text {
+        margin-top: 2rem;
+    }
+
+    .project-ui {
+        display: none;
+    }
+}
