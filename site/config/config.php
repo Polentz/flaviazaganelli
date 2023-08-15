@@ -8,4 +8,5 @@ return [
     ],
     'smartypants' => true,
     'languages' => true,
+    'home' => 'coming-soon',
 ];
