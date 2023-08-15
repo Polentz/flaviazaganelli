@@ -3,15 +3,4 @@ navigation:
   status: all
   template:
     - home
-
-
-sections:
-  pages:
-    label: Homepage
-    #type: pages
-    #layout: list
-    #search: true
-    #image: false
-    #template: project
-        
   

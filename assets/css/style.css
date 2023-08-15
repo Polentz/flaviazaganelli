@@ -237,7 +237,7 @@ em {
     right: 2rem;
 }
 
-.project {
+.gallery {
     width: 100%;
     height: var(--doc-height);
     position: relative;

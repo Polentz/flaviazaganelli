@@ -36,7 +36,7 @@ Gallery:
 
 ----
 
-Maintext: <p><strong>INVISIBILIA</strong> è uno spazio sospeso di interazione tra il corpo umano, il corpo vegetale ed il corpo tecnologico per lo spazio naturale.</p><p>È un lavoro site specific che nasce dalla relazione intrinseca con un determinato luogo ed un determinato albero.</p><p><strong>INVISIBILIA</strong> utilizza i linguaggi della danza contemporanea, della musica elettronica live, della biodata sonification e del disegno.</p><p>Performance costruita attorno ed insieme ad un leccio secolare, dopo un attento lavoro di osservazione, speculazione ed indagine fisica, sonora, vocale e utilizzo di tecnologie di trasduzione elettroacustica (microfoni) e di biodata sonification.</p><p>La performance è frutto della relazione tra i corpi umani, il corpo vegetale dell'albero e l'apparato tecnologico e tende alla costruzione di uno spazio sospeso dove la relazione tra gli elementi in campo possa emergere come atto poetico.</p>
+Maintext: <p>INVISIBILIA è uno spazio sospeso di interazione tra il corpo umano, il corpo vegetale ed il corpo tecnologico per lo spazio naturale.</p><p>È un lavoro site specific che nasce dalla relazione intrinseca con un determinato luogo ed un determinato albero.</p><p>INVISIBILIA utilizza i linguaggi della danza contemporanea, della musica elettronica live, della biodata sonification e del disegno.</p><p>Performance costruita attorno ed insieme ad un leccio secolare, dopo un attento lavoro di osservazione, speculazione ed indagine fisica, sonora, vocale e utilizzo di tecnologie di trasduzione elettroacustica (microfoni) e di biodata sonification.</p><p>La performance è frutto della relazione tra i corpi umani, il corpo vegetale dell'albero e l'apparato tecnologico e tende alla costruzione di uno spazio sospeso dove la relazione tra gli elementi in campo possa emergere come atto poetico.</p>
 
 ----
 
@@ -44,11 +44,15 @@ Customblocks: [{"content":{"link":"https://vimeo.com/637441166/23eee1fa7d","text
 
 ----
 
-Credits: <p><strong>Danza </strong>Flavia Zaganelli<strong><br>Suono </strong>Cecilia Stacchiotti<strong><br>Costumi </strong>Silvia Piantini</p><p>INVISIBILIA fa parte del progetto di ricerca NO TITLE_EXPANDED, ampia indagine sulla relazione tra mondo vegetale, tecnologico ed umano di Flavia Zaganelli sviluppata insieme alla sound designer Cecilia Stacchiotti.</p><p>Progetto supportato in residenza da: PIA Palazzina Indiano Arte, Corniolo Art Platform, Santarcangelo Festival, DAS Dispositivo Arti Sperimentali, Fienile Fluò con il sostegno di h(abita)t – Rete di Spazi per la Danza in collaborazione con Crexida, Paleotto11.</p><p>Progetto vincitore del Bando Abitante 2021, il bando a supporto della danza italiana di Centro Nazionale di Produzione della Danza Virgilio Sieni e di Fondazione CR Firenze.</p>
+Subtext: <p><strong>Danza</strong> <br>Flavia Zaganelli</p><p><strong>Suono</strong> <br>Cecilia Stacchiotti</p><p><strong>Costumi</strong><br>Silvia Piantini</p><p>INVISIBILIA fa parte del progetto di ricerca NO TITLE_EXPANDED, ampia indagine sulla relazione tra mondo vegetale, tecnologico ed umano di Flavia Zaganelli sviluppata insieme alla sound designer Cecilia Stacchiotti.</p><p>Progetto supportato in residenza da: PIA Palazzina Indiano Arte, Corniolo Art Platform, Santarcangelo Festival, DAS Dispositivo Arti Sperimentali, Fienile Fluò con il sostegno di h(abita)t – Rete di Spazi per la Danza in collaborazione con Crexida, Paleotto11.</p><p>Progetto vincitore del Bando Abitante 2021, il bando a supporto della danza italiana di Centro Nazionale di Produzione della Danza Virgilio Sieni e di Fondazione CR Firenze.</p>
 
 ----
 
 Pagestatus: true
+
+----
+
+Credits: <p><strong>Danza </strong>Flavia Zaganelli<strong><br>Suono </strong>Cecilia Stacchiotti<strong><br>Costumi </strong>Silvia Piantini</p><p>INVISIBILIA fa parte del progetto di ricerca NO TITLE_EXPANDED, ampia indagine sulla relazione tra mondo vegetale, tecnologico ed umano di Flavia Zaganelli sviluppata insieme alla sound designer Cecilia Stacchiotti.</p><p>Progetto supportato in residenza da: PIA Palazzina Indiano Arte, Corniolo Art Platform, Santarcangelo Festival, DAS Dispositivo Arti Sperimentali, Fienile Fluò con il sostegno di h(abita)t – Rete di Spazi per la Danza in collaborazione con Crexida, Paleotto11.</p><p>Progetto vincitore del Bando Abitante 2021, il bando a supporto della danza italiana di Centro Nazionale di Produzione della Danza Virgilio Sieni e di Fondazione CR Firenze.</p>
 
 ----
 

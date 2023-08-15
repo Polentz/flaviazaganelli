@@ -7,7 +7,7 @@ accept:
   maxsize: 1258291
 
 fields:
-  credits:
+  caption:
     type: text
     width: 1/2
     label: Crediti

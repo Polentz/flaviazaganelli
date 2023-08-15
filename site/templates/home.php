@@ -4,6 +4,6 @@
 <?php endforeach ?>
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
-<?= snippet('projects-menu') ?>
+<?= snippet('submenu') ?>
 <?= snippet('background') ?>
 <?= snippet('footer') ?>

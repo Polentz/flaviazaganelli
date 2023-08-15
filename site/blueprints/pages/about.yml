@@ -74,7 +74,7 @@ columns:
                     label: Testo del pulsante
                     type: text
                     placeholder: Testo del pulsante ...
-          text:
+          subtext:
             label: Testo secondario
             type: writer
             marks:

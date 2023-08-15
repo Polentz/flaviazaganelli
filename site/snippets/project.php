@@ -1,5 +1,5 @@
 
-<section id="<?= $project->title()->slug() ?>" class="project" data-section-title="<?= $project->title() ?>" data-section-color="<?= $project->color() ?>">
+<section id="<?= $project->title()->slug() ?>" class="gallery project" data-section-title="<?= $project->title() ?>" data-section-color="<?= $project->color() ?>">
     <div class="gallery-grid">
         <?php if($page->is('home')) : ?>
             <?php foreach ($project->cover()->toFiles() as $image) : ?>

@@ -120,7 +120,7 @@ tabs:
                         label: Testo del pulsante
                         type: text
                         placeholder: Testo del pulsante ...
-              credits:
+              subtext:
                 label: Crediti
                 type: writer
                 marks:
