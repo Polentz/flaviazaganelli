@@ -87,6 +87,21 @@ body {
     padding-right: 4rem;
 }
 
+.page-copy a {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-txt);
+    text-underline-offset: 4px;
+    transition: all 1s ease;
+}
+
+.page-copy a:hover {
+    text-decoration-style: solid;
+    text-decoration-thickness: .5px;
+}
+
+
 .main-text {
     font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;

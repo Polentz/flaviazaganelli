@@ -4,43 +4,42 @@
     font-family: "Ortica Linear";
     font-style: normal;
     font-weight: 400;
-    src: url("assets/fonts/OrticaLinear-Regular.woff2") format("woff2"),
-        url("assets/fonts/OrticaLinear-Regular.woff") format("woff"),
-        url("assets/fonts/OrticaLinear-Regular.otf") format("otf");
+    src: url("../fonts/OrticaLinear-Regular.woff2") format("woff2"),
+        url("../fonts/OrticaLinear-Regular.woff") format("woff"),
 }
 
 @font-face {
     font-family: "Ortica Linear";
     font-style: normal;
     font-weight: 700;
-    src: url("assets/fonts/OrticaLinear-Bold.woff2") format("woff2"),
-        url("assets/fonts/OrticaLinear-Bold.woff") format("woff"),
-        url("assets/fonts/OrticaLinear-Bold.otf") format("otf");
+    src: url("../fonts/OrticaLinear-Bold.woff2") format("woff2"),
+        url("../fonts/OrticaLinear-Bold.woff") format("woff"),
 }
 
 @font-face {
     font-family: "Ortica Angular";
     font-style: normal;
     font-weight: 700;
-    src: url("assets/fonts/OrticaAngular-Bold.woff2") format("woff2"),
-        url("assets/fonts/OrticaAngular-Bold.woff") format("woff"),
-        url("assets/fonts/OrticaAngular-Bold.otf") format("otf");
+    src: url("../fonts/OrticaAngular-Bold.woff2") format("woff2"),
+        url("../fonts/OrticaAngular-Bold.woff") format("woff"),
 }
 
 @font-face {
     font-family: "Alte Haas Grotesk";
     font-style: normal;
     font-weight: 400;
-    src: url("assets/fonts/altehaasgroteskregular.woff2") format("woff2"),
-        url("assets/fonts/altehaasgroteskregular.woff") format("woff");
+    src: url("../fonts/altehaasgroteskregular.woff2") format("woff2"),
+        url("../fonts/altehaasgroteskregular.woff") format("woff"),
+        url("../fonts/altehaasgroteskregular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Alte Haas Grotesk";
     font-style: normal;
     font-weight: 700;
-    src: url("assets/fonts/altehaasgroteskbold.woff2") format("woff2"),
-        url("assets/fonts/altehaasgroteskbold.woff") format("woff");
+    src: url("../fonts/altehaasgroteskbold.woff2") format("woff2"),
+        url("../fonts/altehaasgroteskbold.woff") format("woff"),
+        url("../fonts/altehaasgroteskbold.ttf") format("truetype");
 }
 
 @-webkit-keyframes opacity {
@@ -114,6 +113,7 @@ em {
     left: 0;
     z-index: 9;
     font-family: "Ortica Angular", serif;
+    font-style: normal;
     font-weight: 700;
     font-size: var(--menu-font-size);
     display: flex;
@@ -180,9 +180,9 @@ em {
 .nav p,
 .site-title a,
 .site-lang a {
-    -webkit-text-decoration: underline 1px dashed;
-    text-decoration: underline 1px dashed;
-    -webkit-text-decoration-color: transparent;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
     text-decoration-color: transparent;
     text-underline-offset: 4px;
     transition: all .5s ease;
@@ -192,7 +192,6 @@ em {
 .nav p:hover,
 .site-title a:hover,
 .site-lang a:hover {
-    -webkit-text-decoration-color: var(--color-txt);
     text-decoration-color: var(--color-txt);
 }
 
@@ -318,6 +317,8 @@ em {
 .project-title h2 a:hover,
 .inner-menu-list li a:hover {
     font-family: "Ortica Angular", serif;
+    font-style: normal;
+    font-weight: 700;
     font-size: var(--title-font-size-serif);
 }
 
@@ -369,14 +370,15 @@ em {
 }
 
 .popup-list a {
-    -webkit-text-decoration: underline 1px dashed var(--color-bg);
-    text-decoration: underline 1px dashed var(--color-bg);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-bg);
     text-underline-offset: 4px;
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 .popup-list a:hover {
-    -webkit-text-decoration-style: solid;
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }
@@ -394,6 +396,7 @@ em {
     padding: 2rem;
     font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
+    font-weight: 400;
     font-size: var(--menu-font-size);
     line-height: 130%;
     color: var(--color-bg);
@@ -423,6 +426,7 @@ em {
 
 .popup-list p:first-of-type {
     font-family: "Ortica Angular", serif;
+    font-style: normal;
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -483,26 +487,38 @@ em {
     align-items: center;
     justify-content: center;
     will-change: transform;
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .background svg {
     width: 75%;
-    opacity: .85;
+    -webkit-filter: blur(5rem);
     filter: blur(5rem);
     will-change: transform;
     transition: fill .5s ease;
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.background circle:nth-child(1) {
+    opacity: .95;
+}
+
+.background circle:nth-child(2) {
+    opacity: .5;
+}
+
+.background circle:nth-child(3) {
+    opacity: .75;
 }
 
 footer {
@@ -623,6 +639,8 @@ footer {
     .project-title h2 a:hover,
     .inner-menu-list li a:hover {
         font-family: "Ortica Angular", serif;
+        font-style: normal;
+        font-weight: 700;
         font-size: 1rem;
     }
 
