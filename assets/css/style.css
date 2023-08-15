@@ -1,17 +1,12 @@
-@font-face {
-    font-family: "Ortica Linear";
-    font-style: normal;
-    font-weight: 200;
-    src: url("assets/fonts/OrticaLinear-Light.woff2") format("woff2"),
-        url("assets/fonts/OrticaLinear-Light.woff") format("woff");
-}
+@charset "UTF-8";
 
 @font-face {
     font-family: "Ortica Linear";
     font-style: normal;
     font-weight: 400;
     src: url("assets/fonts/OrticaLinear-Regular.woff2") format("woff2"),
-        url("assets/fonts/OrticaLinear-Regular.woff") format("woff");
+        url("assets/fonts/OrticaLinear-Regular.woff") format("woff"),
+        url("assets/fonts/OrticaLinear-Regular.otf") format("otf");
 }
 
 @font-face {
@@ -19,7 +14,8 @@
     font-style: normal;
     font-weight: 700;
     src: url("assets/fonts/OrticaLinear-Bold.woff2") format("woff2"),
-        url("assets/fonts/OrticaLinear-Bold.woff") format("woff");
+        url("assets/fonts/OrticaLinear-Bold.woff") format("woff"),
+        url("assets/fonts/OrticaLinear-Bold.otf") format("otf");
 }
 
 @font-face {
@@ -27,7 +23,8 @@
     font-style: normal;
     font-weight: 700;
     src: url("assets/fonts/OrticaAngular-Bold.woff2") format("woff2"),
-        url("assets/fonts/OrticaAngular-Bold.woff") format("woff");
+        url("assets/fonts/OrticaAngular-Bold.woff") format("woff"),
+        url("assets/fonts/OrticaAngular-Bold.otf") format("otf");
 }
 
 @font-face {
@@ -181,7 +178,8 @@ em {
 
 .nav a,
 .nav p,
-.site-title a {
+.site-title a,
+.site-lang a {
     -webkit-text-decoration: underline 1px dashed;
     text-decoration: underline 1px dashed;
     -webkit-text-decoration-color: transparent;
@@ -192,7 +190,8 @@ em {
 
 .nav a:hover,
 .nav p:hover,
-.site-title a:hover {
+.site-title a:hover,
+.site-lang a:hover {
     -webkit-text-decoration-color: var(--color-txt);
     text-decoration-color: var(--color-txt);
 }
@@ -309,7 +308,7 @@ em {
 
 .project-title h2,
 .project-title h2 a {
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: var(--title-font-size-sansserif);
@@ -329,7 +328,7 @@ em {
     left: 50%;
     transform: translateX(-50%);
     z-index: 8;
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: var(--text-font-size);
@@ -393,7 +392,7 @@ em {
     height: inherit;
     overflow-y: scroll;
     padding: 2rem;
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-size: var(--menu-font-size);
     line-height: 130%;
@@ -410,7 +409,7 @@ em {
 }
 
 .popup-title h3 {
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: var(--title-font-size-sansserif);
@@ -458,7 +457,7 @@ em {
 }
 
 .inner-menu-list {
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: var(--title-font-size-sansserif);
@@ -483,19 +482,28 @@ em {
     display: flex;
     align-items: center;
     justify-content: center;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 .background svg {
     width: 75%;
-}
-
-.background circle {
+    opacity: .85;
+    filter: blur(5rem);
+    will-change: transform;
     transition: fill .5s ease;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
 footer {
     position: relative;
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: .75rem;

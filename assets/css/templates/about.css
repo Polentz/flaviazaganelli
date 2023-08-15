@@ -88,7 +88,7 @@ body {
 }
 
 .main-text {
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -99,7 +99,7 @@ body {
 }
 
 .secondary-text {
-    font-family: "Ortica Linear";
+    font-family: "Ortica Linear", serif;
     font-style: normal;
     font-weight: 400;
     font-size: var(--text-font-size);
@@ -116,7 +116,7 @@ body {
 
 .button {
     display: inline-block;
-    font-family: "Ortica Angular";
+    font-family: "Ortica Angular", serif;
     font-style: normal;
     font-weight: 700;
     font-size: var(--menu-font-size);
@@ -135,7 +135,7 @@ body {
 }
 
 .button:hover {
-    font-family: "Alte Haas Grotesk";
+    font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 700;
 }
@@ -160,7 +160,7 @@ body {
 }
 
 .project-pagination-text {
-    font-family: "Ortica Angular";
+    font-family: "Ortica Angular", serif;
     font-style: normal;
     font-weight: 400;
     font-size: var(--text-font-size);

@@ -64,9 +64,6 @@ const handleParallax = () => {
             const ratio = tag.getAttribute("data-parallax");
             const weightedDistance = distanceToSection * ratio;
             tag.style.transform = `translate(0px, ${weightedDistance}px)`;
-            if (window.scrollY == 0) {
-                tag.style.transform = `translate(0px, 0px)`;
-            }
         });
     });
 };
@@ -90,14 +87,12 @@ const handlePageLabel = () => {
 
 const handleSectionColor = () => {
     const pixelScrolled = window.scrollY;
-    const circles = document.querySelectorAll("circle");
+    const svg = document.querySelector(".background svg");
     const elements = document.querySelectorAll("[data-section-color]")
     elements.forEach(element => {
         if (element.offsetTop - 250 <= pixelScrolled) {
             const color = element.getAttribute("data-section-color");
-            circles.forEach(circle => {
-                circle.style.fill = `${color}`;
-            });
+            svg.style.fill = `${color}`;
         };
     });
 };
@@ -112,13 +107,13 @@ const enlargeImages = () => {
 };
 
 const mouseMoveEffect = () => {
-    const background = document.querySelector(".background svg")
+    const background = document.querySelector(".background")
     document.addEventListener("mousemove", (event) => {
         let x = event.pageX;
         let y = event.pageY;
-        let xDecimal = x * 0.15;
-        let yDecimal = y * 0.15;
-        background.style.transform = `translate(${xDecimal}px, ${yDecimal}px) skew(${(yDecimal * 0.2)}deg)`;
+        let xDecimal = x * 0.02;
+        let yDecimal = y * 0.02;
+        background.style.transform = `translate(${xDecimal}px, ${yDecimal}px)`;
     });
 };
 

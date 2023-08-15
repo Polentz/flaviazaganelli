@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-    mouseMoveEffect();
+    // mouseMoveEffect();
     handleDataAttributes();
     enlargeImages();
 });

@@ -1,5 +1,4 @@
 <?= snippet('header') ?>
-
 <main class="content-wrapper">
     <section class="gallery">
         <div class="gallery-grid">
@@ -36,7 +35,6 @@
         <?php endif ?>
     </section>
 </main>
-
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
 <?= snippet('projects-menu') ?>
