@@ -1,0 +1,11 @@
+name: Pulsante con link
+icon: text
+wysiwyg: true
+fields:
+  title:
+    label: Titolo del progetto
+    type: text
+    info: 'Importante: usa lo stesso nome del progetto'
+  text:
+    label: Testo del pulsante
+    type: text

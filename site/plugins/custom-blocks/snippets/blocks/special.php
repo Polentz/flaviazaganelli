@@ -1,0 +1,1 @@
+<a id="<?= $block->title()->slug() ?>" class="buttton-special"><?= $block->text() ?></a>

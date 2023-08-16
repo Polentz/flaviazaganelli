@@ -55,6 +55,11 @@
             </div>
     </section>
 <?php endif ?>
+
+<?php foreach($page->children()->listed() as $subpage) : ?>
+    <?= snippet('subpage', ['subpage' => $subpage]) ?>
+<?php endforeach ?>
+
 <?= snippet('contact') ?>
 <?= snippet('calendar') ?>
 <?= snippet('submenu') ?>

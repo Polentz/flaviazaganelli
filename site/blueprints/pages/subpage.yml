@@ -1,0 +1,54 @@
+title: Sottopagina
+options:
+  navigation:
+    status: listed
+    template: about
+  changeSlug: false
+
+columns:
+  sidebar:
+    width: 1/2
+    sections:
+      media:
+        type: fields
+        fields:
+          cover:
+            label: Immagini nella home
+            type: files
+            template: image
+            uploads: image
+            query: page.images.filterBy('template', 'image')
+            layout: cards
+            size: small
+            multiple: false
+            max: 1
+            required: true
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
+  main:
+    width: 1/2
+    sections: 
+      copy:
+        type: fields
+        fields:
+          maintext:
+            label: Testo
+            type: writer
+            marks:
+              - bold
+              - italic
+              - underline
+              - link
+              - email
+            nodes: false
+          media:
+            label: Media
+            type: files
+            uploads: audio
+            template: audio
+            min: 1
+            max: 1
+            size: small

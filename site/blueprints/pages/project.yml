@@ -5,7 +5,7 @@ options:
     template: project
 
 tabs:
-  projectslist:
+  home:
     label: Progetto nella Home
     icon: grid-full
     sections:
@@ -111,7 +111,7 @@ tabs:
                         placeholder: Testo del pulsante ...
                   link:
                     name: Link
-                    icon: bolt
+                    icon: url
                     fields:
                       link:
                         label: Link del pulsante
@@ -120,6 +120,17 @@ tabs:
                         label: Testo del pulsante
                         type: text
                         placeholder: Testo del pulsante ...
+                  special:
+                    name: Speciale
+                    icon: bolt
+                    fields:
+                      title:
+                        label: Titolo del progetto
+                        type: text
+                      text:
+                        label: Testo del pulsante
+                        type: text
+                        placeholder: Testo del pulsante ...                        
               subtext:
                 label: Crediti
                 type: writer
@@ -138,3 +149,17 @@ tabs:
                 text: 
                   - "no"
                   - "sì"
+  subpage:
+    label: Sottopagine
+    icon: circle
+    sections:
+      subpages:
+        type: pages
+        layout: cards
+        image:
+          icon: true
+          ratio: 4/3
+          back: white
+          cover: true 
+        templates:
+          - subpage

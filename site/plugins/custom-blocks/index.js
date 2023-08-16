@@ -29,6 +29,21 @@ panel.plugin("flaviazaganelli/blocks", {
           @input="update({ text: $event.target.value })"
         />
       `
-    }
+    },
+    special: {
+      computed: {
+        placeholder() {
+          return "Testo del pulsante ...";
+        }
+      },
+      template: `
+      <input
+        type="text"
+        :placeholder="placeholder"
+        :value="content.text"
+        @input="update({ text: $event.target.value })"
+      />
+      `
+    },
   }
 });

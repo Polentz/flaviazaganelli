@@ -1,1 +1,1 @@
-<a href="<?= $block->link() ?>" target="_blank" rel="noopener noreferrer"><?= $block->text() ?></a>
+<a class="buttton-link" href="<?= $block->link() ?>" target="_blank" rel="noopener noreferrer"><?= $block->text() ?></a>

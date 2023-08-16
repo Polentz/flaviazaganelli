@@ -1,4 +1,4 @@
-<?php if($pages->template('project')) : ?>
+<?php if($pages->template('project') || $pages->template('subpage')) : ?>
     <section class="gallery" data-section-color="<?= $page->color() ?>">
 <?php else : ?>
     <section class="gallery">
