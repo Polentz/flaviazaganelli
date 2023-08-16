@@ -375,15 +375,21 @@ const toggleInfo = () => {
     });
 };
 
-const openPopupElement = (button, container) => {
-    if (document.getElementById(button)) {
-        document.getElementById(button).addEventListener("click", () => {
-            document.querySelector(container).classList.add("open");
-            if (document.querySelector(container).classList.contains("close")) {
-                document.querySelector(container).classList.remove("close");
-            };
+const openPopupElement = () => {
+    const buttons = document.querySelectorAll(".nav-button, .buttton-special");
+    const popupElements = document.querySelectorAll(".popup, .inner-menu, .subpage");
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            popupElements.forEach(element => {
+                if (element.classList.contains(button.id)) {
+                    element.classList.add("open");
+                    if (element.classList.contains("close")) {
+                        element.classList.remove("close");
+                    };
+                };
+            });
         });
-    };
+    });
 };
 
 const closePopupElement = () => {
@@ -420,9 +426,7 @@ const closeIndexMenu = () => {
 window.addEventListener("load", () => {
     documentHeight();
     handleAnchorTags();
-    openPopupElement("contact", ".contact");
-    openPopupElement("calendar", ".calendar");
-    openPopupElement("index", ".index");
+    openPopupElement();
     toggleNav();
     closePopupElement();
     closeIndexMenu();

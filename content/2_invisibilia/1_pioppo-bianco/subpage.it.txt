@@ -6,7 +6,7 @@ Cover: - file://F0OoAxK1nXZE7lEy
 
 ----
 
-Maintext: <p><strong>Pioppo bianco (Populus alba)</strong></p><p>Come mi posizioni?</p><p>Con la schiena appoggiata al tronco allontanati di 41 passi dal Pioppo, poi voltati e resta ad osservarlo. Ascolta la traccia.</p><p>Mentre la traccia scorre, se vuoi, ripeti più volte quest’azione in direzioni diverse.</p>
+Maintext: <p><strong>Pioppo bianco (Populus alba)</strong></p><p>Come mi posiziono?</p><p>Con la schiena appoggiata al tronco allontanati di 41 passi dal Pioppo, poi voltati e resta ad osservarlo. Ascolta la traccia.</p><p>Mentre la traccia scorre, se vuoi, ripeti più volte quest’azione in direzioni diverse.</p>
 
 ----
 
