@@ -260,14 +260,17 @@ const audioPlayer = () => {
         });
     });
 
-    document.addEventListener("play", (e) => {
-        const audios = document.getElementsByTagName("audio");
-        for (let i = 0, len = audios.length; i < len; i++) {
-            if (audios[i] != e.target) {
-                audios[i].pause();
-            };
-        };
-    }, true);
+    const buttonsClose = document.querySelectorAll(".subpage .popup-ui");
+    const audios = document.querySelectorAll("audio");
+    buttonsClose.forEach(button => {
+        button.addEventListener("click", () => {
+            audios.forEach(audio => {
+                if (audio.play) {
+                    audio.pause();
+                };
+            });
+        });
+    });
 };
 
 const mouseMoveEffect = () => {

@@ -1,7 +1,7 @@
-<section class="subpage close <?=$subpage->title()->slug() ?>">
+<section class="subpage close <?=$page->title()->slug() ?>">
     <div class="subpage-wrapper">
-        <div class="subpage-cover" data-section-color="<?= $subpage->parent()->color() ?>">
-            <?php if ($image = $subpage->cover()->toFile() ) : ?>
+        <div class="subpage-cover" data-section-color="<?= $page->parent()->color() ?>">
+            <?php if ($image = $page->cover()->toFile() ) : ?>
                 <figure>
                     <img src="<?= $image->resize(1200, null)->url() ?>" alt="<?= $image->alt() ?>">
                     <?php if($image->caption()->isNotEmpty()) : ?>
@@ -14,8 +14,10 @@
         </div>
         <div class="subpage-copy page-copy">
             <div class="main-text">
-                <?= $subpage->maintext()->kt() ?>
-                <?= snippet('audio', ['page' => $subpage]) ?>
+                <?= $page->maintext()->kt() ?>
+                <?php if($page->audio()->isNotEmpty()) : ?>
+                    <?= snippet('audio', ['page' => $page]) ?>
+                <?php endif ?>
             </div>
         </div>
     </div>

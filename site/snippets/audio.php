@@ -32,7 +32,5 @@
 
         </div>
     </div>
-    <?php if ($file = $page->file()): ?>
-        <audio src="<?= $file->url() ?>" preload="metadata"></audio>
-    <?php endif ?>
+    <audio src="<?= $page->file()->url() ?>" preload="metadata"></audio>
 </div>

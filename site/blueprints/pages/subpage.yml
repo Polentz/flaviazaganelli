@@ -43,7 +43,7 @@ columns:
               - link
               - email
             nodes: false
-          media:
+          audio:
             label: Upload audio file
             type: files
             uploads: audio
