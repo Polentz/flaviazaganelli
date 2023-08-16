@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="footer">
         <p><?= $site->footer() ?> © Flavia Zaganelli</p>    
     </footer>
     

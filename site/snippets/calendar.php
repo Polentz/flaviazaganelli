@@ -1,6 +1,6 @@
 <?php if($site->calendarBlocks()->isNotEmpty()) : ?>
     <?php if ($page->is('home')) : ?>
-        <section class="popup calendar">
+        <section class="popup calendar open">
     <?php else : ?>
         <section class="popup calendar close">
     <?php endif ?>

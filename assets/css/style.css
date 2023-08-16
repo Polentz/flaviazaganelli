@@ -105,6 +105,29 @@ em {
     font-style: italic;
 }
 
+.header a,
+.header a:link,
+.header a:visited,
+.header a:active,
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:active,
+.page-copy a,
+.page-copy a:link,
+.page-copy a:visited,
+.page-copy a:active,
+button a,
+button a:link,
+button a:visited,
+button a:active,
+figcaption a,
+figcaption a:link,
+figcaption a:visited,
+figcaption a:active {
+    color: var(--color-txt);
+}
+
 .header {
     width: 100%;
     height: 4rem;
@@ -519,7 +542,7 @@ em {
     opacity: .75;
 }
 
-footer {
+.footer {
     position: relative;
     font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
