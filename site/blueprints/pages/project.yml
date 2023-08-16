@@ -7,7 +7,7 @@ options:
 tabs:
   home:
     label: Progetto nella Home
-    icon: grid-full
+    icon: home
     sections:
       color:
         type: fields
@@ -150,14 +150,21 @@ tabs:
                   - "no"
                   - "sì"
   subpage:
-    label: Sottopagine
-    icon: circle
+    label: Extras
+    icon: star
     sections:
+      info: 
+        label: "Contenuti extra della pagina {{ page.title }}"
+        text: |
+          I contenuti extra si aprono come elementi pop-up.
+          Ognuno è collegato a un pulsante speciale nella pagina del progetto. 
+          Esempio: le schede dei singoli alberi di Invisibilia.
       subpages:
+        label: Elementi pop-up
         type: pages
-        layout: cards
+        layout: cardlets
+        sortable: false
         image:
-          icon: true
           ratio: 4/3
           back: white
           cover: true 

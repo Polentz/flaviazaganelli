@@ -18,3 +18,11 @@ html {
 .k-topbar-wrapper:after {
     display: none !important;
 }
+
+.k-box[data-theme=info],
+.k-box[data-theme=negative],
+.k-box[data-theme=notice],
+.k-box[data-theme=positive] {
+    background: transparent;
+    padding: 0;
+}

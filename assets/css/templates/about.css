@@ -89,14 +89,17 @@ body {
 
 .page-copy a {
     text-decoration: underline;
+    -webkit-text-decoration-style: dashed;
     text-decoration-style: dashed;
     text-decoration-thickness: 1px;
+    -webkit-text-decoration-color: var(--color-txt);
     text-decoration-color: var(--color-txt);
     text-underline-offset: 4px;
     transition: all 1s ease;
 }
 
 .page-copy a:hover {
+    -webkit-text-decoration-style: solid;
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }

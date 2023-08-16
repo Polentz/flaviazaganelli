@@ -1,20 +1,22 @@
 <section class="subpage close <?=$subpage->title()->slug() ?>">
-    <div class="subpage-cover" data-section-color="<?= $subpage->parent()->color() ?>">
-        <?php if ($image = $subpage->cover()->toFile() ) : ?>
-            <figure class="">
-                <img src="<?= $image->resize(1200, null)->url() ?>" alt="<?= $image->alt() ?>">
-                <?php if($image->caption()->isNotEmpty()) : ?>
-                    <figcaption>
-                        <?= $image->caption()->kt() ?>
-                    </figcaption>
-                <?php endif ?>
-            </figure>
-        <?php endif ?>
-    </div>
-    <div class="subpage-copy page-copy">
-        <div class="main-text">
-            <?= $subpage->maintext()->kt() ?>
-            <?= snippet('audio', ['page' => $subpage]) ?>
+    <div class="subpage-wrapper">
+        <div class="subpage-cover" data-section-color="<?= $subpage->parent()->color() ?>">
+            <?php if ($image = $subpage->cover()->toFile() ) : ?>
+                <figure>
+                    <img src="<?= $image->resize(1200, null)->url() ?>" alt="<?= $image->alt() ?>">
+                    <?php if($image->caption()->isNotEmpty()) : ?>
+                        <figcaption>
+                            <?= $image->caption()->kt() ?>
+                        </figcaption>
+                    <?php endif ?>
+                </figure>
+            <?php endif ?>
+        </div>
+        <div class="subpage-copy page-copy">
+            <div class="main-text">
+                <?= $subpage->maintext()->kt() ?>
+                <?= snippet('audio', ['page' => $subpage]) ?>
+            </div>
         </div>
     </div>
     <div class="popup-ui ui-close left">

@@ -203,8 +203,10 @@ figcaption a:active {
 .site-title a,
 .site-lang a {
     text-decoration: underline;
+    -webkit-text-decoration-style: dashed;
     text-decoration-style: dashed;
     text-decoration-thickness: 1px;
+    -webkit-text-decoration-color: transparent;
     text-decoration-color: transparent;
     text-underline-offset: 4px;
     transition: all .5s ease;
@@ -214,6 +216,7 @@ figcaption a:active {
 .nav p:hover,
 .site-title a:hover,
 .site-lang a:hover {
+    -webkit-text-decoration-color: var(--color-txt);
     text-decoration-color: var(--color-txt);
 }
 
@@ -393,14 +396,17 @@ figcaption a:active {
 
 .popup-list a {
     text-decoration: underline;
+    -webkit-text-decoration-style: dashed;
     text-decoration-style: dashed;
     text-decoration-thickness: 1px;
+    -webkit-text-decoration-color: var(--color-bg);
     text-decoration-color: var(--color-bg);
     text-underline-offset: 4px;
     transition: all .5s ease;
 }
 
 .popup-list a:hover {
+    -webkit-text-decoration-style: solid;
     text-decoration-style: solid;
     text-decoration-thickness: .5px;
 }
@@ -510,10 +516,7 @@ figcaption a:active {
     justify-content: center;
     will-change: transform;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
@@ -524,10 +527,7 @@ figcaption a:active {
     will-change: transform;
     transition: fill .5s ease;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
@@ -636,12 +636,17 @@ figcaption a:active {
         display: block;
     }
 
+    .popup-ui {
+        top: 1rem;
+        transform: none;
+    }
+
     .right {
         right: 1rem;
     }
 
     .left {
-        left: 1rem;
+        display: none;
     }
 
     .project {

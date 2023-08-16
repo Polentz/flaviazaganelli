@@ -40,7 +40,7 @@ Maintext: <p>INVISIBILIA è uno spazio sospeso di interazione tra il corpo umano
 
 ----
 
-Customblocks: [{"content":{"link":"https://vimeo.com/637441166/23eee1fa7d","text":"Video integrale"},"id":"a2d3b9e8-5272-4d59-afbc-5c8da6c93119","isHidden":false,"type":"link"},{"content":{"file":["file://syu92YznLMXCVQBU"],"text":"Dossier"},"id":"4f99a3d9-112f-41ed-b173-d1583f087905","isHidden":false,"type":"download"},{"content":{"title":"Pioppo bianco","text":"Pioppo bianco"},"id":"23c86909-0206-400d-9d6c-512bf32a4820","isHidden":false,"type":"special"}]
+Customblocks: [{"content":{"link":"https://vimeo.com/637441166/23eee1fa7d","text":"Video integrale"},"id":"a2d3b9e8-5272-4d59-afbc-5c8da6c93119","isHidden":false,"type":"link"},{"content":{"file":["file://syu92YznLMXCVQBU"],"text":"Dossier"},"id":"4f99a3d9-112f-41ed-b173-d1583f087905","isHidden":false,"type":"download"},{"content":{"title":"Pioppo bianco","text":"Pioppo bianco"},"id":"23c86909-0206-400d-9d6c-512bf32a4820","isHidden":false,"type":"special"},{"content":{"title":"Leccio","text":"Leccio"},"id":"13ac389b-346e-42cf-9107-4828ad4e79c2","isHidden":false,"type":"special"}]
 
 ----
 

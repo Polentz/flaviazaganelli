@@ -109,22 +109,6 @@ const handlePageLabel = () => {
 
     mediaQuery.addListener(handleMediaQuery);
     handleMediaQuery(mediaQuery);
-
-
-    // const pixelScrolled = window.scrollY;
-    // const pageLabel = document.querySelector(".page-title h2");
-    // sections.forEach(section => {
-    //     if (section.offsetTop - 200 <= pixelScrolled) {
-    //         pageLabel.style.animation = "opacity .35s ease 1";
-    //         pageLabel.innerHTML = section.getAttribute("data-section-title");
-    //     };
-    //     if (window.scrollY == 0) {
-    //         pageLabel.style.animation = "none";
-    //         setTimeout(() => {
-    //             pageLabel.innerHTML = "+";
-    //         }, 350);
-    //     };
-    // });
 };
 
 const handleSectionColor = () => {

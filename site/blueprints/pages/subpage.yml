@@ -1,9 +1,9 @@
-title: Sottopagina
+title: Extra
 options:
   navigation:
     status: listed
-    template: about
-  changeSlug: false
+    template: subpage
+  preview: false
 
 columns:
   sidebar:
@@ -13,16 +13,15 @@ columns:
         type: fields
         fields:
           cover:
-            label: Immagini nella home
+            label: Immagine
             type: files
             template: image
             uploads: image
             query: page.images.filterBy('template', 'image')
             layout: cards
-            size: small
+            size: large
             multiple: false
             max: 1
-            required: true
             image:
               icon: true
               ratio: 4/3
@@ -45,10 +44,10 @@ columns:
               - email
             nodes: false
           media:
-            label: Media
+            label: Upload audio file
             type: files
             uploads: audio
             template: audio
-            min: 1
+            multiple: false
             max: 1
             size: small
