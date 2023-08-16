@@ -14,16 +14,23 @@ const handleAnchorTags = () => {
         a.addEventListener("click", (e) => {
             e.preventDefault();
             const href = a.getAttribute("href");
-            document.querySelector(href).scrollIntoView();
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+            });
         });
     });
 };
 
+const header = document.querySelector("header");
 const menu = document.querySelector(".menu");
 const pageTitle = document.querySelector(".page-title");
+const pageLabel = document.querySelector(".page-title h2");
+const mobileButton = document.querySelector(".mobile-ui");
 const nav = document.querySelector(".nav");
 const navButtons = document.querySelectorAll(".nav-button");
 const sections = document.querySelectorAll(".project");
+const uiClose = document.querySelectorAll(".ui-close");
+const mediaQuery = window.matchMedia("(max-width: 720px)");
 
 const hanldeSessionStorage = () => {
     const initial = sessionStorage.getItem("initial");
@@ -70,19 +77,54 @@ const handleParallax = () => {
 
 const handlePageLabel = () => {
     const pixelScrolled = window.scrollY;
-    const pageLabel = document.querySelector(".page-title h2");
-    sections.forEach(section => {
-        if (section.offsetTop - 200 <= pixelScrolled) {
-            pageLabel.style.animation = "opacity .35s ease 1";
-            pageLabel.innerHTML = section.getAttribute("data-section-title");
+    const handleMediaQuery = (e) => {
+        if (e.matches) {
+            sections.forEach(section => {
+                if (section.offsetTop - 200 <= pixelScrolled) {
+                    pageLabel.style.animation = "opacity .35s ease 1";
+                    pageLabel.innerHTML = section.getAttribute("data-section-title");
+                };
+                if (window.scrollY == 0) {
+                    pageLabel.style.animation = "none";
+                    setTimeout(() => {
+                        pageLabel.innerHTML = "";
+                    }, 350);
+                };
+            });
+        } else {
+            sections.forEach(section => {
+                if (section.offsetTop - 200 <= pixelScrolled) {
+                    pageLabel.style.animation = "opacity .35s ease 1";
+                    pageLabel.innerHTML = section.getAttribute("data-section-title");
+                };
+                if (window.scrollY == 0) {
+                    pageLabel.style.animation = "none";
+                    setTimeout(() => {
+                        pageLabel.innerHTML = "+";
+                    }, 350);
+                };
+            });
         };
-        if (window.scrollY == 0) {
-            pageLabel.style.animation = "none";
-            setTimeout(() => {
-                pageLabel.innerHTML = "+";
-            }, 350);
-        };
-    });
+    };
+
+    mediaQuery.addListener(handleMediaQuery);
+    handleMediaQuery(mediaQuery);
+
+
+    // const pixelScrolled = window.scrollY;
+    // const pageLabel = document.querySelector(".page-title h2");
+    // sections.forEach(section => {
+    //     if (section.offsetTop - 200 <= pixelScrolled) {
+    //         pageLabel.style.animation = "opacity .35s ease 1";
+    //         pageLabel.innerHTML = section.getAttribute("data-section-title");
+    //     };
+    //     if (window.scrollY == 0) {
+    //         pageLabel.style.animation = "none";
+    //         setTimeout(() => {
+    //             pageLabel.innerHTML = "+";
+    //         }, 350);
+    //     };
+    // });
 };
 
 const handleSectionColor = () => {
@@ -116,27 +158,52 @@ const mouseMoveEffect = () => {
 };
 
 const toggleNav = () => {
-    menu.addEventListener("mouseenter", () => {
-        pageTitle.style.opacity = "0";
-        setTimeout(() => {
-            pageTitle.style.display = "none";
-            nav.classList.add("show");
-        }, 250);
-    });
-    navButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            menu.classList.add("nav-visible");
-        });
-    });
-    menu.addEventListener("mouseleave", () => {
-        if (!menu.classList.contains("nav-visible")) {
-            pageTitle.style.opacity = "1";
-            setTimeout(() => {
-                pageTitle.style.display = "block";
-                nav.classList.remove("show");
-            }, 250);
+    const handleMediaQuery = (e) => {
+        if (e.matches) {
+            mobileButton.addEventListener("click", () => {
+                header.classList.toggle("add-backdrop")
+                mobileButton.classList.toggle("rotate");
+                pageTitle.classList.toggle("hide")
+                nav.classList.toggle("show");
+            });
+            uiClose.forEach(uiElement => {
+                uiElement.addEventListener("click", () => {
+                    if (nav.classList.contains("show")) {
+                        header.classList.remove("add-backdrop")
+                        mobileButton.classList.remove("rotate");
+                        pageTitle.classList.remove("hide")
+                        nav.classList.remove("show");
+                    }
+                });
+            });
+
+        } else {
+            menu.addEventListener("mouseenter", () => {
+                pageTitle.style.opacity = "0";
+                setTimeout(() => {
+                    pageTitle.style.display = "none";
+                    nav.classList.add("show");
+                }, 250);
+            });
+            navButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    menu.classList.add("nav-visible");
+                });
+            });
+            menu.addEventListener("mouseleave", () => {
+                if (!menu.classList.contains("nav-visible")) {
+                    pageTitle.style.opacity = "1";
+                    setTimeout(() => {
+                        pageTitle.style.display = "block";
+                        nav.classList.remove("show");
+                    }, 250);
+                };
+            });
         };
-    });
+    };
+
+    mediaQuery.addListener(handleMediaQuery);
+    handleMediaQuery(mediaQuery);
 };
 
 const hideNav = () => {
@@ -182,7 +249,6 @@ const openPopupElement = (button, container) => {
 };
 
 const closePopupElement = () => {
-    const uiClose = document.querySelectorAll(".ui-close");
     uiClose.forEach(uiElement => {
         const container = uiElement.parentElement;
         uiElement.addEventListener("click", () => {
@@ -203,6 +269,12 @@ const closeIndexMenu = () => {
             innerMenu.classList.remove("open");
             innerMenu.classList.add("close");
             hideNav();
+            if (header.classList.contains("add-backdrop")) {
+                header.classList.remove("add-backdrop")
+                mobileButton.classList.remove("rotate");
+                pageTitle.classList.remove("hide");
+                nav.classList.remove("show");
+            };
         });
     });
 };

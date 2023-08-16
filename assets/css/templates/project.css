@@ -64,8 +64,8 @@ body {
     width: 100%;
     max-width: unset;
     height: var(--doc-height);
-    -webkit-backdrop-filter: blur(2rem) grayscale(1);
-    backdrop-filter: blur(2rem) grayscale(1);
+    -webkit-backdrop-filter: blur(2rem) grayscale(.25);
+    backdrop-filter: blur(2rem) grayscale(.25);
     position: fixed;
     top: 0;
     left: 0;
@@ -202,7 +202,7 @@ body {
         padding: 5rem 1rem;
     }
 
-    .project {
+    .gallery {
         width: 100%;
     }
 
@@ -216,12 +216,22 @@ body {
         width: 100%;
     }
 
+    .gallery-grid-item.enlarge {
+        -webkit-backdrop-filter: blur(.5rem) grayscale(.25);
+        backdrop-filter: blur(.5rem) grayscale(.25);
+    }
+
+    .gallery-grid-item.enlarge img {
+        height: unset;
+        width: 100%;
+    }
+
     .page-copy {
         padding-right: 0;
     }
 
     .secondary-text {
-        margin-top: 2rem;
+        margin-top: .5rem;
     }
 
     .project-ui {

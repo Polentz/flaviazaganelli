@@ -16,12 +16,12 @@
 <header class="header">
     <menu class="menu">
         <?php if ($page->is('home')) : ?>
-            <h1 class="site-title">Flavia Zaganelli</h1>
+            <h1 class="site-title">Flavia Zaganelli <span class="mobile-ui">+</span></h1>
             <div class="page-title">
-                <h2>+</h2>
+                <h2></h2>
             </div>
         <?php else : ?>
-            <h1 class="site-title"><a href="<?= page('home')->url() ?>">Flavia Zaganelli</a></h1>
+            <h1 class="site-title"><a href="<?= page('home')->url() ?>">Flavia Zaganelli</a> <span class="mobile-ui">+</span></h1>
             <div class="page-title">
                 <h2><?= $page->title() ?></h2>
             </div>
