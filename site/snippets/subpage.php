@@ -15,10 +15,10 @@
         <div class="subpage-copy page-copy">
             <div class="main-text">
                 <?= $page->maintext()->kt() ?>
-                <?php if($page->audio()->isNotEmpty()) : ?>
-                    <?= snippet('audio', ['page' => $page]) ?>
-                <?php endif ?>
             </div>
+            <?php if($page->audio()->isNotEmpty()) : ?>
+                <?= snippet('audio', ['page' => $page]) ?>
+            <?php endif ?>
         </div>
     </div>
     <div class="popup-ui ui-close left">

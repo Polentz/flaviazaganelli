@@ -419,7 +419,7 @@ figcaption a:active {
 }
 
 .popup-wrapper {
-    height: auto;
+    height: inherit;
     overflow-y: scroll;
     padding: 2rem;
     font-family: "Alte Haas Grotesk", sans-serif;

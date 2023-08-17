@@ -201,19 +201,24 @@
 }
 
 .subpage-wrapper {
+    height: inherit;
     display: flex;
-    align-items: center;
-    gap: 4rem;
-    padding: 2rem;
+    align-items: start;
 }
 
 .subpage-cover {
     width: 50%;
-    align-self: center;
+    padding: 2rem;
 }
 
 .subpage-copy {
-    padding-right: 8rem;
+    height: inherit;
+    overflow-y: scroll;
+    padding: 2rem 7rem 2rem 2rem;
+}
+
+.subpage-copy::-webkit-scrollbar {
+    display: none;
 }
 
 .subpage-cover img {
@@ -395,10 +400,22 @@ input.seek-slider::-webkit-slider-thumb {
     }
 
     .subpage-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        height: inherit;
+        display: block;
         padding: 1rem;
+        overflow-y: scroll;
+    }
+
+    .subpage-cover {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .subpage-copy {
+        height: auto;
+        overflow-y: hidden;
+        padding: 0;
     }
 
 }
