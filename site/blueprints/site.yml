@@ -88,7 +88,7 @@ tabs:
                 label: Keywords
                 type: tags         
       image:
-        width: 1/4
+        width: 1/2
         sections:
           image:
             type: fields
@@ -106,20 +106,6 @@ tabs:
                   icon: false
                   ratio: 6/3
                   cover: true
-      favicons:
-        width: 1/4
-        sections:
-          favicons:
-            type: fields
-            fields:
-              favicons:
-                label: Favicons
-                type: files
-                template: image
-                uploads: image
-                layout: list
-                size: small
-                multiple: true
 
 
   

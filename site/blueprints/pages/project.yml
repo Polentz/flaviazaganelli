@@ -9,14 +9,14 @@ tabs:
     label: Progetto nella Home
     icon: home
     sections:
-      color:
+      colorPicker:
         type: fields
         fields:
           color:
             width: 1/4
             label: Colore
             type: colors
-      cover:
+      gallery:
         type: fields
         fields:
           cover:
@@ -35,7 +35,7 @@ tabs:
               ratio: 4/3
               back: white
               cover: true   
-      info:
+      caption:
         type: fields
         fields:
           gap:
@@ -47,7 +47,6 @@ tabs:
             type: writer
             marks: false
             nodes: false
-            spellcheck: true
   page:
     label: Pagina del progetto
     icon: page
@@ -125,8 +124,9 @@ tabs:
                     icon: bolt
                     fields:
                       title:
-                        label: Titolo del progetto
+                        label: Titolo del contenuto extra
                         type: text
+                        placeholder: 'Usa lo stesso nome del contenuto extra ...'
                       text:
                         label: Testo del pulsante
                         type: text
