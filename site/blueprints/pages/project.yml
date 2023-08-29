@@ -120,7 +120,7 @@ tabs:
                         type: text
                         placeholder: Testo del pulsante ...
                   special:
-                    name: Speciale
+                    name: Contenuto extra
                     icon: bolt
                     fields:
                       title:
@@ -144,29 +144,29 @@ tabs:
               pagestatus:
                 label: La pagina è pronta?
                 width: 1/2
-                required: true
                 type: toggle
                 text: 
                   - "no"
                   - "sì"
   subpage:
-    label: Extras
+    label: Contenuto extra
     icon: star
     sections:
       info: 
         label: "Contenuti extra della pagina {{ page.title }}"
         text: |
-          I contenuti extra si aprono come elementi pop-up.
-          Ognuno è collegato a un pulsante speciale nella pagina del progetto. 
-          Esempio: le schede dei singoli alberi di Invisibilia.
+            I contenuti extra si aprono come elementi pop-up. Ognuno è collegato a un pulsante speciale nella pagina del progetto. Esempio: le schede dei singoli alberi di Invisibilia.
+            Creare prima l'elemento e poi il pulsante nella pagina del progetto.
       subpages:
         label: Elementi pop-up
         type: pages
-        layout: cardlets
+        layout: cards
+        size: small
         sortable: false
         image:
+          icon: true
           ratio: 4/3
           back: white
-          cover: true 
+          cover: true  
         templates:
           - subpage

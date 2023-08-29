@@ -410,6 +410,42 @@ const closeIndexMenu = () => {
     });
 };
 
+const galleryOnMobile = () => {
+    const galleryNodeList = document.querySelectorAll(".gallery-grid-item");
+    const button = document.querySelector(".gallery-button");
+    let galleryArray = Array.from(galleryNodeList);
+    if (galleryNodeList.length > 4) {
+        const newArray = galleryArray.slice(0, 4);
+        newArray.forEach(item => {
+            item.classList.add("visible-on-mobile");
+        });
+        galleryNodeList.forEach(item => {
+            if (!item.classList.contains("visible-on-mobile")) {
+                item.classList.add("hide-on-mobile");
+            };
+        });
+        const buttonSvg = document.querySelector(".gallery-button svg");
+        button.addEventListener("click", () => {
+            galleryNodeList.forEach(item => {
+                if (item.classList.contains("hide-on-mobile")) {
+                    buttonSvg.style.transform = "rotate(45deg)"
+                    setTimeout(() => {
+                        item.classList.remove("hide-on-mobile");
+                    }, 250);
+                } else if (!item.classList.contains("visible-on-mobile")) {
+                    buttonSvg.style.transform = "rotate(0deg)"
+                    setTimeout(() => {
+                        item.classList.add("hide-on-mobile");
+                        window.scrollTo(0, 0);
+                    }, 250);
+                };
+            });
+        });
+    } else {
+        button.style.display = "none";
+    }
+};
+
 window.addEventListener("load", () => {
     documentHeight();
     handleAnchorTags();

@@ -109,22 +109,22 @@ body {
     font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--text-font-size-sansserif);
     line-height: 130%;
     display: flex;
     flex-direction: column;
-    gap: var(--text-font-size);
+    gap: 1rem;
 }
 
 .secondary-text {
     font-family: "Ortica Linear", serif;
     font-style: normal;
     font-weight: 400;
-    font-size: var(--text-font-size);
+    font-size: var(--text-font-size-serif);
     line-height: 130%;
     display: flex;
     flex-direction: column;
-    gap: var(--text-font-size);
+    gap: 1rem;
     margin-top: 4rem;
 }
 
@@ -144,11 +144,11 @@ body {
 
 .button svg {
     position: relative;
-    width: calc(var(--text-font-size)/2);
-    height: calc(var(--text-font-size)/2);
+    width: calc(var(--text-font-size-serif)/2);
+    height: calc(var(--text-font-size-serif)/2);
     stroke: var(--color-txt);
     stroke-width: 2px;
-    margin-right: var(--text-font-size);
+    margin-right: var(--text-font-size-serif);
     transition: transform .25s ease;
 }
 
@@ -181,7 +181,7 @@ body {
     font-family: "Ortica Angular", serif;
     font-style: normal;
     font-weight: 400;
-    font-size: var(--text-font-size);
+    font-size: var(--text-font-size-serif);
 }
 
 @media screen and (max-width: 720px) {
@@ -213,6 +213,24 @@ body {
     .gallery-grid-item.enlarge img {
         height: unset;
         width: 100%;
+    }
+
+    .gallery-grid-item.hide-on-mobile {
+        display: none;
+    }
+
+    .gallery-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .gallery-button svg {
+        width: 2rem;
+        height: 2rem;
+        stroke: var(--color-txt);
+        text-align: center;
+        transition: transform .25s ease;
     }
 
     .page-copy {

@@ -16,7 +16,7 @@
                 <path d="M1 1L1 25L25 25L25 1L1 1Z" />
             </svg>
         </div>
-        <div class="audio-time --txt-ui">
+        <div class="audio-time">
             <span class="audio-progress">0:00</span> / <span class="audio-duration"></span>
         </div>
         <input type="range" class="seek-slider" max="100" value="0">

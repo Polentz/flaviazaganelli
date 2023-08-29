@@ -70,7 +70,8 @@
     --menu-font-size: .9rem;
     --title-font-size-sansserif: 4rem;
     --title-font-size-serif: 3.5rem;
-    --text-font-size: .95rem;
+    --text-font-size-sansserif: 1rem;
+    --text-font-size-serif: .95rem;
     --ui-open-size: 3rem;
     --ui-close-size: 2.5rem;
 }
@@ -357,7 +358,7 @@ figcaption a:active {
     font-family: "Alte Haas Grotesk", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: var(--text-font-size);
+    font-size: var(--text-font-size-sansserif);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -449,14 +450,13 @@ figcaption a:active {
 }
 
 .popup-list:not(:last-of-type) {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
-.popup-list p:first-of-type {
-    font-family: "Ortica Angular", serif;
+.popup-list p {
+    font-family: "Ortica Linear", serif;
     font-style: normal;
-    font-weight: 700;
-    margin-bottom: .5rem;
+    font-weight: 400;
 }
 
 .calendar {
@@ -558,7 +558,6 @@ figcaption a:active {
 @media screen and (max-width: 720px) {
     :root {
         --title-font-size-sansserif: 2.5rem;
-        --text-font-size: .85rem;
         --ui-open-size: 2.5rem;
         --ui-close-size: 2rem;
     }
@@ -712,7 +711,7 @@ figcaption a:active {
         font-family: "Ortica Angular", serif;
         font-style: normal;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: var(--text-font-size-serif);
         gap: 1rem;
     }
 
@@ -720,7 +719,7 @@ figcaption a:active {
         font-family: "Ortica Angular", serif;
         font-style: normal;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: var(--text-font-size-serif);
     }
 
     .background svg {

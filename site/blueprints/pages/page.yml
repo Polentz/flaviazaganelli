@@ -1,8 +1,8 @@
-title: Bio
+title: Page
 options:
   navigation:
     status: listed
-    template: about
+    template: page
   changeSlug: false
 
 columns:

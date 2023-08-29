@@ -12,7 +12,6 @@
     }
 ?>
 
-
 <header class="header">
     <menu class="menu">
         <?php if ($page->is('home')) : ?>
@@ -27,7 +26,9 @@
             </div>
         <?php endif ?>
         <div class="nav">
-            <a href="<?= page('about')->url() ?>"><?= page('about')->title() ?></a>
+            <?php foreach($pages->template('page')->listed() as $page) : ?>
+                <a href="<?= $page->url() ?>"><?= $page->title() ?></a>
+            <?php endforeach ?> 
             <?php if($site->calendarBlocks()->isNotEmpty()) : ?>
                 <p id="calendar" class="nav-button"><?= $calendar ?></p>
             <?php endif ?>
@@ -35,7 +36,7 @@
             <p id="index" class="nav-button">Index</p>                
         </div>
     </menu>
-    <div class="site-lang">
+    <!-- <div class="site-lang">
         <a href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>
-    </div>
+    </div> -->
 </header>

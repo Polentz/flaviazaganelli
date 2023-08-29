@@ -20,7 +20,7 @@ tabs:
             templates:
               - project
           pages:
-            label: Bio
+            label: Altre pagine
             type: pages
             layout: list
             image:
@@ -29,7 +29,7 @@ tabs:
               back: white
               cover: true 
             templates:
-              - about
+              - page
           footer:
             label: Footer
             type: fields
