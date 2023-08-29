@@ -636,12 +636,12 @@ figcaption a:active {
     }
 
     .popup-ui {
-        top: 1rem;
+        top: 2rem;
         transform: none;
     }
 
     .right {
-        right: 1rem;
+        right: 2rem;
     }
 
     .left {

@@ -77,38 +77,60 @@ const handleParallax = () => {
 
 const handlePageLabel = () => {
     const pixelScrolled = window.scrollY;
-    const handleMediaQuery = (e) => {
-        if (e.matches) {
-            sections.forEach(section => {
-                if (section.offsetTop - 200 <= pixelScrolled) {
-                    pageLabel.style.animation = "opacity .35s ease 1";
-                    pageLabel.innerHTML = section.getAttribute("data-section-title");
-                };
-                if (window.scrollY == 0) {
-                    pageLabel.style.animation = "none";
+    sections.forEach(section => {
+        if (section.offsetTop - 200 <= pixelScrolled) {
+            pageLabel.style.animation = "opacity .35s ease 1";
+            pageLabel.innerHTML = section.getAttribute("data-section-title");
+        };
+        if (window.scrollY == 0) {
+            pageLabel.style.animation = "none";
+            const handleMediaQuery = (e) => {
+                if (e.matches) {
                     setTimeout(() => {
                         pageLabel.innerHTML = "";
                     }, 350);
-                };
-            });
-        } else {
-            sections.forEach(section => {
-                if (section.offsetTop - 200 <= pixelScrolled) {
-                    pageLabel.style.animation = "opacity .35s ease 1";
-                    pageLabel.innerHTML = section.getAttribute("data-section-title");
-                };
-                if (window.scrollY == 0) {
-                    pageLabel.style.animation = "none";
+                } else {
                     setTimeout(() => {
                         pageLabel.innerHTML = "+";
                     }, 350);
                 };
-            });
+            };
+            mediaQuery.addListener(handleMediaQuery);
+            handleMediaQuery(mediaQuery);
         };
-    };
+    });
+    // const handleMediaQuery = (e) => {
+    //     if (e.matches) {
+    //         sections.forEach(section => {
+    //             if (section.offsetTop - 200 <= pixelScrolled) {
+    //                 pageLabel.style.animation = "opacity .35s ease 1";
+    //                 pageLabel.innerHTML = section.getAttribute("data-section-title");
+    //             };
+    //             if (window.scrollY == 0) {
+    //                 pageLabel.style.animation = "none";
+    //                 setTimeout(() => {
+    //                     pageLabel.innerHTML = "";
+    //                 }, 350);
+    //             };
+    //         });
+    //     } else {
+    //         sections.forEach(section => {
+    //             if (section.offsetTop - 200 <= pixelScrolled) {
+    //                 pageLabel.style.animation = "opacity .35s ease 1";
+    //                 pageLabel.innerHTML = section.getAttribute("data-section-title");
+    //             };
+    //             if (window.scrollY == 0) {
+    //                 pageLabel.style.animation = "none";
+    //                 setTimeout(() => {
+    //                     pageLabel.innerHTML = "+";
+    //                 }, 350);
+    //             };
+    //         });
+    //     };
+    // };
 
-    mediaQuery.addListener(handleMediaQuery);
-    handleMediaQuery(mediaQuery);
+    // mediaQuery.addListener(handleMediaQuery);
+    // handleMediaQuery(mediaQuery);
 };
 
 const handleSectionColor = () => {
@@ -373,8 +395,29 @@ const openPopupElement = () => {
                     if (element.classList.contains("close")) {
                         element.classList.remove("close");
                     };
+                } else {
+                    const handleMediaQuery = (e) => {
+                        if (e.matches) {
+                            element.classList.remove("open");
+                            element.classList.add("close");
+                        };
+                    };
+                    mediaQuery.addListener(handleMediaQuery);
+                    handleMediaQuery(mediaQuery);
                 };
             });
+            const handleMediaQuery = (e) => {
+                if (e.matches) {
+                    if (nav.classList.contains("show")) {
+                        header.classList.remove("add-backdrop")
+                        mobileButton.classList.remove("rotate");
+                        pageTitle.classList.remove("hide")
+                        nav.classList.remove("show");
+                    }
+                };
+            };
+            mediaQuery.addListener(handleMediaQuery);
+            handleMediaQuery(mediaQuery);
         });
     });
 };
@@ -443,7 +486,7 @@ const galleryOnMobile = () => {
         });
     } else {
         button.style.display = "none";
-    }
+    };
 };
 
 window.addEventListener("load", () => {
