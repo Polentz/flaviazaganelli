@@ -100,7 +100,6 @@
 .page-copy {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     flex: 1 1 50%;
     padding-right: 4rem;
 }
@@ -131,6 +130,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 4rem;
 }
 
 .secondary-text {
@@ -142,11 +142,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 4rem;
 }
 
-.buttons {
-    margin: 1rem 0;
+.main-text:not(:first-child),
+.secondary-text:not(:first-child) {
+    margin-top: 4rem;
 }
 
 .button {

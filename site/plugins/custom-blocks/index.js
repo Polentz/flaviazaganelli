@@ -1,5 +1,41 @@
 panel.plugin("flaviazaganelli/blocks", {
   blocks: {
+    maintext: {
+      computed: {
+        placeholder() {
+          return "Testo principale ...";
+        }
+      },
+      template: `
+        <div>
+          <p>
+            <k-writer
+              v-bind="field('maintext')"
+              :value="content.maintext"
+              @input="update({ maintext: $event })">
+            </k-writer>
+          </p>
+        </div>
+      `
+    },
+    subtext: {
+      computed: {
+        placeholder() {
+          return "Testo secondario ...";
+        }
+      },
+      template: `
+        <div>
+          <p>
+            <k-writer
+              v-bind="field('subtext')"
+              :value="content.subtext"
+              @input="update({ subtext: $event })">
+            </k-writer>
+          </p>
+        </div>
+      `
+    },
     link: {
       computed: {
         placeholder() {

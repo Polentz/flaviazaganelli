@@ -1,0 +1,9 @@
+name: Buttons
+icon: bolt
+fields:
+  blocks:
+    type: blocks
+    fieldsets:
+      - link
+      - download
+      - special

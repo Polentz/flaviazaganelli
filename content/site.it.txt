@@ -38,7 +38,7 @@ Favicons:
 
 ----
 
-Customblocks: 
+customBlocks: 
 
 ----
 

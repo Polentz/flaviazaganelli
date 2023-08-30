@@ -26,3 +26,28 @@ html {
     background: transparent;
     padding: 0;
 }
+
+.k-button.k-block-options-button[title="More"] {
+    display: none;
+}
+
+.k-block-selector.k-dialog {
+    background: #e9e9e9;
+    color: black;
+}
+
+.k-block-selector summary {
+    color: black;
+}
+
+.k-dialog {
+    border-radius: 0;
+}
+
+.k-block-types .k-button {
+    background-color: white;
+}
+
+.k-clipboard-hint {
+    display: none;
+}

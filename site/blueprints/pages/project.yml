@@ -88,70 +88,85 @@ tabs:
           copy:
             type: fields
             fields:
-              maintext:
-                label: Testo
-                type: writer
-                marks:
-                  - bold
-                  - italic
-                  - underline
-                  - link
-                  - email
-                nodes: false
               customBlocks:
-                label: Pulsanti
-                width: 1/2
+                label: Testi
                 type: blocks
                 fieldsets:
-                  download:
-                    name: Download File
-                    icon: attachment
-                    fields:
-                      file:
-                        label: Link del pulsante
-                        type: files
-                        label: File in download
-                        template: document
-                        uploads: document
-                        info: false
-                        max: 1
-                      text:
-                        label: Testo del pulsante
-                        type: text
-                        placeholder: Testo del pulsante ...
-                  link:
-                    name: Link
-                    icon: url
-                    fields:
+                  text:
+                    label: Testi
+                    type: group
+                    fieldsets:
+                      maintext:
+                        name: Testo principale
+                        icon: text
+                        fields:
+                          maintext:
+                            label: Testo
+                            type: writer
+                            marks:
+                              - bold
+                              - italic
+                              - underline
+                              - link
+                              - email
+                            nodes: false
+                      subtext:
+                        name: Testo secondario
+                        icon: text
+                        fields:
+                          subtext:
+                            label: Testo
+                            type: writer
+                            marks:
+                              - bold
+                              - italic
+                              - underline
+                              - link
+                              - email
+                            nodes: false
+                  buttons:
+                    label: Pulsanti
+                    type: group
+                    fieldsets:
+                      download:
+                        name: Download File
+                        icon: attachment
+                        fields:
+                          file:
+                            label: Link del pulsante
+                            type: files
+                            label: File in download
+                            template: document
+                            uploads: document
+                            info: false
+                            max: 1
+                          text:
+                            label: Testo del pulsante
+                            type: text
+                            placeholder: Testo del pulsante ...
                       link:
-                        label: Link del pulsante
-                        type: url
-                      text:
-                        label: Testo del pulsante
-                        type: text
-                        placeholder: Testo del pulsante ...
-                  special:
-                    name: Contenuto extra
-                    icon: bolt
-                    fields:
-                      title:
-                        label: Titolo del contenuto extra
-                        type: text
-                        placeholder: 'Usa lo stesso nome del contenuto extra ...'
-                      text:
-                        label: Testo del pulsante
-                        type: text
-                        placeholder: Testo del pulsante ...                        
-              subtext:
-                label: Crediti
-                type: writer
-                marks:
-                  - bold
-                  - italic
-                  - underline
-                  - link
-                  - email
-                nodes: false
+                        name: Link
+                        icon: url
+                        fields:
+                          link:
+                            label: Link del pulsante
+                            type: url
+                          text:
+                            label: Testo del pulsante
+                            type: text
+                            placeholder: Testo del pulsante ...
+                      special:
+                        name: Contenuto extra
+                        icon: bolt
+                        fields:
+                          title:
+                            label: Titolo del contenuto extra
+                            type: text
+                            placeholder: 'Usa lo stesso nome del contenuto extra ...'
+                          text:
+                            label: Testo del pulsante
+                            type: text
+                            placeholder: Testo del pulsante ...             
               pagestatus:
                 label: La pagina è pronta?
                 width: 1/2
@@ -164,12 +179,12 @@ tabs:
     icon: star
     sections:
       info: 
-        label: "Contenuti extra della pagina {{ page.title }}"
+        label: Info
         text: |
             I contenuti extra si aprono come elementi pop-up. Ognuno è collegato a un pulsante speciale nella pagina del progetto. Esempio: le schede dei singoli alberi di Invisibilia.
             Creare prima l'elemento e poi il pulsante nella pagina del progetto.
       subpages:
-        label: Elementi pop-up
+        label: "Contenuti extra della pagina {{ page.title }}"
         type: pages
         layout: cards
         size: small
