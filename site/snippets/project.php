@@ -3,7 +3,7 @@
     <div class="gallery-grid">
         <?php foreach ($project->cover()->toFiles() as $image) : ?>
             <div class="gallery-grid-item">
-                <img src="<?= $image->resize(1200, null)->url() ?>">
+                <img src="<?= $image->crop(1200, 675, 72)->url() ?>">
             </div>
         <?php endforeach ?>
     </div>

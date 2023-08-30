@@ -1,4 +1,4 @@
 window.addEventListener("load", () => {
-    enlargeImages();
+    enlargeGalleryItem();
     galleryOnMobile();
 });

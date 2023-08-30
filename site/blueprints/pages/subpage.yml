@@ -48,6 +48,16 @@ columns:
             type: files
             uploads: audio
             template: audio
+            query: page.images.filterBy('template', 'audio')
             multiple: false
             max: 1
-            size: small
+          video:
+            label: File video
+            type: files
+            width: 1/1
+            template: video
+            uploads: video
+            query: page.images.filterBy('template', 'video')
+            multiple: false
+            max: 1
+            required: false

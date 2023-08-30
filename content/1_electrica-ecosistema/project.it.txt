@@ -5,9 +5,7 @@ Color: #001eff
 Cover:
 
 - file://Xk4nmpTN7kRYJ4P8
-- file://xMcFcV81NN6Krvky
 - file://5xdjYY56GqIepQ2s
-- file://4SC5mOuYXZQYOT7Z
 
 ----
 

@@ -1,0 +1,11 @@
+title: Video File
+
+accept: 
+  extension: mp4
+  type: video
+
+fields:
+  caption:
+    type: text
+    width: 1/2
+    label: Crediti

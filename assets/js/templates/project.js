@@ -1,10 +1,11 @@
 window.addEventListener("load", () => {
+    handleSectionsColor();
     mouseMoveEffect();
-    enlargeImages();
+    enlargeGalleryItem();
     galleryOnMobile();
     audioPlayer();
 });
 
 document.addEventListener("scroll", () => {
-    handleSectionColor();
+    handleSectionsColor();
 });

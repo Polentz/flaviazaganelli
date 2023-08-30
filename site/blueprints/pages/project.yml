@@ -22,19 +22,20 @@ tabs:
           cover:
             label: Immagini nella home
             type: files
+            width: 1/1
             template: image
             uploads: image
             query: page.images.filterBy('template', 'image')
             layout: cards
-            size: small
+            size: large
             multiple: true
-            max: 4
+            max: 2
             required: true
             image:
               icon: true
               ratio: 4/3
               back: white
-              cover: true   
+              cover: true
       caption:
         type: fields
         fields:
@@ -71,6 +72,16 @@ tabs:
                   ratio: 4/3
                   back: white
                   cover: true 
+              video:
+                label: Video
+                type: files
+                width: 1/1
+                template: video
+                uploads: video
+                query: page.images.filterBy('template', 'video')
+                multiple: false
+                max: 1
+                required: false
       main:
         width: 1/2
         sections: 

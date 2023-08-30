@@ -38,6 +38,7 @@ const hanldeSessionStorage = () => {
         const element = document.querySelector(".calendar");
         if (element) {
             element.classList.add("close");
+            element.classList.remove("open");
         }
     } else {
         sessionStorage.setItem("initial", "done");
@@ -76,9 +77,9 @@ const handleParallax = () => {
 };
 
 const handlePageLabel = () => {
-    const pixelScrolled = window.scrollY;
     sections.forEach(section => {
-        if (section.offsetTop - 200 <= pixelScrolled) {
+        const sectionRect = section.getBoundingClientRect();
+        if (sectionRect.top < innerHeight - (window.innerHeight / 2)) {
             pageLabel.style.animation = "opacity .35s ease 1";
             pageLabel.innerHTML = section.getAttribute("data-section-title");
         };
@@ -99,59 +100,30 @@ const handlePageLabel = () => {
             handleMediaQuery(mediaQuery);
         };
     });
-    // const handleMediaQuery = (e) => {
-    //     if (e.matches) {
-    //         sections.forEach(section => {
-    //             if (section.offsetTop - 200 <= pixelScrolled) {
-    //                 pageLabel.style.animation = "opacity .35s ease 1";
-    //                 pageLabel.innerHTML = section.getAttribute("data-section-title");
-    //             };
-    //             if (window.scrollY == 0) {
-    //                 pageLabel.style.animation = "none";
-    //                 setTimeout(() => {
-    //                     pageLabel.innerHTML = "";
-    //                 }, 350);
-    //             };
-    //         });
-    //     } else {
-    //         sections.forEach(section => {
-    //             if (section.offsetTop - 200 <= pixelScrolled) {
-    //                 pageLabel.style.animation = "opacity .35s ease 1";
-    //                 pageLabel.innerHTML = section.getAttribute("data-section-title");
-    //             };
-    //             if (window.scrollY == 0) {
-    //                 pageLabel.style.animation = "none";
-    //                 setTimeout(() => {
-    //                     pageLabel.innerHTML = "+";
-    //                 }, 350);
-    //             };
-    //         });
-    //     };
-    // };
-
-    // mediaQuery.addListener(handleMediaQuery);
-    // handleMediaQuery(mediaQuery);
 };
 
-const handleSectionColor = () => {
-    const pixelScrolled = window.scrollY;
+const handleSectionsColor = () => {
     const svg = document.querySelector(".background svg");
-    const elements = document.querySelectorAll("[data-section-color]")
+    const elements = document.querySelectorAll("[data-section-color]");
     elements.forEach(element => {
-        if (element.offsetTop - 250 <= pixelScrolled) {
-            const color = element.getAttribute("data-section-color");
+        const elementRect = element.getBoundingClientRect();
+        const color = element.getAttribute("data-section-color");
+        if (elementRect.top < innerHeight - (window.innerHeight / 2)) {
             svg.style.fill = `${color}`;
-            const doc = document.documentElement;
-            doc.style.setProperty("--color-acc", `${color}`);
         };
     });
 };
 
-const enlargeImages = () => {
+const enlargeGalleryItem = () => {
     const images = document.querySelectorAll(".gallery-grid-item");
     images.forEach(img => {
-        img.addEventListener("click", () => {
+        const video = img.querySelector("video");
+        img.addEventListener("click", (e) => {
             img.classList.toggle("enlarge");
+            if (video) {
+                e.preventDefault();
+                video.play();
+            };
         });
     });
 };
@@ -354,10 +326,19 @@ const toggleNav = () => {
 };
 
 const hideNav = () => {
-    menu.classList.remove("nav-visible");
-    pageTitle.style.opacity = "1";
-    pageTitle.style.display = "block";
-    nav.classList.remove("show");
+    const handleMediaQuery = (e) => {
+        if (e.matches) {
+            menu.classList.remove("nav-visible");
+            nav.classList.remove("show");
+        } else {
+            menu.classList.remove("nav-visible");
+            pageTitle.style.opacity = "1";
+            pageTitle.style.display = "block";
+            nav.classList.remove("show");
+        };
+    };
+    mediaQuery.addListener(handleMediaQuery);
+    handleMediaQuery(mediaQuery);
 };
 
 const toggleInfo = () => {
@@ -365,12 +346,17 @@ const toggleInfo = () => {
         const title = project.querySelector(".project-wrapper");
         const info = project.querySelector(".project-info");
         const ui = project.querySelectorAll(".project-ui");
+        const images = project.querySelectorAll(".gallery-grid-item img")
         title.addEventListener("mouseenter", () => {
             if (info) {
                 info.classList.add("info");
             };
             ui.forEach(uiElement => {
                 uiElement.classList.add("info");
+            });
+            images.forEach(image => {
+                image.classList.add("animate");
+                image.style.animationPlayState = "running";
             });
         });
         title.addEventListener("mouseleave", () => {
@@ -379,6 +365,9 @@ const toggleInfo = () => {
             };
             ui.forEach(uiElement => {
                 uiElement.classList.remove("info");
+            });
+            images.forEach(image => {
+                image.style.animationPlayState = "paused";
             });
         });
     });
@@ -488,6 +477,21 @@ const galleryOnMobile = () => {
         button.style.display = "none";
     };
 };
+
+const calendarOnMobile = () => {
+    const handleMediaQuery = (e) => {
+        const calendar = document.querySelector(".calendar");
+        if (e.matches) {
+            pageLabel.innerHTML = "";
+            calendar.classList.add("close");
+            calendar.classList.remove("open");
+        } else {
+            pageLabel.innerHTML = "+";
+        };
+    };
+    mediaQuery.addListener(handleMediaQuery);
+    handleMediaQuery(mediaQuery);
+}
 
 window.addEventListener("load", () => {
     documentHeight();

@@ -1,6 +1,6 @@
 <section class="subpage close <?=$page->title()->slug() ?>">
     <div class="subpage-wrapper">
-        <div class="subpage-cover" data-section-color="<?= $page->parent()->color() ?>">
+        <div class="subpage-cover">
             <?php if ($image = $page->cover()->toFile() ) : ?>
                 <figure>
                     <img src="<?= $image->resize(1200, null)->url() ?>" alt="<?= $image->alt() ?>">
@@ -18,6 +18,16 @@
             </div>
             <?php if($page->audio()->isNotEmpty()) : ?>
                 <?= snippet('audio', ['page' => $page]) ?>
+            <?php endif ?>
+            <?php if($video = $page->video()->toFile()) : ?>
+                <figure class="video-component">
+                    <video controls loop controlsList="nodownload noremoteplayback">
+                        <source src="<?= $video->url() ?>">
+                    </video>
+                    <figcaption>
+                            <?= $video->caption()->kt() ?>
+                    </figcaption>
+                </figure>
             <?php endif ?>
         </div>
     </div>

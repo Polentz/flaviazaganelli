@@ -2,7 +2,7 @@ Title: The Game We Play
 
 ----
 
-Color: #ff70d9
+Color: 
 
 ----
 
@@ -10,16 +10,10 @@ Cover:
 
 - file://1A6dg0KeDWc9CKRb
 - file://TYhqcrW2Xf98kj46
-- file://Knbiki6KwshK4fbX
-- file://C4FKSPsnerGL6NXO
 
 ----
 
-Info: 
-
-----
-
-Pagestatus: false
+Info: <p>More information coming soon</p>
 
 ----
 
@@ -32,11 +26,23 @@ Gallery:
 
 ----
 
-Buttonblocks: 
+Maintext: 
 
 ----
 
-Maintext: 
+Customblocks: 
+
+----
+
+Subtext: 
+
+----
+
+Pagestatus: false
+
+----
+
+Buttonblocks: 
 
 ----
 
