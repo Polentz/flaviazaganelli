@@ -3,6 +3,7 @@ Kirby::plugin('flaviazaganelli/blocks', [
     'blueprints' => [
         'blocks/maintext' => __DIR__ . '/blueprints/blocks/maintext.yml',
         'blocks/subtext' => __DIR__ . '/blueprints/blocks/subtext.yml',
+        'blocks/buttons' => __DIR__ . '/blueprints/blocks/buttons.yml',
         'blocks/download' => __DIR__ . '/blueprints/blocks/download.yml',
         'blocks/link' => __DIR__ . '/blueprints/blocks/link.yml',
         'blocks/special' => __DIR__ . '/blueprints/blocks/special.yml',

@@ -6,7 +6,7 @@
         <div class="gallery-grid">
             <?php foreach ($page->gallery()->toFiles() as $image) : ?>
                 <figure class="gallery-grid-item">
-                    <img src="<?= $image->resize(1200, null)->url() ?>" alt="<?= $image->alt() ?>">
+                    <img src="<?= $image->resize(800, null)->url() ?>" alt="<?= $image->alt() ?>">
                     <?php if($image->caption()->isNotEmpty()) : ?>
                         <figcaption>
                             <?= $image->caption()->kt() ?>

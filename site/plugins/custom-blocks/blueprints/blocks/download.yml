@@ -1,14 +1,14 @@
 name: Pulsante per download file
-icon: bolt
+icon: attachment
 wysiwyg: true
 fields:
+  text:
+    label: Testo del pulsante
+    type: text
   file:
     type: files
-    label: Documenti
+    label: Documento in download
     template: document
     uploads: document
     info: false
     sortable: true
-  text:
-    label: Testo del pulsante
-    type: text

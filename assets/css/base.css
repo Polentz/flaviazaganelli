@@ -190,11 +190,11 @@ img::selection {
 }
 
 ::-moz-selection {
-    background-color: white;
-    color: white;
+    background-color: transparent;
+    color: var(--color-acc);
 }
 
 ::selection {
-    background-color: white;
-    color: white;
+    background-color: transparent;
+    color: var(--color-acc);
 }

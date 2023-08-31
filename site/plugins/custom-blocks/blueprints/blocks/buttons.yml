@@ -1,7 +1,8 @@
-name: Buttons
+name: Pulsanti
 icon: bolt
 fields:
   blocks:
+    label: Pulsanti
     type: blocks
     fieldsets:
       - link

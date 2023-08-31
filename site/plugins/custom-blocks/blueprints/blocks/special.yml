@@ -1,10 +1,10 @@
 name: Pulsante per contenuto extra
-icon: text
+icon: star
 wysiwyg: true
 fields:
-  title:
-    label: Titolo del progetto
-    type: text
   text:
     label: Testo del pulsante
+    type: text
+  title:
+    label: Titolo del contenuto speciale
     type: text

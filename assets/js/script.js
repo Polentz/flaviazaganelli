@@ -104,12 +104,14 @@ const handlePageLabel = () => {
 
 const handleSectionsColor = () => {
     const svg = document.querySelector(".background svg");
-    const elements = document.querySelectorAll("[data-section-color]");
+    const elements = document.querySelectorAll(".gallery, .project-pagination");
     elements.forEach(element => {
         const elementRect = element.getBoundingClientRect();
         const color = element.getAttribute("data-section-color");
         if (elementRect.top < innerHeight - (window.innerHeight / 2)) {
             svg.style.fill = `${color}`;
+            const doc = document.documentElement;
+            doc.style.setProperty("--color-acc", `${color}`);
         };
     });
 };

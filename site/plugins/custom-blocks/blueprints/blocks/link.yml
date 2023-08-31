@@ -1,7 +1,10 @@
-name: Pulsante con link
-icon: text
+name: Pulsante per link
+icon: url
 wysiwyg: true
 fields:
+  text:
+    label: Testo del pulsante
+    type: text
   link:
     label: Link
-    type: writer
+    type: url

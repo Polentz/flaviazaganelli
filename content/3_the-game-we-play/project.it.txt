@@ -2,7 +2,7 @@ Title: The Game We Play
 
 ----
 
-Color: 
+Color: #ff70d9
 
 ----
 
@@ -26,19 +26,27 @@ Gallery:
 
 ----
 
-Maintext: 
+Video: 
 
 ----
 
-customBlocks: 
-
-----
-
-Subtext: 
+Blocks: 
 
 ----
 
 Pagestatus: false
+
+----
+
+Maintext: 
+
+----
+
+Customblocks: 
+
+----
+
+Subtext: 
 
 ----
 

@@ -1,3 +1,4 @@
+.k-block-container-type-button,
 .k-block-type-download,
 .k-block-type-link,
 .k-block-type-special {
@@ -15,7 +16,7 @@
     content: "";
     width: 6px;
     height: 6px;
-    background-color: #000;
+    background-color: black;
     position: absolute;
     top: 50%;
     left: 0;
@@ -35,7 +36,7 @@
 .k-block-type-link input:focus,
 .k-block-type-special input:focus {
     outline: 0;
-    border-color: #000;
+    border-color: black;
 }
 
 .k-block-type-maintext,
@@ -48,4 +49,19 @@
     font-style: normal;
     font-weight: 400;
     font-size: .95rem;
+}
+
+.buttons {
+    margin: 0 1rem;
+}
+
+.button {
+    font-family: "Ortica Angular", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.button li {
+    list-style: inside;
 }

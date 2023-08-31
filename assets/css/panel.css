@@ -51,3 +51,7 @@ html {
 .k-clipboard-hint {
     display: none;
 }
+
+.k-writer .ProseMirror p {
+    margin-bottom: 0;
+}

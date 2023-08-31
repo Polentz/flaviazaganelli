@@ -36,6 +36,17 @@ panel.plugin("flaviazaganelli/blocks", {
         </div>
       `
     },
+    buttons: {
+      template: `
+        <div class="buttons">
+          <div v-for="item in content.blocks" class="button-wrapper">
+            <ul class="button">
+              <li v-html="item.content.text"></li>
+            </ul>
+          </div>
+        </div> 
+      `
+    },
     link: {
       computed: {
         placeholder() {
