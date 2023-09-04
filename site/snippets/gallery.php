@@ -15,14 +15,18 @@
                 </figure>
             <?php endforeach ?>
             <?php if($video = $page->video()->toFile()) : ?>
-                <figure class="gallery-grid-item">
+                <div class="gallery-grid-item">
                     <video controls autoplay muted loop controlsList="nodownload noremoteplayback">
                         <source src="<?= $video->url() ?>">
                     </video>
-                    <figcaption>
-                            <?= $video->caption()->kt() ?>
-                    </figcaption>
-                </figure>
+                    <?php if($video->caption()->isNotEmpty()) : ?>
+                        <figure>
+                            <figcaption>
+                                <?= $video->caption()->kt() ?>
+                            </figcaption>
+                        </figure>
+                    <?php endif ?>
+                </div>
             <?php endif ?>
         </div>
         <div class="mobile-ui gallery-button">

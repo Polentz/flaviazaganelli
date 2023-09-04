@@ -6,11 +6,23 @@ Cover: - file://Gtr555eIqYzNqCKJ
 
 ----
 
-Maintext: <p><strong>Leccio (Quercus ilex)</strong></p><p>Come mi posiziono?</p><p>Avvicinati più lentamente che puoi, arriva al suo tronco e osserva da vicino la corteccia.</p><p>Siediti ai suoi piedi e alza lo sguardo. Ascolta la traccia.</p>
+Texttitle: Leccio (Quercus ilex)
+
+----
+
+Blocks: [{"content":{"maintext":"<p>Come mi posiziono?</p><p>Avvicinati più lentamente che puoi, arriva al suo tronco e osserva da vicino la corteccia.</p><p>Siediti ai suoi piedi e alza lo sguardo. Ascolta la traccia.</p>"},"id":"e9e507cb-d99e-4372-9e7a-1d0997b02e1d","isHidden":false,"type":"maintext"},{"content":{"blocks":"[{\"content\":{\"text\":\"Dov'è?\",\"link\":\"https://www.google.com/maps/d/u/0/viewer?mid=14ugqHCQv87FetmrDLoUGGDzUS7aT650&ll=43.79035248421247%2C11.19980936483362&z=19\"},\"id\":\"8cd07e5f-6f1b-4ca7-a079-01b5462503bf\",\"isHidden\":false,\"type\":\"link\"}]"},"id":"e40bdb1a-edfb-4fe1-b3a8-3c2142d07a2f","isHidden":false,"type":"buttons"}]
 
 ----
 
 Audio: 
+
+----
+
+Video: 
+
+----
+
+Maintext: <p><strong>Leccio (Quercus ilex)</strong></p><p>Come mi posiziono?</p><p>Avvicinati più lentamente che puoi, arriva al suo tronco e osserva da vicino la corteccia.</p><p>Siediti ai suoi piedi e alza lo sguardo. Ascolta la traccia.</p>
 
 ----
 

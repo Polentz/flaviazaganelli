@@ -14,11 +14,11 @@ Blocks: [{"content":{"maintext":"<p>Come mi posiziono?</p><p>Con la schiena appo
 
 ----
 
-Audio: - file://lHA75lpP6bB9iW7f
+Audio: 
 
 ----
 
-Video: - file://9X5oR8O4Ob5lfDW2
+Video: 
 
 ----
 

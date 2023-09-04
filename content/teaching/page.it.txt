@@ -1,0 +1,13 @@
+Title: Teaching
+
+----
+
+Gallery: 
+
+----
+
+Blocks: [{"content":{"maintext":"<p><strong>Corsi e Workshop</strong></p><p>Insegno Pilates e facilito classi e laboratori di danza contemporanea e pratiche somatiche tra Bologna e Berlino.</p>"},"id":"630e224b-f67a-4403-b250-194b5d98fb58","isHidden":false,"type":"maintext"}]
+
+----
+
+Uuid: 1hCi1OxFvTotuihZ

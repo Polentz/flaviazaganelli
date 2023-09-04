@@ -54,7 +54,6 @@ tabs:
                 type: blocks
                 fieldsets:
                   - text
-
       contact:
         width: 1/4
         sections:

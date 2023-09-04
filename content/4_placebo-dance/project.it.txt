@@ -1,0 +1,33 @@
+Title: Placebo Dance
+
+----
+
+Color: #ffcb3d
+
+----
+
+Cover: - file://mV8oXgFmAY9eeDx6
+
+----
+
+Info: <p>Maggiori informazioni in arrivo</p>
+
+----
+
+Gallery: - file://mV8oXgFmAY9eeDx6
+
+----
+
+Video: 
+
+----
+
+Blocks: 
+
+----
+
+Pagestatus: false
+
+----
+
+Uuid: sLfMTdlb9O0dagKC

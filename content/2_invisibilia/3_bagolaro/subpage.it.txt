@@ -1,0 +1,25 @@
+Title: Bagolaro
+
+----
+
+Cover: - file://JMicfknheNdA3HOq
+
+----
+
+Texttitle: Bagolaro (Celtis Australis)
+
+----
+
+Blocks: [{"content":{"maintext":"<p>Siediti alla sua base con la schiena ben appoggiata al suo fusto e osserva fuori. Ascolta la traccia e se vuoi, chiudi gli occhi.</p><p>Mentre la traccia scorre, se vuoi, ripeti più volte quest’azione in direzioni diverse.</p>"},"id":"9696b82c-d172-43a2-bf1b-cdec13e4c945","isHidden":false,"type":"maintext"},{"content":{"blocks":"[{\"content\":{\"text\":\"Dov'è?\",\"link\":\"https://www.google.com/maps/d/u/0/viewer?mid=14ugqHCQv87FetmrDLoUGGDzUS7aT650&ll=43.79016273392422%2C11.199007638236989&z=19\"},\"id\":\"b1a151a6-d130-4daa-bb83-4ecb3f31d5e8\",\"isHidden\":false,\"type\":\"link\"}]"},"id":"dd7f95bb-591b-4da0-8d9a-5d8144d08eb7","isHidden":false,"type":"buttons"}]
+
+----
+
+Audio: 
+
+----
+
+Video: 
+
+----
+
+Uuid: GK7765VyEHdNshl5

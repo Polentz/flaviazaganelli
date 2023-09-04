@@ -99,7 +99,7 @@ tabs:
                   - "no"
                   - "sì"
   subpage:
-    label: Contenuto extra
+    label: Contenuti extra
     icon: star
     sections:
       info: 

@@ -10,7 +10,7 @@ Calendarheader: What's Next
 
 ----
 
-Calendarblocks: [{"content":{"text":"<p>11.08.2023</p><p><strong>Invisibilia</strong></p><p><a href=\"https://www.santarcangelofestival.com/\" target=\"_blank\" rel=\"noreferrer\">Santarcangelo Festival</a></p><p>Santarcangelo di Romagna</p><p>Residenza</p>"},"id":"4135b8e5-b1aa-4cd2-a65f-bb9467e109be","isHidden":false,"type":"text"},{"content":{"text":"<p>11.08.2023</p><p><strong>Invisibilia</strong></p><p><a href=\"https://www.santarcangelofestival.com/\" target=\"_blank\" rel=\"noreferrer\">Santarcangelo Festival</a></p><p>Santarcangelo di Romagna</p><p>Residenza</p>"},"id":"d80cdde4-1d94-4486-85da-36c0a5b4d6e1","isHidden":false,"type":"text"}]
+Calendarblocks: [{"content":{"text":"<p>06.09.2023</p><p><strong>WAM//prime danze placebo</strong></p><p><a href=\"https://www.danzaurbana.eu/festival/\" target=\"_blank\" rel=\"noreferrer\">Danza Urbana Festival</a></p><p>Bologna</p><p>Laboratorio Performativo &gt; info</p>"},"id":"5819804e-c387-43e4-bd48-3f46583b3f80","isHidden":false,"type":"text"},{"content":{"text":"<p>10-11.09.2023</p><p><strong>supportER</strong></p><p>Festival Ammutinamenti</p><p>Ravenna</p>"},"id":"956732ac-d416-48de-9a5a-7cc650b62c7e","isHidden":false,"type":"text"},{"content":{"text":"<p>16.09.2023</p><p><strong>In electrica /ecosi'stɛma/</strong></p><p><a href=\"https://fabbricaeuropa.net/en/events/flavia-zaganelli-2/\" target=\"_blank\" rel=\"noreferrer\">Fabbrica Europa Festival</a></p><p>Firenze</p><p>Performance &gt; site specific versione for Manifattura Tabacchi</p>"},"id":"40e84b87-115f-4835-8285-85b2dcaade8e","isHidden":false,"type":"text"},{"content":{"text":"<p>novembre 2023</p><p><strong>PLACEBO DANCE</strong></p><p><strong>New research</strong></p><p>Moving in November Festival <br>Helsinki</p><p>Residency / Boarding Pass Plus Dance</p>"},"id":"6d2b8595-6c1e-4906-aa67-0237f5896b9c","isHidden":false,"type":"text"}]
 
 ----
 
@@ -18,15 +18,15 @@ Contactheader: Say Hi!
 
 ----
 
-Contactblocks: [{"content":{"text":"<p>Personale</p><p><a href=\"f.zaganelli@hotmail.it\" rel=\"noreferrer\">f.zaganelli@hotmail.it</a></p><p><a href=\"https://www.instagram.com/flo_zag/\" target=\"_blank\" rel=\"noreferrer\">Instagram/flo_zag/</a></p>"},"id":"20e5283d-f876-405b-b74a-d8a3cbce3341","isHidden":false,"type":"text"},{"content":{"text":"<p>Distribuzione</p><p><a href=\"irenealbertarossini@gmail.com\" rel=\"noreferrer\">irenealbertarossini@gmail.com</a></p>"},"id":"ace1d852-d2bd-4bc7-81b7-d3eaca887315","isHidden":false,"type":"text"}]
+Contactblocks: [{"content":{"text":"<p>Personale</p><p><a href=\"f.zaganelli@hotmail.it\" rel=\"noreferrer\">f.zaganelli@hotmail.it</a></p>"},"id":"e971da49-fa41-40b7-863a-841c6cf4a0b4","isHidden":false,"type":"text"},{"content":{"text":"<p>Distribuzione</p><p><a href=\"irenealbertarossini@gmail.com\" rel=\"noreferrer\">irenealbertarossini@gmail.com</a></p>"},"id":"98339b16-427a-48ab-b929-9f33006c9d69","isHidden":false,"type":"text"},{"content":{"text":"<p>Social</p><p><a href=\"https://www.instagram.com/flo_zag/\" target=\"_blank\" rel=\"noreferrer\">Instagram/flo_zag/</a></p>"},"id":"ea26e41b-fb83-4cfa-9adb-255d43f33b18","isHidden":false,"type":"text"}]
 
 ----
 
-Description: 
+Description: Flavia Zaganelli è dance artist e performer. La sua ricerca è trasversale e multidisciplinare, le interessano le relazioni tra le cose, il dubbio, le forme collaborative ed il processo. Danza e coreografia sono per lei occasioni di conoscenza dei molti modi di stare al mondo.
 
 ----
 
-Keywords: 
+Keywords: flavia zaganelli, danza, dance artist, performer, coroegrafia, multidisciplinare, arte, arte performativa, italia, berlino
 
 ----
 
