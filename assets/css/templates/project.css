@@ -215,7 +215,7 @@
 .subpage-wrapper {
     height: inherit;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .subpage-cover {
@@ -377,6 +377,12 @@ input.seek-slider::-webkit-slider-thumb {
 
 .mute-icon.toggle-volume {
     opacity: 1;
+}
+
+.video-component {
+    padding: 1rem 0;
+    border-top: dashed 1px var(--color-txt);
+    border-bottom: dashed 1px var(--color-txt);
 }
 
 .video-component video {

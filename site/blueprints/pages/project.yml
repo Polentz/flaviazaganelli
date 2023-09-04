@@ -105,8 +105,8 @@ tabs:
       info: 
         label: Info
         text: |
-            I contenuti extra si aprono come elementi pop-up. Ognuno è collegato a un pulsante speciale nella pagina del progetto. Esempio: le schede dei singoli alberi di Invisibilia.
-            Creare prima l'elemento e poi il pulsante nella pagina del progetto.
+            I contenuti extra si aprono come elementi pop-up. Ciascun elemento è collegato a un pulsante speciale nella pagina del progetto.
+            Importante: creare prima l'elemento e poi il pulsante nella pagina del progetto; il titolo del contenuto extra e del pulante devono coincidere.
       subpages:
         label: "Contenuti extra della pagina {{ page.title }}"
         type: pages
