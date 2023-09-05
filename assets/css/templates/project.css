@@ -544,9 +544,9 @@ input.seek-slider::-webkit-slider-thumb {
         padding-right: 0;
     }
 
-    .buttons {
+    /* .buttons {
         margin: 0;
-    }
+    } */
 
     .project-ui {
         display: none;
