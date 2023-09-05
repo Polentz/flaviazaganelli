@@ -112,7 +112,7 @@ tabs:
         type: pages
         layout: cards
         size: small
-        sortable: false
+        sortable: true
         image:
           icon: true
           ratio: 4/3
