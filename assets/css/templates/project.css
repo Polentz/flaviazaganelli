@@ -195,9 +195,9 @@
     gap: .5rem;
 }
 
-/* .secondary-text:last-of-type {
+.secondary-text:last-of-type {
     margin-top: 3rem;
-} */
+}
 
 .buttons {
     margin: 0 1rem;
