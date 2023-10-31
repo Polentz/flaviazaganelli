@@ -21,7 +21,6 @@ columns:
             layout: cards
             size: large
             multiple: false
-            max: 1
             image:
               icon: true
               ratio: 4/3
@@ -38,22 +37,19 @@ columns:
             type: text
           blocks:
             label: Testo
-            type: blocks 
-          audio:
+            type: blocks         
+          audioElement:
             label: File audio
             type: files
-            uploads: audio
             template: audio
-            query: page.images.filterBy('template', 'audio')
+            uploads: audio
             multiple: false
-            max: 1
-          video:
+            image: false
+          videoElement:
             label: File video
             type: files
             width: 1/1
             template: video
             uploads: video
-            query: page.images.filterBy('template', 'video')
             multiple: false
-            max: 1
-            required: false
+            image: false

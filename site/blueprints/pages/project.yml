@@ -78,10 +78,7 @@ tabs:
                 width: 1/1
                 template: video
                 uploads: video
-                query: page.images.filterBy('template', 'video')
                 multiple: false
-                max: 1
-                required: false
       main:
         width: 1/2
         sections: 
@@ -90,7 +87,11 @@ tabs:
             fields:
               blocks:
                 label: Testi
-                type: blocks                    
+                type: blocks
+                fieldsets:
+                  - maintext
+                  - subtext
+                  - buttons               
               pagestatus:
                 label: La pagina è pronta?
                 width: 1/2
