@@ -142,8 +142,8 @@ body::after {
     position: fixed;
     bottom: 0;
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(58.85%, rgba(255, 255, 255, 0.00)), to(#ffffff));
     background: -o-linear-gradient(top, rgba(255, 255, 255, 0.00) 58.85%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(58.85%, rgba(255, 255, 255, 0.00)), to(#ffffff));
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 58.85%, #ffffff 100%);
     z-index: 7;
     pointer-events: none;
@@ -346,17 +346,12 @@ figcaption a:active {
 
 .gallery-grid {
     width: 100%;
-    /* height: auto; */
     height: 100%;
     display: -ms-grid;
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
     -ms-grid-columns: 1fr 4rem 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    /* justify-content: center;
-    align-items: center;
-    justify-items: stretch; */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -367,7 +362,6 @@ figcaption a:active {
 }
 
 .gallery-grid-item {
-    /* max-width: 300px; */
     width: 100%;
 }
 
@@ -376,16 +370,12 @@ figcaption a:active {
 }
 
 .gallery:nth-of-type(odd) .gallery-grid-item:nth-of-type(1) {
-    /* margin-left: 2rem;
-    margin-top: 2rem; */
     -ms-flex-item-align: end;
     -ms-grid-row-align: end;
     align-self: end;
 }
 
 .gallery:nth-of-type(even) .gallery-grid-item:nth-of-type(2) {
-    /* margin-left: 2rem;
-    margin-top: 2rem; */
     -ms-flex-item-align: end;
     -ms-grid-row-align: end;
     align-self: end;
@@ -400,19 +390,6 @@ figcaption a:active {
     -webkit-animation: movedown 20s linear alternate infinite;
     animation: movedown 20s linear alternate infinite;
 }
-
-/* .gallery-grid-item:nth-of-type(3) {
-    margin-top: 3rem;
-}
-
-.gallery-grid-item:nth-of-type(4) {
-    grid-column: 2 / 3;
-    margin-left: -2rem;
-}
-
-.gallery-grid-item:nth-of-type(5) {
-    margin-left: -2rem;
-} */
 
 .project-wrapper {
     width: 100%;
@@ -732,8 +709,8 @@ figcaption a:active {
         position: fixed;
         top: 0;
         left: 0;
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(58.85%, rgba(255, 255, 255, 0.00)), to(#ffffff));
         background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.00) 58.85%, #ffffff 100%);
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(58.85%, rgba(255, 255, 255, 0.00)), to(#ffffff));
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 58.85%, #ffffff 100%);
         z-index: 7;
         pointer-events: none;
@@ -833,7 +810,6 @@ figcaption a:active {
     .gallery-grid {
         width: 100%;
         height: 100%;
-        /* new */
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-auto-rows: -webkit-min-content;
@@ -841,17 +817,9 @@ figcaption a:active {
         -ms-flex-line-pack: center;
         align-content: center;
         overflow-x: clip;
-        /* grid-template-columns: 250px 250px; */
-        /* justify-content: center;
-        align-items: center;
-        justify-items: center; */
-        /* overflow: hidden; */
-        /* gap: 1rem; */
     }
 
     .gallery-grid-item {
-        /* max-width: 200px;
-        margin: 0 !important; */
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -862,7 +830,6 @@ figcaption a:active {
     }
 
     .gallery-grid-item:nth-of-type(1) {
-        /* align-self: unset; */
         margin-left: 40%;
     }
 
@@ -875,15 +842,6 @@ figcaption a:active {
         -webkit-animation: none;
         animation: none;
     }
-
-    /* .gallery:nth-of-type(even) .gallery-grid-item:nth-of-type(1) {
-        margin-left: -40%;
-    }
-
-    .gallery:nth-of-type(even) .gallery-grid-item:nth-of-type(2) {
-        align-self: unset;
-        margin-left: 40%;
-    } */
 
     .project-info {
         opacity: 1;
