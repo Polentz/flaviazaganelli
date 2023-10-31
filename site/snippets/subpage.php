@@ -41,7 +41,9 @@
                         <div class="audio-time">
                             <span class="audio-progress">0:00</span> / <span class="audio-duration"></span>
                         </div>
-                        <input type="range" class="seek-slider" max="100" value="0">
+                        <div class="seek-slider-container">
+                            <input type="range" class="seek-slider" max="100" value="0">
+                        </div>
                         <div class="audio-volume">
                             <svg class="volume-icon" viewBox="0 0 29 28" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
