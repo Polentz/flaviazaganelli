@@ -10,5 +10,5 @@ fields:
     label: Documento in download
     template: document
     uploads: document
-    info: false
-    sortable: true
+    query: page.files.filterBy('template', 'document')
+    multiple: false

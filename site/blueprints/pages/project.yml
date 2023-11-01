@@ -77,6 +77,7 @@ tabs:
                 type: files
                 width: 1/1
                 template: video
+                query: page.files.filterBy('template', 'video')
                 uploads: video
                 multiple: false
       main:
@@ -106,8 +107,8 @@ tabs:
       info: 
         label: Info
         text: |
-            I contenuti extra si aprono come elementi pop-up. Ciascun elemento è collegato a un pulsante speciale nella pagina del progetto.
-            Importante: creare prima l'elemento e poi il pulsante nella pagina del progetto; il titolo del contenuto extra e del pulante devono coincidere.
+            Ciascun contenuto extra è collegato a un pulsante.
+            Importante: quando si aggiunge un nuovo contenuto extra, il titolo deve coincidere con il testo del pulsante per farlo funzionare.
       subpages:
         label: "Contenuti extra della pagina {{ page.title }}"
         type: pages

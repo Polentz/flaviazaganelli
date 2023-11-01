@@ -33,7 +33,7 @@ columns:
         type: fields
         fields:
           texttitle:
-            label: Titolo
+            label: Titolo del testo
             type: text
           blocks:
             label: Testo
@@ -43,6 +43,7 @@ columns:
             type: files
             template: audio
             uploads: audio
+            query: page.files.filterBy('template', 'audio')
             multiple: false
             image: false
           videoElement:
@@ -50,6 +51,7 @@ columns:
             type: files
             width: 1/1
             template: video
+            query: page.files.filterBy('template', 'video')
             uploads: video
             multiple: false
             image: false

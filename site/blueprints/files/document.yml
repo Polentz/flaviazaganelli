@@ -1,18 +1,6 @@
-title: Document
+title: Documento
 options:
   preview: false
 
 accept: 
   type: image, document
-  maxsize: 15728640
-
-fields:
-  documentTitle:
-    width: 1/2
-    label: Titolo
-    type: writer
-    marks:
-      - bold
-      - italic
-      - underline
-    nodes: false
