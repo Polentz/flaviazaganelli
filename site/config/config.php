@@ -21,5 +21,4 @@ return [
             ],
         ]
             ],
-    'home' => 'coming-soon',
 ];
